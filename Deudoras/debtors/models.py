@@ -17,7 +17,7 @@ class User(models.Model):
 class Debtors(models.Model):
     name = models.CharField(max_length=200)
     student = models.IntegerField()
-    school_class = models.CharField(max_length=200)
+    student_class = models.CharField(max_length=200)
     info = models.TextField()
     school_id = models.ForeignKey(School,on_delete=models.DO_NOTHING)
 
