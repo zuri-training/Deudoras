@@ -3,10 +3,7 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-li {
-  list-style: none;
+  font-family: "Manrope", sans-serif;
 }
 
 /*Primary color*/
@@ -27,12 +24,15 @@ h3 {
   color: #03045e;
   font-size: clamp(1.5rem, 2.5vw, 2rem);
   line-height: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
 p {
   color: #000814;
   font-size: clamp(1rem, 2.5vw, 1.4rem);
-  line-height: 1.5rem;
+  line-height: 2rem;
+  font-weight: 400;
 }
 
 label span {
@@ -44,6 +44,7 @@ button {
   border: none;
   outline: none;
   padding: 1rem;
+  width: 100%;
   border-radius: 8px;
   color: white;
   margin-top: 1.5rem;
@@ -54,6 +55,7 @@ button {
 
 label {
   color: #535454;
+  font-weight: 600;
 }
 
 .alreadyAccount {
@@ -79,7 +81,7 @@ label {
 @media (min-width: 900px) {
   .Container {
     width: 90%;
-    padding-block: 1.5rem;
+    padding-block: 2rem;
   }
 }
 
@@ -202,6 +204,11 @@ img {
   -ms-flex-item-align: end;
       -ms-grid-row-align: end;
       align-self: end;
+  margin-bottom: 3rem;
+}
+
+.desktop-hero-img {
+  margin-bottom: 2rem;
 }
 
 @media (min-width: 900px) {
@@ -210,7 +217,7 @@ img {
     display: -ms-flexbox;
     display: flex;
     gap: 1em;
-    margin-bottom: 1.3rem;
+    margin-bottom: 2rem;
   }
   .progress-bar div {
     width: 45px;
@@ -260,7 +267,7 @@ img {
 @media (min-width: 900px) {
   .form_header {
     text-align: left;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
   }
 }
 
@@ -277,7 +284,7 @@ img {
 
 @media (min-width: 900px) {
   .form {
-    gap: 2rem;
+    gap: 3.5rem;
   }
 }
 
