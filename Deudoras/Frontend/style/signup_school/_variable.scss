@@ -15,7 +15,7 @@ $background-white: hsl(0, 0%, 95%);
 $large_screen: 900px;
 
 $medium_screen: 650px;
-$medium_screenm: 1000px;
+$medium_screenm: 1200px;
 $medium_screenl: 1300px;
 
 @mixin large {
@@ -29,7 +29,7 @@ $medium_screenl: 1300px;
   }
 }
 @mixin mmedium {
-  @media (max-width: $medium_screenm) {
+  @media (min-width: $medium_screenm) {
     @content;
   }
 }

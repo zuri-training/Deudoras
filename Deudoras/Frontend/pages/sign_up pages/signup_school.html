@@ -12,10 +12,11 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../../style/signup_school/signup_school.css" />
+    <script src="../../scripts/signup_school.js" defer></script>
   </head>
   <body>
     <main>
-      <div class="">
+      <div class="logo-top">
         <img
           src="../../assets/signup_school assets/project debtor logo 2.png"
           alt="Logo"
@@ -34,45 +35,95 @@
               <h3>Registration Forms</h3>
               <p>Please fill the form below to register</p>
             </div>
+            <ul class="page3-header">
+              Password!
+              <li>Password must have at least one digit</li>
+              <li>Password must contain uppercase</li>
+              <li>Password must be minimum of 8 character</li>
+            </ul>
+            <form action="" id="Signup_School_Form">
+              <section class="form page1">
+                <div class="form_item">
+                  <label for="UserType">User Type <span>*</span></label>
+                  <select id="UserType">
+                    <option value="school">School</option>
+                  </select>
+                </div>
+                <div class="form_item">
+                  <label for="SchoolName">School Name <span>*</span></label>
+                  <input
+                    type="text"
+                    id="SchoolName"
+                    placeholder="Ava Memorial College"
+                  />
+                </div>
+                <div class="form_item">
+                  <label for="SchoolEmail">
+                    School Email Address <span>*</span>
+                  </label>
+                  <input
+                    type="email"
+                    id="SchoolEmail"
+                    placeholder="Avacollege@yahoo.com"
+                  />
+                </div>
+                <div>
+                  <button id="next-1" type="button">NEXT</button>
+                  <p class="alreadyAccount">
+                    Already have an account?
+                    <a href="#"><span>SIGN IN</span></a>
+                  </p>
+                </div>
+              </section>
+              <section class="form page2">
+                <div class="form_item">
+                  <label for="SchoolCAC">School CAC No <span>*</span></label>
+                  <input type="number" id="SchoolCAC" />
+                </div>
+                <div class="form_item">
+                  <label for="SchoolAddress"
+                    >Full School Address <span>*</span></label
+                  >
+                  <input type="text" id="SchoolAddress" />
+                </div>
+                <div class="form_item">
+                  <label for="LGA"> LGA <span>*</span> </label>
+                  <input type="text" id="LGA" />
+                </div>
+                <div>
+                  <button id="next-2" type="button">NEXT</button>
+                  <p class="alreadyAccount">
+                    Already have an account?
+                    <a href="#"><span>SIGN IN</span></a>
+                  </p>
+                </div>
+              </section>
+              <section class="form page3">
+                <div class="form_item">
+                  <label for="Password">Password <span>*</span></label>
+                  <input type="password" id="Password" />
+                </div>
+                <div class="form_item">
+                  <label for="ConfirmPassword"
+                    >Confirm Password <span>*</span></label
+                  >
+                  <input type="password" id="ConfirmPassword" />
+                </div>
+                <div class="form_item">
+                  <label class="checkbox">
+                    <input type="checkbox" name="agree" id="agree" />I agree to
+                    the<span>term and condition</span>
+                  </label>
+                </div>
 
-            <section class="form">
-              <div class="form_item">
-                <label for="UserType">User Type <span>*</span></label>
-                <select id="UserType">
-                  <option value="school">School</option>
-                </select>
-              </div>
-              <div class="form_item">
-                <label for="SchoolName">School Name <span>*</span></label>
-                <input
-                  type="text"
-                  id="SchoolName"
-                  placeholder="Ava Memorial College"
-                />
-              </div>
-              <div class="form_item">
-                <label for="SchoolEmail">
-                  School Email Address <span>*</span>
-                </label>
-                <input
-                  type="email"
-                  id="SchoolEmail"
-                  placeholder="Avacollege@yahoo.com"
-                />
-              </div>
-              <div>
-                <a href="signup_school_2.html"
-                  ><button type="submit">NEXT</button></a
-                >
-              </div>
-            </section>
-            <p class="alreadyAccount">
-              Already have an account? <a href="#"><span>SIGN IN</span></a>
-            </p>
+                <button type="submit">SIGN UP</button>
+                <p class="alreadyAccount">© 2020. All Rights Reserved.</p>
+              </section>
+            </form>
           </div>
         </section>
         <section id="main_2">
-          <div class="Container" id="main_info">
+          <div class="Container main_info page1-second">
             <img
               src="../../assets/signup_school assets/project debtor logo svg 1.png"
               alt="Logo"
@@ -103,6 +154,74 @@
               <p class="info-p">
                 Register your school on our platform and have access to upload
                 the database of students defaulters in your school.
+              </p>
+            </article>
+          </div>
+          <div class="Container main_info page2-second">
+            <img
+              src="../../assets/signup_school assets/project debtor logo svg 1.png"
+              alt="Logo"
+              class="desktop desktop-logo"
+            />
+            <img
+              src="../../assets/signup_school assets/Businesswoman making online payment via bank card mobile.png"
+              alt=""
+              class="mobile"
+            />
+            <img
+              src="../../assets/signup_school assets/Businesswoman making online payment via bank card tablet.png"
+              alt=""
+              class="mobile-tab"
+            />
+            <img
+              src="../../assets/signup_school assets/Businesswoman making online payment via bank card desktop.png"
+              alt=""
+              class="desktop desktop-hero-img"
+            />
+            <div class="desktop progress-bar">
+              <div></div>
+              <div class="active"></div>
+              <div></div>
+            </div>
+            <article class="desktop">
+              <h3>Track Down Students Owing</h3>
+              <p class="info-p">
+                Collaborate with other schools in your locality so they can
+                track down student debtors for you.
+              </p>
+            </article>
+          </div>
+          <div class="Container p-top main_info page3-second">
+            <img
+              src="../../assets/signup_school assets/project debtor logo svg 1.png"
+              alt="Logo"
+              class="desktop desktop-logo"
+            />
+            <img
+              src="../../assets/signup_school assets/Hands with house phone.png"
+              alt=""
+              class="mobile"
+            />
+            <img
+              src="../../assets/signup_school assets/Hands with house tablet.png"
+              alt=""
+              class="mobile-tab"
+            />
+            <img
+              src="../../assets/signup_school assets/Hands with house laptop.png"
+              alt=""
+              class="desktop desktop-hero-img"
+            />
+            <div class="desktop progress-bar">
+              <div></div>
+              <div></div>
+              <div class="active"></div>
+            </div>
+            <article class="desktop">
+              <h3>Get Them To Pay Before Registering</h3>
+              <p class="info-p">
+                By collaborating with other schools, you can get them to pay
+                before registering in a new school in the locality.
               </p>
             </article>
           </div>

@@ -14,16 +14,26 @@ body {
 
 h3 {
   color: $p-c-dark-blue;
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-size: clamp(1rem, 3.5vw, 1.5rem);
   line-height: 2rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  // margin-bottom: 0.5rem;
+  @include medium {
+    font-size: clamp(1rem, 3.5vw, 1.5rem);
+  }
+  @include mmedium {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+  }
 }
 p {
   color: $para-color;
-  font-size: clamp(1rem, 2.5vw, 1.4rem);
-  line-height: 2rem;
+  font-size: clamp(0.7rem, 3.5vw, 1rem);
+  line-height: 1.7rem;
   font-weight: 400;
+  @include mmedium {
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+    line-height: 2rem;
+  }
 }
 label span {
   color: $danger;
@@ -33,6 +43,8 @@ button {
   border: none;
   outline: none;
   padding: 1rem;
+  font-weight: 600;
+  font-size: 1rem;
   width: 100%;
   border-radius: 8px;
   color: white;
@@ -44,6 +56,11 @@ button {
 label {
   color: $light-greyish;
   font-weight: 600;
+  font-size: clamp(0.7rem, 3.5vw, 1rem);
+
+  @include mmedium {
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+  }
 }
 .alreadyAccount {
   color: $grayishbalck;
@@ -63,6 +80,9 @@ label {
   }
   @include large {
     width: 90%;
+    padding-top: 1.5rem;
+  }
+  @include mmedium {
     padding-block: 2rem;
   }
 }
@@ -124,31 +144,36 @@ img {
       width: 50%;
     }
   }
-  &_info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    margin-bottom: 0;
+}
+.main_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 0;
 
-    @include large {
-      margin-bottom: 0;
-    }
+  @include large {
+    margin-bottom: 0;
   }
 }
 .desktop-logo {
   align-self: end;
-  margin-bottom: 3rem;
+  @include mmedium {
+    margin-bottom: 3rem;
+  }
 }
 .desktop-hero-img {
-  margin-bottom: 2rem;
+  @include mmedium {
+    margin-bottom: 2rem;
+  }
 }
 .progress-bar {
   @include large {
     display: flex;
     gap: 1em;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+
     div {
       width: 45px;
       height: 10px;
@@ -159,6 +184,9 @@ img {
       width: 70px;
       background-color: $p-c-dark-blue;
     }
+  }
+  @include mmedium {
+    margin-bottom: 2rem;
   }
 }
 .info {
@@ -173,12 +201,16 @@ img {
   margin-bottom: 1.2rem;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+
   @include medium {
+    gap: 4px;
     text-align: center;
   }
   @include large {
     text-align: left;
+    margin-bottom: 3rem;
+  }
+  @include mmedium {
     margin-bottom: 5rem;
   }
 }
@@ -187,14 +219,20 @@ img {
   flex-direction: column;
   gap: 1.5rem;
   @include large {
+    gap: 2rem;
+  }
+  @include mmedium {
     gap: 3.5rem;
   }
   input,
   select {
-    padding: 1em;
+    padding: 0.7rem;
     border-radius: 8px;
     font-size: 1rem;
     border: 1px solid $light-greyish;
+    @include medium {
+      padding: 1rem;
+    }
   }
   &_item {
     display: flex;
@@ -228,4 +266,19 @@ ul {
   span {
     color: #575894;
   }
+}
+
+.logo-top {
+  padding-top: 1.5rem;
+  @include large {
+    padding-top: 0;
+  }
+}
+
+.page2,
+.page3,
+.page2-second,
+.page3-second,
+.page3-header {
+  display: none;
 }
