@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #03045e;
+  --secondary-color: #0077b6;
+  --background-color: #f6faff;
+}
+body {
+  background-color: var(--background-color);
+}
+nav {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  justify-content: space-between;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
+.nav-section {
+  display: flex;
+}
+.nav-links {
+  display: flex;
+  margin: 10px 50px;
+}
+.nav-links ul {
+  display: flex;
+}
+.nav-links li a {
+  padding: 0px 10px;
+}
+.nav-buttons {
+  padding: 10px 10px;
+}
+.section-1 {
+  display: flex;
+  margin: auto;
+  width: 90%;
+}
+.first-card {
+  display: flex;
+  margin: auto;
+  width: 90%;
+}
+.second-card {
+  display: flex;
+  margin: auto;
+  width: 90%;
+}
+.third-card {
+  display: flex;
+  margin: auto;
+  width: 90%;
+}
+.section-3 {
+  text-align: center;
+}
+.plate-1 {
+  display: flex;
+  margin: auto;
+  width: 90%;
+}
+.plate-2 {
+  display: flex;
+  margin: auto;
+  width: 90%;
+}
+.plate-3 {
+  display: flex;
+  margin: auto;
+  width: 90%;
+}
+.plate-4 {
+  display: flex;
+  margin: auto;
+  width: 90%;
+}
+.plate-5 {
+  display: flex;
+  margin: auto;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+}
