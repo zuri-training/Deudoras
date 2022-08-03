@@ -1,42 +1,61 @@
-var myInput = document.getElementById("password");
-var capital = document.getElementById("capital");
-var number = document.getElementById("number");
-var length = document.getElementById("length");
+function validateForm(){
+var myInput = document.getElementById("password").value;
+var myInput2 = document.getElementById("cpassword").value;
 
-myInput.onfocus = function(){
-  document.getElementById("message").style.display = "block";
-  }
 
-myInput.onblur = function(){
-  document.getElementById("message").style.display = "none";
-  }
+if(myInput == ""){
+    document.getElementById("message1").innerHTML = "**Fill the password please!";
+    return false;
+}
 
-myInput.onkeyup = function(){
-  var upperCaseLettters = /[A-Z]/g;
-  if (myInput.value.match(upperCaseLetters)){
-    capital.classList.remvove("invalid");
-    capital.classList.add("valid");
-    }else{
-      capital.classList.remove("valid");
-      capital.classList.add("invalid");
-      }
-  var numbers = /[0-9]/g;
-  if (myInput.value.match(numbers)){
-    number.classList.remvove("invalid");
-    number.classList.add("valid");
-    }else{
-      number.classList.remove("valid");
-      number.classList.add("invalid");
-      }
-  if (myInput.value.length >= 8){
-    length.classList.remvove("invalid");
-    length.classList.add("valid");
-    }else{
-      length.classList.remove("valid");
-      length.classList.add("invalid");
-      }
+if(myInput2 == ""){
+    document.getElementById("message2").innerHTML = "**Enter the password please!";
+    return false;
+}
+
+if(myInput.length < 8){
+    document.getElementById("message1").innerHTML = "**Password length must be atleast 8 characters";
+    return false;
+}
+
+/*
+var numbers = /[0-9]/g;
+if not (myInput.match(numbers)){
+    document.getElementById("message1").innerHTML = "**Password length must contain a number";
+    return false;
+}    
+
+var upperCaseLettters = /[A-Z]/g;
+if not (myInput.match(upperCaseLetters)){
+    document.getElementById("message1").innerHTML = "**Password length must contain an uppercase";
+    return false;
+}*/
+ 
+    
+if(myInput != myInput2){
+    document.getElementById("message2").innerHTML = "**Passwords are not same";
+    return false;
+}else{
+    alert("Your password created successfully");
+    document.write("JavaScript form has been submitted successfully");
+}
 }
 
 
+/* check box for password */
+function myFunction(){
+  if (myInput.type === "password"){
+    myInput.type = "text";
+  }else{
+    myInput.type = "password";
+  }
+}
 
-
+/* check box for confirm password */
+function myFunc(){
+  if (myInput2.type === "password"){
+    myInput2.type = "text";
+  }else{
+    myInput2.type = "password";
+  }
+}
