@@ -187,7 +187,6 @@ li {
   color: #03034e;
 }
 .simplicity-image img {
-  width: 541px;
   height: 493px;
 }
 .simplicity button {
@@ -204,6 +203,7 @@ li {
   font-size: 13px;
   letter-spacing: 0.0125em;
   color: #fafbfc;
+  margin-bottom: 62px;
 }
 .s-p1 {
   font-family: var(--font-family);
@@ -223,7 +223,7 @@ li {
   line-height: 22px;
   letter-spacing: 0.005em;
   color: #000814;
-  margin-bottom: 90px;
+  margin-bottom: 121px;
 }
 .second-card {
   display: flex;
@@ -231,11 +231,14 @@ li {
   width: 90%;
 }
 .contention {
-  margin: 20px 76px;
+  width: 100%;
+}
+.contention-image {
+  width: 100%;
 }
 .contention-image img {
-  width: 640px;
-  margin-top: -110px;
+  margin-top: -47px;
+  margin-right: 32px;
 }
 .contention h2 {
   font-family: var(--font-family);
@@ -288,10 +291,9 @@ li {
   width: 90%;
 }
 .privacy {
-  margin: 10px 85px;
+  margin: 72px 124px;
 }
 .privacy-image img {
-  margin-top: -100px;
   margin-bottom: 160px;
 }
 .privacy button {
