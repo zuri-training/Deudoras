@@ -563,7 +563,7 @@ li {
   border-radius: 8px;
 }
 .help-2 button a {
-  font-family: "Manrope";
+  font-family: var(--font-family);
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -591,4 +591,74 @@ li {
   line-height: 27px;
   letter-spacing: 0.0015em;
   color: #ffffff;
+}
+footer {
+  margin-top: 224px;
+  background-color: #03034e;
+  height: 256px;
+}
+.footer {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+.footer-1 {
+  display: flex;
+  padding: 32.82px;
+  width: 50%;
+  margin-left: 71.59px;
+}
+.community,
+.company,
+.join,
+.platform {
+  padding-left: 30px;
+}
+.footer-2 {
+  width: 30%;
+}
+.footer-3 {
+  width: 20%;
+}
+.li {
+  font-family: var(--font-family);
+  width: 75.05px;
+  height: 11.32px;
+  color: #fafbfc;
+  margin-bottom: 12.56px;
+}
+.footer-1 li a {
+  font-family: var(--font-family);
+  width: 59.21px;
+  height: 7.5px;
+  color: #fafbfc;
+  font-size: 11.5px;
+}
+.subscribe h2 {
+  font-family: var(--font-family);
+  width: 218.95px;
+  height: 12.08px;
+  color: #fafbfc;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 12.54px;
+}
+.subscribe p {
+  margin-bottom: 27.7px;
+  color: #fafbfc;
+  font-size: 12px;
+  font-family: var(--font-family);
+}
+.social h3 {
+  color: #fafbfc;
+  font-size: 16px;
+  font-family: var(--font-family);
+  font-weight: 400;
+}
+.social p {
+  color: #fafbfc;
+  font-family: var(--font-family);
+  font-size: 12px;
 }
