@@ -672,9 +672,19 @@ footer {
   font-size: 16px;
   font-family: var(--font-family);
   font-weight: 400;
+  margin-bottom: 4px;
+  text-align: center;
 }
 .social p {
   color: #fafbfc;
   font-family: var(--font-family);
   font-size: 12px;
+  text-align: center;
+}
+.social a img {
+  margin-bottom: 7px;
+  padding-left: 14px;
+}
+.mine {
+  margin-left: 72px;
 }
