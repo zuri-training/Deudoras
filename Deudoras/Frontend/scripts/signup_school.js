@@ -14,11 +14,10 @@ console.log(thirdPageSecond);
 //page1
 let schoolName = document.getElementById("SchoolName");
 let schoolEmail = document.getElementById("SchoolEmail");
-// let emailError = document.getElementById("SchoolEmailError");
-// let NameError = document.getElementById("SchoolNameError");
 
 //page 2
 let schoolCAC = document.getElementById("SchoolCAC");
+let schoolCACDanger = document.querySelector(".school-danger");
 let SchoolAddress = document.getElementById("SchoolAddress");
 let SchoolLGA = document.getElementById("LGA");
 
@@ -26,6 +25,7 @@ let SchoolLGA = document.getElementById("LGA");
 let Schoolpassword = document.getElementById("Password");
 let ConfirmPassword = document.getElementById("ConfirmPassword");
 let agree = document.getElementById("agree");
+let ConfirmError = document.querySelector(".page-3_confirmError");
 
 //button selector
 let firstPageBtn = document.getElementById("next-1");
@@ -61,12 +61,18 @@ schoolEmail.addEventListener("change", (e) => {
 
 firstPageBtn.addEventListener("click", (e) => {
   if (!schoolNameRegex && !schoolEmailRegex) {
-    // emailError.style.display = "block";
-    // NameError.style.display = "block";
+    ConfirmError.innerHTML = "<div> Fill in the field properly </div>";
+    ConfirmError.style.display = "block";
+    schoolName.style.borderColor = "#d31616";
+    schoolEmail.style.borderColor = "#d31616";
   } else if (!schoolNameRegex) {
-    // NameError.style.display = "block";
+    ConfirmError.innerHTML = "<div> Input the school name  </div>";
+    ConfirmError.style.display = "block";
+    schoolName.style.borderColor = "#d31616";
   } else if (!schoolEmailRegex) {
-    // emailError.style.display = "block";
+    ConfirmError.innerHTML = "<div> Invalid school email  </div>";
+    ConfirmError.style.display = "block";
+    schoolEmail.style.borderColor = "#d31616";
   } else {
     firstPage.style.display = "none";
     firstPageSecond.style.display = "none";
@@ -97,15 +103,23 @@ SchoolLGA.addEventListener("change", (e) => {
 
 secondPageBtn.addEventListener("click", (e) => {
   if (!schoolCACRegex && !SchoolAddressRegex && !SchoolLGARegex) {
-    // CACError.style.display = "block";
-    // AddressError.style.display = "block";
-    // LGAError.style.display = "block";
+    ConfirmError.innerHTML = "<div> Fill in the field properly </div>";
+    ConfirmError.style.display = "block";
+    SchoolAddress.style.borderColor = "#d31616";
+    SchoolLGA.style.borderColor = "#d31616";
+    schoolCAC.style.borderColor = "#d31616";
   } else if (!schoolCACRegex) {
-    // CACError.style.display = "block";
+    schoolCACDanger.style.display = "block";
+
+    schoolCAC.style.borderColor = "#d31616";
   } else if (!SchoolAddressRegex) {
-    // AddressError.style.display = "block";
+    ConfirmError.innerHTML = "<div> Input the address field  </div>";
+    ConfirmError.style.display = "block";
+    SchoolAddress.style.borderColor = "#d31616";
   } else if (!SchoolLGARegex) {
-    // LGAError.style.display = "block";
+    ConfirmError.innerHTML = "<div> Input the LGA field  </div>";
+    ConfirmError.style.display = "block";
+    SchoolLGA.style.borderColor = "#d31616";
   } else {
     secondPage.style.display = "none";
     secondPageSecond.style.display = "none";
@@ -119,16 +133,16 @@ secondPageBtn.addEventListener("click", (e) => {
 let Password_Input;
 Schoolpassword.addEventListener("change", (e) => {
   Password_Input = e.target.value;
-  return Password_Input;
+  const regex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/gim;
+  console.log(Password_Input);
+  SchoolpasswordRegex = regex.test(Password_Input);
+  console.log(SchoolpasswordRegex);
+  return SchoolpasswordRegex, Password_Input;
 });
 
-SchoolpasswordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/gi.test(
-  Password_Input
-);
-
 ConfirmPassword.addEventListener("change", (e) => {
-  console.log("Schoolpaswordregex state" + SchoolpasswordRegex);
   let Input = e.target.value;
+  console.log(Input);
   ConfirmPasswordRegex = Password_Input === Input;
   console.log(ConfirmPasswordRegex);
   return ConfirmPasswordRegex;
@@ -137,15 +151,28 @@ console.log(ConfirmPasswordRegex);
 
 signUpbtn.addEventListener("click", (e) => {
   if (!ConfirmPasswordRegex && !SchoolpasswordRegex) {
-    // ConfirmError.style.display = "block";
-    // passwordError.style.display = "block";
-    // agreeError.style.display = "block";
+    ConfirmError.innerHTML = "<div> Fill in the field properly  </div>";
+    ConfirmError.style.display = "block";
+    thirdPageHeader.style.display = "none";
+    ConfirmPassword.style.borderColor = "#d31616";
+    Schoolpassword.style.borderColor = "#d31616";
     e.preventDefault();
   } else if (!SchoolpasswordRegex) {
+    ConfirmError.innerHTML = "<div> Use the hint for password </div>";
+    ConfirmError.style.display = "block";
+    thirdPageHeader.style.display = "none";
+    if (Password_Input < 8) {
+      ConfirmError.innerHTML = "<div> password is too short </div>";
+      ConfirmError.style.display = "block";
+      Schoolpassword.style.borderColor = "#d31616";
+      e.preventDefault();
+    }
     e.preventDefault();
-    // passwordError.style.display = "block";
   } else if (!ConfirmPassword) {
-    // ConfirmError.style.display = "block";
+    ConfirmError.innerHTML = "<div> Password does not match! </div>";
+    ConfirmError.style.display = "block";
+    thirdPageHeader.style.display = "none";
+    ConfirmPassword.style.borderColor = "#d31616";
     e.preventDefault();
   } else {
   }

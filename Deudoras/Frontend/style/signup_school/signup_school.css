@@ -108,7 +108,6 @@ label {
 @media (min-width: 900px) {
   .Container {
     width: 90%;
-    padding-top: 1.5rem;
   }
 }
 
@@ -187,16 +186,16 @@ img {
         -ms-flex-direction: row;
             flex-direction: row;
     gap: 0;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
   }
 }
 
 @media (min-width: 900px) {
   #main_2 {
     background-color: #f6faff;
-    height: 100vh;
+    padding-bottom: 2rem;
     width: 50%;
   }
 }
@@ -204,7 +203,7 @@ img {
 @media (min-width: 900px) {
   #main_1 {
     background-color: white;
-    height: 100vh;
+    padding-block: 2rem;
     width: 50%;
   }
 }
@@ -277,19 +276,23 @@ img {
   }
 }
 
-.info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 0.5rem;
-}
-
-.info info-p {
-  width: 60%;
+@media (min-width: 900px) {
+  .info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0.5rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .info p {
+    width: 70%;
+  }
 }
 
 .form_header {
@@ -422,11 +425,80 @@ ul li {
   }
 }
 
+.page-3_confirmError {
+  background-color: #f0b1b1;
+  color: #d31616;
+  width: 100%;
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 0.7rem;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 650px) {
+  .page-3_confirmError {
+    padding: 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .page-3_confirmError {
+    font-size: 1.2rem;
+  }
+}
+
+.school-danger {
+  color: #d31616;
+  font-size: 0.7rem;
+}
+
+@media (min-width: 650px) {
+  .school-danger {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .school-danger {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .site-tip {
+    margin-top: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 2rem;
+  }
+}
+
+#Signup_School_Form {
+  margin-top: 0;
+}
+
+.hero-p3 {
+  width: 80%;
+}
+
 .page2,
 .page3,
 .page2-second,
 .page3-second,
-.page3-header {
+.page3-header,
+.page-3_confirmError,
+.school-danger {
   display: none;
 }
 /*# sourceMappingURL=signup_school.css.map */

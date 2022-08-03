@@ -80,7 +80,7 @@ label {
   }
   @include large {
     width: 90%;
-    padding-top: 1.5rem;
+    // padding-top: 1.5rem;
   }
   @include mmedium {
     padding-block: 2rem;
@@ -127,20 +127,20 @@ img {
   @include large {
     flex-direction: row;
     gap: 0;
-    align-items: center;
+    align-items: stretch;
   }
 
   &_2 {
     @include large {
       background-color: $Background-col;
-      height: 100vh;
+      padding-bottom: 2rem;
       width: 50%;
     }
   }
   &_1 {
     @include large {
       background-color: white;
-      height: 100vh;
+      padding-block: 2rem;
       width: 50%;
     }
   }
@@ -189,12 +189,18 @@ img {
     margin-bottom: 2rem;
   }
 }
+// .info-p {
+//   width: 60%;
+// }
 .info {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  info-p {
-    width: 60%;
+  @include large {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    p {
+      width: 70%;
+    }
   }
 }
 .form_header {
@@ -274,11 +280,55 @@ ul {
     padding-top: 0;
   }
 }
-
+.page-3_confirmError {
+  background-color: #f0b1b1;
+  color: $danger;
+  width: 100%;
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 0.7rem;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  @include medium {
+    padding: 2rem;
+    font-size: 1rem;
+  }
+  @include large {
+    font-size: 1.2rem;
+  }
+}
+.school-danger {
+  color: $danger;
+  font-size: 0.7rem;
+  @include medium {
+    font-size: 1rem;
+  }
+  @include large {
+    font-size: 1.2rem;
+  }
+}
+.site-tip {
+  @include large {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+#Signup_School_Form {
+  margin-top: 0;
+}
+.hero-p3 {
+  width: 80%;
+}
 .page2,
 .page3,
 .page2-second,
 .page3-second,
-.page3-header {
+.page3-header,
+.page-3_confirmError,
+.school-danger {
   display: none;
 }
