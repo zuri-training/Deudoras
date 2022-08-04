@@ -1,0 +1,94 @@
+@import "./reset";
+@import "./variable";
+
+body {
+    background-color: #F6FAFF;
+    padding: 2em 4em;
+}
+
+nav {
+    padding: 2em 0;
+    border: 1px solid green;
+    
+}
+
+.nav_links {
+    display: flex;
+    justify-content: space-between;
+}
+.nav_links_1{
+    margin: auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav_links_2 {
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 0.3em 0.3em;
+    box-shadow: 0em 0.2em #DFE2ED;
+}
+
+.nav_items:not(:first-child):not(:last-child) {
+    margin: 0 0 0 2em;
+}
+.nav_items.article {
+    margin-left: 2em;
+}
+
+.nav_items.dash {
+    background-color: white;
+    padding: 0.4em;
+    border-radius: 5px;
+    box-shadow: 0em 0.2em #DFE2ED;
+}
+
+.nav_items_2 {
+    margin: 0 0.5em;
+}
+
+.main_welcome{
+    margin: 2em 0;
+}
+.main_child_info{
+    margin: 2em 0;
+}
+.main_student_name{
+    margin: 2em 0;
+}
+
+.main_student_detail {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    padding: 1em;
+    background-color: aqua;
+}
+.main_student_detail_2 {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    padding: 1em;
+    background-color: aquamarine;
+}
+
+.main_brkdwn_stdnt_debt{
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+.main_brkdwn_stdnt_debt_session{
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    padding: 1em;
+    background-color: aqua;
+}
+.main_brkdwn_stdnt_debt_detail{
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    padding: 1em;
+    background-color: white;
+    border-bottom: 2px solid lightblue;
+}
