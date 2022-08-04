@@ -15,6 +15,11 @@
 .span-1 {
   color: var(--secondary-color);
 }
+.radical {
+  height: 150px;
+  width: 200px;
+  background-image: radial-gradient(black, black);
+}
 button {
   cursor: pointer;
 }
@@ -25,14 +30,20 @@ nav {
   display: flex;
   width: 80%;
   margin: 24px auto;
+  justify-content: center;
 }
 nav img {
   width: 91px;
   height: 35px;
   margin-top: 6px;
+  width: 10%;
 }
 a {
   text-decoration: none;
+}
+i {
+  padding-left: 15px;
+  padding-top: 5px;
 }
 .active {
   padding: 4px 8px;
@@ -49,6 +60,7 @@ li {
 }
 .nav-section {
   display: flex;
+  width: 90%;
 }
 .nav-links {
   margin-left: 40px;
@@ -73,7 +85,7 @@ li {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  margin-left: 15.5em;
+  margin-left: 24%;
 }
 .nav-button-1 {
   border: none;
@@ -108,12 +120,13 @@ li {
   display: flex;
   margin: auto;
   width: 80%;
+  justify-content: center;
 }
 .division-1 {
-  width: 30%;
+  width: 100%;
 }
 .division-2 {
-  width: 50%;
+  width: 100%;
 }
 .division-1 h2 {
   font-family: var(--font-family);
@@ -251,7 +264,7 @@ li {
   width: 100%;
 }
 .contention-image img {
-  margin-top: -47px;
+  margin-top: -45px;
   margin-right: 32px;
 }
 .contention h2 {
@@ -386,6 +399,7 @@ li {
   display: flex;
   margin: auto;
   width: 80%;
+  justify-content: center;
 }
 .plate-1-image img {
   width: 490px;
@@ -430,6 +444,7 @@ li {
   display: flex;
   margin: auto;
   width: 80%;
+  justify-content: center;
 }
 .data-1 {
   font-family: var(--font-family);
@@ -470,6 +485,7 @@ li {
   display: flex;
   margin: auto;
   width: 80%;
+  justify-content: center;
 }
 .completion {
   margin-left: 178px;
@@ -508,6 +524,114 @@ li {
   letter-spacing: 0.0015em;
   color: #010113;
 }
+.carousel {
+  height: 576px;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  background-color: #cce4f0;
+  margin-bottom: 174px;
+}
+.testimonial {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  padding: 50px 0;
+  overflow: hidden;
+}
+.testimonial .image {
+  margin-top: -90px;
+  height: 170px;
+  width: 170px;
+  object-fit: cover;
+  border: 2px solid #02033f;
+  border-radius: 50%;
+}
+.testimonial .slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 30px;
+  height: 100%;
+  width: 100%;
+}
+.slide p {
+  text-align: center;
+  padding: 0 160px;
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.005em;
+  color: #02033f;
+  margin-bottom: 16px;
+}
+
+.slide .details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.details .name {
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.0025em;
+  color: #02033f;
+  margin-bottom: 16px;
+}
+
+.fa-twitter {
+  color: #f6faff;
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  top: 16px;
+  left: -418px;
+  background: #000814;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+}
+/* swiper button css */
+.nav-btn {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  transform: translateY(30px);
+  transition: 0.2s;
+  margin-top: -170px;
+}
+.nav-btn:hover {
+  height: 40px;
+  width: 40px;
+}
+.nav-btn::after,
+.nav-btn::before {
+  font-size: 32px;
+  color: #02033f;
+}
+.swiper-pagination {
+  padding-bottom: 99px;
+}
+.swiper-button-next {
+  margin-right: 180px;
+}
+.swiper-button-prev {
+  margin-left: 180px;
+}
+.swiper-pagination-bullet {
+  background: #d9d9d9;
+  opacity: 0.6;
+}
+.swiper-pagination-bullet-active {
+  background-color: #fafbfc;
+}
 .plate-4 {
   display: flex;
   margin: auto;
@@ -520,7 +644,7 @@ li {
   width: 100%;
 }
 .goals-image img {
-  margin-left: 80px;
+  margin-left: 140px;
   width: 386px;
   height: 299.73px;
   margin-bottom: 229px;
@@ -566,8 +690,12 @@ li {
   text-align: center;
   margin-bottom: 40px;
 }
-.help-2 {
-  margin-left: 11%;
+.center {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
 }
 .help-2 button {
   padding: 8px;
@@ -590,7 +718,6 @@ li {
   opacity: 0.6;
 }
 .read-more {
-  margin-left: 37%;
   margin-top: 40px;
   padding: 16px 24px;
   width: 331px;
