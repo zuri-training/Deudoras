@@ -1,0 +1,784 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  display: flex;
+  height: 100vh;
+}
+.container-content1 {
+  padding: 0 3em;
+  margin: 0 auto;
+  /* margin-top: 2em; */
+  width: 50%;
+  /* background-color: red; */
+}
+.content {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 6em;
+  /* background-color: green; */
+}
+article {
+  /* text-align: center; */
+  margin: 0 auto;
+  margin-bottom: 1em;
+  /* padding: 0 7em; */
+  /* background-color: blue; */
+  max-width: 370px;
+  width: 100%;
+}
+article h1 {
+  color: #03045e;
+  margin-bottom: 0.2em;
+  font-size: 1.7rem;
+  letter-spacing: 0.25%;
+  font-family: 'Manrope', sans-serif;
+}
+article p {
+  font-family: 'Manrope', sans-serif;
+  color: #323232;
+  letter-spacing: 0.0015em;
+  font-size: 0.9rem;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.form-controller {
+  max-width: 370px;
+  width: 90%;
+  /* background-color: aqua; */
+  position: relative;
+  padding: 0.5em 0;
+}
+.form-controller label {
+  color: #535454;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  margin-top: 0;
+  display: block;
+  margin-bottom: 0.3em;
+}
+.form-controller input {
+  padding: 1em;
+  width: 100%;
+  border: 1px solid #535454;
+  border-radius: 8px;
+}
+input::placeholder {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.8rem;
+}
+.password::placeholder {
+  font-family: 'Manrope', sans-serif;
+  color: #535454;
+  font-size: 1rem;
+}
+.form-controller.error small {
+  visibility: visible;
+  color: #e26464;
+  margin-left: 0.5em;
+}
+.form-controller.error input {
+  border: 1px solid #e26464;
+}
+
+.btn-eye {
+  position: absolute;
+  right: 3%;
+  top: 38%;
+  border: none;
+  background-color: #fff;
+}
+.btn-eye i {
+  color: #535454;
+  font-size: 1.5rem;
+}
+small {
+  visibility: hidden;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.005em;
+  font-size: 0.7em;
+}
+.form-controll {
+  max-width: 370px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
+.forgot {
+  text-decoration: none;
+  color: #006398;
+  margin-top: 2em;
+  font-size: 0.83rem;
+  font-family: 'Manrope', sans-serif;
+}
+.box {
+  /* background-color: #03045e; */
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.remember {
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  display: flex;
+  font-size: 0.83rem;
+
+  gap: 0.5em;
+  color: #006398;
+  /* background-color: red; */
+}
+.check {
+  border: 1px solid #006398;
+  padding: 4em;
+  margin-top: 0.1em;
+}
+.container-content2 {
+  background-color: #f6faff;
+  width: 50%;
+}
+.btn {
+  width: 100%;
+  padding: 0.9em 1.7em;
+  background-color: #03045e;
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  margin-bottom: 0.5em;
+  box-shadow: 0px 2px 3px rgba(3, 4, 94, 0.3),
+    0px 6px 10px 4px rgba(3, 4, 94, 0.15);
+}
+
+/* Words with lie through */
+.log {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+  text-transform: uppercase;
+  font-family: 'Manrope', sans-serif;
+  letter-spacing: 0.001em;
+  font-size: 0.815rem;
+  color: #02022f;
+}
+
+.log span {
+  background: #fff;
+  padding: 0 10px;
+}
+.google {
+  font-family: 'Manrope', sans-serif;
+  width: 100%;
+  padding: 0.4em;
+  text-transform: uppercase;
+  gap: 0.5em;
+  background-color: #fff;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #03045e;
+  border-radius: 8px;
+  letter-spacing: 0.0125em;
+  display: flex;
+}
+.signup {
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-size: 00.83rem;
+  color: #03035e;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.google span img {
+  width: 24px;
+}
+/* For the second side of the form */
+.logo {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 2em;
+}
+.logo img {
+  width: 40%;
+}
+.image {
+  width: 80%;
+  margin: 0 auto;
+}
+.image img {
+  width: 100%;
+}
+.log-google {
+  margin-top: 1em;
+}
+.log-signup {
+  margin-top: 0.5em;
+}
+@media screen and (max-width: 992px) {
+  .container {
+    width: 100%;
+    display: flex;
+    height: 100vh;
+  }
+  .container-content1 {
+    padding: 0 3em;
+    margin: 0 auto;
+    /* margin-top: 2em; */
+    width: 50%;
+    /* background-color: red; */
+  }
+  .content {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 6em;
+    /* background-color: green; */
+  }
+  article {
+    /* text-align: center; */
+    margin: 0 auto;
+    margin-bottom: 1em;
+    /* padding: 0 7em; */
+    /* background-color: blue; */
+    max-width: 370px;
+    width: 100%;
+  }
+  article h1 {
+    color: #03045e;
+    margin-bottom: 0.2em;
+    font-size: 1.7rem;
+    letter-spacing: 0.25%;
+    font-family: 'Manrope', sans-serif;
+  }
+  article p {
+    font-family: 'Manrope', sans-serif;
+    color: #323232;
+    letter-spacing: 0.0015em;
+    font-size: 0.9rem;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+  .form-controller {
+    max-width: 370px;
+    width: 90%;
+    /* background-color: aqua; */
+    position: relative;
+    padding: 0.5em 0;
+  }
+  .form-controller label {
+    color: #535454;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    margin-top: 0;
+    display: block;
+    margin-bottom: 0.3em;
+  }
+  .form-controller input {
+    padding: 1em;
+    width: 100%;
+    border: 1px solid #535454;
+    border-radius: 8px;
+  }
+  input::placeholder {
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.8rem;
+  }
+  .password::placeholder {
+    font-family: 'Manrope', sans-serif;
+    color: #535454;
+    font-size: 1rem;
+  }
+  .btn-eye {
+    position: absolute;
+    right: 2%;
+    top: 40%;
+    border: none;
+    background-color: #fff;
+  }
+  .btn-eye img {
+    width: 28px;
+  }
+  small {
+    visibility: hidden;
+  }
+  .form-controll {
+    max-width: 370px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+  }
+  .forgot {
+    text-decoration: none;
+    color: #006398;
+    margin-top: 2em;
+    font-size: 0.83rem;
+    font-family: 'Manrope', sans-serif;
+  }
+  .box {
+    /* background-color: #03045e; */
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .remember {
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    display: flex;
+    font-size: 0.83rem;
+
+    gap: 0.5em;
+    color: #006398;
+    /* background-color: red; */
+  }
+  .check {
+    border: 1px solid #006398;
+    padding: 4em;
+    margin-top: 0.1em;
+  }
+  .container-content2 {
+    background-color: #f6faff;
+    width: 50%;
+  }
+  .btn {
+    width: 100%;
+    padding: 0.9em 1.7em;
+    background-color: #03045e;
+    border: none;
+    color: #fff;
+    border-radius: 8px;
+    margin-bottom: 0.5em;
+    box-shadow: 0px 2px 3px rgba(3, 4, 94, 0.3),
+      0px 6px 10px 4px rgba(3, 4, 94, 0.15);
+  }
+
+  /* Words with lie through */
+  .log {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    line-height: 0.1em;
+    margin: 10px 0 20px;
+    text-transform: uppercase;
+    font-family: 'Manrope', sans-serif;
+    letter-spacing: 0.001em;
+    font-size: 0.815rem;
+    color: #02022f;
+  }
+
+  .log span {
+    background: #fff;
+    padding: 0 10px;
+  }
+  .google {
+    font-family: 'Manrope', sans-serif;
+    width: 100%;
+    padding: 0.4em;
+    text-transform: uppercase;
+    gap: 0.5em;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #03045e;
+    border-radius: 8px;
+    letter-spacing: 0.0125em;
+    display: flex;
+  }
+  .signup {
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-size: 00.83rem;
+    color: #03035e;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .google span img {
+    width: 24px;
+  }
+  /* For the second side of the form */
+  .logo {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2em;
+  }
+  .logo img {
+    width: 40%;
+  }
+  .image {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .image img {
+    width: 100%;
+  }
+  .log-google {
+    margin-top: 1em;
+  }
+  .log-signup {
+    margin-top: 0.5em;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    min-height: 160vh;
+    background-color: #f6faff;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .container-content2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    /* max-width: 375px; */
+    width: 100%;
+    order: 1;
+  }
+  .container-content1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* max-width: 375px; */
+    margin-top: 0;
+    background-color: #f6faff;
+    width: 100%;
+    padding: 0 2em;
+    order: 2;
+    margin: 0 auto;
+  }
+  .content {
+    margin-top: 0;
+    max-width: 414px;
+    width: 100%;
+  }
+  article {
+    max-width: 414px;
+    /* max-width: 568px; */
+    width: 100%;
+  }
+  article h1 {
+    font-size: 1.5rem;
+  }
+  article p {
+    font-size: 0.9rem;
+  }
+  form {
+    /* max-width: 375px; */
+    width: 100%;
+    margin: 0 auto;
+  }
+  .form-controller {
+    max-width: 568px;
+    width: 100%;
+  }
+  .form-controller input {
+    background-color: #f6faff;
+    border: 1px solid #535454;
+  }
+  .logo {
+    /* max-width: 375px; */
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    /* margin: 0 auto; */
+  }
+  .logo img {
+    margin-top: 1em;
+    margin-left: 2em;
+    width: 25%;
+  }
+  .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 375px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .image img {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+  .btn-eye {
+    background-color: #f6faff;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  body {
+    min-height: 160vh;
+    background-color: #f6faff;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .container-content2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    /* max-width: 375px; */
+    width: 100%;
+    order: 1;
+  }
+  .container-content1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* max-width: 375px; */
+    margin-top: 0;
+    background-color: #f6faff;
+    width: 100%;
+    padding: 0 2em;
+    order: 2;
+    margin: 0 auto;
+  }
+  .content {
+    margin-top: 0;
+    max-width: 375px;
+    width: 100%;
+  }
+  article {
+    /* max-width: 568px; */
+    width: 100%;
+  }
+  article h1 {
+    font-size: 1.5rem;
+  }
+  article p {
+    font-size: 0.9rem;
+  }
+  form {
+    /* max-width: 375px; */
+    width: 100%;
+    margin: 0 auto;
+  }
+  .form-controller {
+    max-width: 568px;
+    width: 100%;
+  }
+  .form-controller input {
+    background-color: #f6faff;
+    border: 1px solid #535454;
+  }
+  .logo {
+    /* max-width: 375px; */
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    /* margin: 0 auto; */
+  }
+  .logo img {
+    margin-top: 1em;
+    margin-left: 2em;
+    width: 35%;
+  }
+  .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 375px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .image img {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+  .btn-eye {
+    background-color: #f6faff;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  body {
+    background-color: #f6faff;
+    min-height: 125vh;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .container-content2 {
+    width: 100%;
+    order: 1;
+  }
+  .container-content1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* max-width: 375px; */
+    margin-top: 0;
+    background-color: #f6faff;
+    width: 100%;
+    padding: 0 2em;
+    order: 2;
+    margin: 0 auto;
+  }
+  article {
+    width: 100%;
+  }
+  article h1 {
+    font-size: 1.5rem;
+  }
+  article p {
+    font-size: 0.9rem;
+  }
+  form {
+    /* max-width: 375px; */
+    width: 100%;
+    margin: 0 auto;
+  }
+  .form-controller {
+    /* max-width: 375px; */
+    width: 100%;
+  }
+  .form-controller input {
+    background-color: #f6faff;
+    border: 1px solid #535454;
+  }
+  .logo {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .logo img {
+    width: 50%;
+  }
+  .image {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .image img {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+  .btn-eye {
+    background-color: #f6faff;
+  }
+  .content {
+    margin-top: 0;
+    width: 100%;
+    padding-bottom: 2em;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    /* height: 870px; */
+    height: 130vh;
+    background-color: #f6faff;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: em;
+  }
+  .container-content2 {
+    max-width: 375px;
+    width: 100%;
+    order: 1;
+    /* background-color: red; */
+  }
+
+  .container-content1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* max-width: 375px; */
+    margin-top: 0;
+    background-color: #f6faff;
+    width: 100%;
+    padding: 0 2em;
+    order: 2;
+    margin: 0 auto;
+  }
+  .content {
+    margin-top: 0;
+    width: 100%;
+  }
+  article {
+    width: 100%;
+  }
+  article h1 {
+    font-size: 1.2rem;
+  }
+  article p {
+    font-size: 0.9rem;
+  }
+  form {
+    /* max-width: 375px; */
+    width: 100%;
+    margin: 0 auto;
+  }
+  .form-controller {
+    /* max-width: 375px; */
+    width: 100%;
+  }
+  .form-controller input {
+    background-color: #f6faff;
+    border: 1px solid #535454;
+  }
+  .logo {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .logo img {
+    width: 50%;
+  }
+  .image {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .image img {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+  .box {
+    width: 100%;
+    align-items: center;
+  }
+  .forgot {
+    margin-top: 2em;
+  }
+  input::placeholder {
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.8rem;
+  }
+  .btn-eye {
+    background-color: #f6faff;
+  }
+}
