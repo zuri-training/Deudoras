@@ -6,6 +6,10 @@
   font-family: "Manrope", sans-serif;
 }
 
+li {
+  list-style: none;
+}
+
 /*Primary color*/
 /*Neutral color*/
 body {

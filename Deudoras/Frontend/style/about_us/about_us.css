@@ -1,0 +1,113 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Manrope", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+/*Primary color*/
+/*Neutral color*/
+h2 {
+  color: #03045e;
+  font-size: clamp(1rem, 3.5vw, 1.3rem);
+  line-height: 2rem;
+  font-weight: 600;
+}
+
+@media (min-width: 650px) {
+  h2 {
+    font-size: clamp(1.4rem, 3.5vw, 2.5rem);
+  }
+}
+
+@media (min-width: 900px) {
+  h2 {
+    font-size: clamp(2rem, 2.5vw, 3rem);
+  }
+}
+
+h3 {
+  color: #03045e;
+  font-size: clamp(1.25rem, 3.5vw, 2rem);
+  line-height: 1.7rem;
+  font-weight: 600;
+}
+
+h4 {
+  color: #03045e;
+  font-size: clamp(0.7rem, 3.5vw, 1.45rem);
+  line-height: 1rem;
+  font-weight: 400;
+}
+
+p {
+  color: #000814;
+  font-size: clamp(0.65rem, 3.5vw, 1rem);
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+
+li,
+button {
+  font-size: 1.25rem;
+}
+
+@media (min-width: 650px) {
+  li,
+  button {
+    font-size: 1rem;
+  }
+}
+
+button {
+  font-size: 0.65rem;
+}
+
+.Container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media (min-width: 650px) {
+  .Container {
+    width: 85%;
+  }
+}
+
+@media (min-width: 900px) {
+  .Container {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .Container {
+    padding-block: 2rem;
+  }
+}
+
+@media (min-width: 650px) {
+  .mobile {
+    display: none;
+  }
+}
+
+.desktop {
+  display: none;
+}
+
+@media (min-width: 650px) {
+  .desktop {
+    display: block;
+  }
+}
+
+#mobile-nav {
+  display: none;
+}
+/*# sourceMappingURL=about_us.css.map */

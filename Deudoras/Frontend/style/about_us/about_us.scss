@@ -1,0 +1,76 @@
+@import "../signup_school/reset";
+@import "../signup_school/variable";
+
+// typography and style
+
+h2 {
+  color: $p-c-dark-blue;
+  font-size: clamp(1rem, 3.5vw, 1.3rem);
+  line-height: 2rem;
+  font-weight: 600;
+  // margin-bottom: 0.5rem;
+  @include medium {
+    font-size: clamp(1.4rem, 3.5vw, 2.5rem);
+  }
+  @include large {
+    font-size: clamp(2rem, 2.5vw, 3rem);
+  }
+}
+h3 {
+  color: $p-c-dark-blue;
+  font-size: clamp(1.25rem, 3.5vw, 2rem);
+  line-height: 1.7rem;
+  font-weight: 600;
+}
+h4 {
+  color: $p-c-dark-blue;
+  font-size: clamp(0.7rem, 3.5vw, 1.45rem);
+  line-height: 1rem;
+  font-weight: 400;
+}
+p {
+  color: $para-color;
+  font-size: clamp(0.65rem, 3.5vw, 1rem);
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+li,
+button {
+  font-size: 1.25rem;
+  @include medium {
+    font-size: 1rem;
+  }
+}
+button {
+  font-size: 0.65rem;
+}
+// alignment
+.Container {
+  width: 90%;
+  margin: 0 auto;
+
+  @include medium {
+    width: 85%;
+  }
+  @include large {
+    width: 80%;
+    // padding-top: 1.5rem;
+  }
+  @include mmedium {
+    padding-block: 2rem;
+  }
+}
+.mobile {
+  @include medium {
+    display: none;
+  }
+}
+.desktop {
+  display: none;
+  @include medium {
+    display: block;
+  }
+}
+#mobile-nav {
+  display: none;
+}

@@ -16,6 +16,7 @@ class School_dashboard extends React.Component {
               src="../../assets/school_dashboard assets/menu.png"
               alt="logo"
             />
+            <div></div>
           </div>
         </nav>
       </div>
