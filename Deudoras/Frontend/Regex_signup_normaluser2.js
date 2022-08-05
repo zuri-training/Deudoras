@@ -18,19 +18,20 @@ if(myInput.length < 8){
     return false;
 }
 
-/*
+
 var numbers = /[0-9]/g;
-if not (myInput.match(numbers)){
+if (!myInput.match(numbers)){
     document.getElementById("message1").innerHTML = "**Password length must contain a number";
     return false;
 }    
+  
 
-var upperCaseLettters = /[A-Z]/g;
-if not (myInput.match(upperCaseLetters)){
+var upperCaseLetters = /[A-Z]/g;
+if (!myInput.match(upperCaseLetters)){
     document.getElementById("message1").innerHTML = "**Password length must contain an uppercase";
     return false;
-}*/
- 
+}
+  
     
 if(myInput != myInput2){
     document.getElementById("message2").innerHTML = "**Passwords are not same";
