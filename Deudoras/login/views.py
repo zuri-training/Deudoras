@@ -15,8 +15,16 @@ from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
 
 # Create your views here.
 
-def home(request):
-    return render(request, "login/index.html")
+def Landing(request):
+    return render(request, "login/landing.html")
+
+
+def SchoolHome(request):
+    return render(request, "login/school.html")
+
+
+def UserHome(request):
+    return render(request, "login/user.html")
 
 
 def SchoolSignup(request):
@@ -49,7 +57,10 @@ def SchoolSignup(request):
 
         messages.success(request, 'Your account has been succesfully created')
 
-    return render(request, 'login/schoolsignin.html')
+        return redirect('schoolsignin')
+
+
+    return render(request, 'login/SchoolSignup.html')
 
 
 def UserSignup(request):
@@ -64,15 +75,15 @@ def UserSignup(request):
 
         if User.objects.filter(username=username.exists()):
             messages.error(request, "Username Already Registered! Try a different one.")
-            return redirect('home')
+            return redirect('landing')
 
         if User.objects.filter(user_email=user_email.exists()):
             messages.error(request, "Email Already Registered! Try Login instead")
-            return redirect('home')
+            return redirect('landing')
         
         if user_password != confirm_user_password:
             messages.error(request, "Passwords didn't matched!!")
-            return redirect('home')
+            return redirect('landing')
         
 
         myuser = User.objects.create_user(username, user_email, user_password)
@@ -82,26 +93,10 @@ def UserSignup(request):
 
         messages.success(request, 'Your account has been succesfully created')
 
-    return render(request, 'login/usersignin.html')
+        return redirect('usersignin')
 
 
-# def activate(request,uidb64,token):
-#     try:
-#         uid = force_text(urlsafe_base64_decode(uidb64))
-#         myuser = User.objects.get(pk=uid)
-#     except (TypeError,ValueError,OverflowError,User.DoesNotExist):
-#         myuser = None
-
-#     if myuser is not None and generate_token.check_token(myuser, token):
-#         myuser.is_active = True
-#         # user.profile.signup_confirmation = True
-#         myuser.save()
-#         login(request,myuser)
-#         messages.success(request, "Your Account has been activated!!")
-#         return redirect('signin')
-#     else:
-#         return render(request,'activation_failed.html')
-
+    return render(request, 'login/UserSignup.html')
 
 
 def SchoolSignin(request):
@@ -113,13 +108,16 @@ def SchoolSignin(request):
         user = authenticate(email=email, password=password)
 
         if user is not None:
-            name =user.name
+            school_name =user.school_name
             login(request, user)
-            return render(request, "login/index.html", {'name':name})
+            return render(request, "login/landing.html", {'name':school_name})
 
         else:
             messages.error(request, "Bad credentials!!")
-            return redirect('home')
+            return redirect('landing')
+
+        return redirect('landing')
+
 
     return render(request, "login/schoolsignin.html")
     
@@ -133,13 +131,16 @@ def UserSignin(request):
         user = authenticate(email=email, password=password)
 
         if user is not None:
-            name =user.name
+            username =user.username
             login(request, user)
-            return render(request, "login/index.html", {'name':name})
+            return render(request, "login/landing.html", {'name':username})
 
         else:
             messages.error(request, "Bad credentials!!")
-            return redirect('home')
+            return redirect('landing')
+
+        return redirect('landing')
+
 
     return render(request, "login/usersignin.html")
 
