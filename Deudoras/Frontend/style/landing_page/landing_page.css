@@ -41,7 +41,7 @@ nav img {
 a {
   text-decoration: none;
 }
-i {
+.fa-angle-right {
   padding-left: 15px;
   padding-top: 5px;
 }
@@ -595,8 +595,7 @@ li {
   left: -418px;
   background: #000814;
   border-radius: 50%;
-  height: 40px;
-  width: 40px;
+  padding: 7px 0px 0px 12px;
 }
 /* swiper button css */
 .nav-btn {
@@ -814,4 +813,33 @@ footer {
 }
 .mine {
   margin-left: 72px;
+}
+
+/* subscription button*/
+
+.footer-2 .search input {
+  font-size: 12px;
+  outline: none;
+  font-family: var(--font-family);
+  border-radius: 50px;
+}
+
+.ic {
+  position: absolute;
+
+  font-size: 18px;
+}
+
+.footer-2 .email button {
+  position: absolute;
+  top: 50%;
+  right: -30px;
+  transform: translate(-50%, -50%);
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 50px;
+  border: 1px solid gray;
+  outline: none;
+  background: #286aeb;
+  color: white;
 }
