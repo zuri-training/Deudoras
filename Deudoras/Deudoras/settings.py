@@ -46,7 +46,27 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'debtors',
     'login.apps.LoginConfig',
+    'django_extensions',
+    'rest_framework',
+    # 'rest_framework.authtoken',
+    # 'api',
+    # 'rest_auth',
+    # 'django-extensions',
 ]
+
+# AUTH_USER_MODEL ='api.urls'
+REST_FRAMEWORK = {
+#   'DEFAULT_PERMISSION_CLASSES': (
+#       'rest_framework.permissions.IsAuthenticated',
+#   ),
+  'DEFAULT_AUTHENTICATION_CLASSES': (
+    #   'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+      'rest_framework.authentication.SessionAuthentication',
+      'rest_framework.authentication.BasicAuthentication',
+       'rest_framework.authentication.TokenAuthentication',
+  ),
+}
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

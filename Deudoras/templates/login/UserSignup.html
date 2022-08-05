@@ -9,9 +9,9 @@
   <body>
     <h1>SignUp</h1>
 
-    <form action="/signup" method="post">
+    <form action="/UserSignup" method="post">
       {% csrf_token %}
-      <label for="">Userame</label>
+      <label for="">Name</label>
       <input
         type="text"
         ,
@@ -19,21 +19,7 @@
         ,
         name="username"
         ,
-        placeholder="Type a username (only letters and numbers are allowed)"
-        ,
-        required
-      />
-      <br />
-
-      <label for="">Name</label>
-      <input
-        type="text"
-        ,
-        id="name"
-        ,
-        name="name"
-        ,
-        placeholder="Type your name"
+        placeholder="Enter your name"
         ,
         required
       />
@@ -43,9 +29,9 @@
       <input
         type="email"
         ,
-        id="email"
+        id="user_email"
         ,
-        name="email"
+        name="user_email"
         ,
         placeholder="Enter your Email"
         ,
@@ -59,14 +45,27 @@
         ,
         id=""
         ,
-        name="pass1"
+        name="password1"
         ,
         required,
         placeholder="Enter your password"
       />
       <br />
 
-      <button type="submit">SignIn</button>
+      <label for="">Confirm Password</label>
+      <input
+        type="password"
+        ,
+        id="password2"
+        ,
+        name="password2"
+        ,
+        required,
+        placeholder="Confirm your password"
+      />
+      <br />
+
+      <button type="submit">Register</button>
     </form>
   </body>
 </html>

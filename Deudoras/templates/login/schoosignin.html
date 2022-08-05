@@ -25,15 +25,15 @@
     {% endfor %}
 
     <h3>Log In to your account!</h3>
-    <form method="post" action="/signin" class="mb-2">
+    <form method="post" action="/SchoolSignin" class="mb-2">
       {% csrf_token %}
       <div class="form-group">
-        <label for="username">Username</label>
+        <label for="email">Email</label>
         <input
           type="text"
           class="form-control"
-          id="username"
-          name="username"
+          id="email"
+          name="email"
           placeholder="Enter Your Username"
           required
         />
