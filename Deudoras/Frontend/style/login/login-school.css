@@ -214,11 +214,14 @@ small {
   width: 40%;
 }
 .image {
+  height: 90vh;
+  display: flex;
+  align-items: center;
   width: 80%;
   margin: 0 auto;
 }
 .image img {
-  width: 100%;
+  width: 90%;
 }
 .log-google {
   margin-top: 1em;
@@ -233,7 +236,7 @@ small {
     height: 100vh;
   }
   .container-content1 {
-    padding: 0 3em;
+    padding: 0 2em;
     margin: 0 auto;
     /* margin-top: 2em; */
     width: 50%;
@@ -424,6 +427,9 @@ small {
   .image {
     width: 80%;
     margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    align-items: center;
   }
   .image img {
     width: 100%;
@@ -509,6 +515,7 @@ small {
     width: 25%;
   }
   .image {
+    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
