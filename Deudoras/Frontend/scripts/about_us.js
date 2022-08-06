@@ -1,7 +1,7 @@
 // selectors
 let mobileNav = document.getElementById("mobile-nav");
 let btnClose = document.getElementById("close");
-let btnOpen = document.querySelector(".mobileBtn");
+let btnOpen = document.querySelector(".mobileBtnOpen");
 
 // scripting
 
