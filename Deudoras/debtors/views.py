@@ -154,5 +154,7 @@ def UserSignin(request):
 def signout(request):
     logout(request)
     messages.success(request, "logged out succesfully")
-    return redirect('home')
+    return redirect('debtors/index.html')
 
+def need_help(request):
+    return render(request,'debtors/need_help.html')

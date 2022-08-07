@@ -10,5 +10,6 @@ urlpatterns = [
     path('schoolsignup', views.SchoolSignup, name='SchoolSignup'),
     path('schoolsignin', views.SchoolSignin, name='schoolsignin'),
     path('signout', views.signout, name='signout'),
+    path('help', views.need_help,name='Help'),
 
 ]
