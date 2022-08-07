@@ -19,6 +19,7 @@ from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
 
 # Create your views here.
 
+
 def Landing(request):
     return render(request, "index.html")
 
@@ -154,3 +155,4 @@ def signout(request):
     logout(request)
     messages.success(request, "logged out succesfully")
     return redirect('home')
+
