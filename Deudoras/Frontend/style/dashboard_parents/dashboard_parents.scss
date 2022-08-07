@@ -1,25 +1,40 @@
-@import "./reset";
-@import "./variable";
+@import "./reset", "./variable";
 
 body {
     background-color: #F6FAFF;
-    padding: 2em 4em;
+    // padding: 2em 4em;
+}
+div.body_sidebar{
+    display: flex;    
 }
 
 
-navv {
-    padding: 1em 0 2em 0;    
+.navv {
+    padding: 1em 0 2em 0;
+    background-color: #02034e;
+    height: auto;
+    width: 20%;
 }
 .nav_links {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 .nav_links_1{
-    margin: auto 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     color: #8B9098;
+}
+.nav_items {
+    padding: 1em 0;
+}
+.logo{
+    width: 12em;
+    height: 2em;
+    margin-bottom: 3em;
+    margin-top: 2em;
 }
 .nav_links_2 {
     border: 1px solid white;
@@ -28,36 +43,39 @@ navv {
     box-shadow: 0em 0.2em #DFE2ED;
     background-color: white;
 }
-.nav_items:not(:first-child):not(:last-child) {
-    margin: 0 0 0 2em;
-}
-.nav_items.article {
-    margin-left: 2em;
-}
-.nav_items.dash {
-    background-color: white;
-    padding: 0.4em;
-    border-radius: 5px;
-    box-shadow: 0em 0.2em #DFE2ED;
-}
+// .nav_items:not(:first-child):not(:last-child) {
+//     margin: 0 0 0 2em;
+// }
+// .nav_items.article {
+//     margin-left: 2em;
+// }
+// .nav_items.dash {
+//     background-color: white;
+//     padding: 0.4em;
+//     border-radius: 5px;
+//     box-shadow: 0em 0.2em #DFE2ED;
+// }
 .nav_items_2 {
     margin: auto;
     align-self: center;
     align-items: center;
 }
-span img {
-    border: 1px solid #02034E;
-    border-radius: 50%;
-    height: 25px;
-    width: 25px;
-    margin-left: 5px;
+.nav_items_2--img {
+    width: 30px;
+    height: 30px;
 }
 
 
 
-.main_one{
-    color: #02034E;
-    margin: 1em 0;
+main{
+    width: 100%;
+    padding: 3em 2em;
+    padding-left: 1em;
+}
+.main_one {
+    color: #02034e;
+    margin: 0em 0;
+    margin-bottom: 1em;
 }
 .main_welcome{
     margin: 0 0 0.6em 0;
@@ -91,23 +109,23 @@ span img {
     border-bottom: 2px solid #BFDDEC;
 }
 .main_student_detail_1{
-    width: 5em;
-    margin-left: 1em;
+    width: 25%;
+    // margin-left: 1em;
 }
 .main_student_detail_2{
-    width: 17em;
-    margin-left: -10em;
+    width: 35%;
+    // margin-left: -10em;
 }
 .main_student_detail_3{
-    width: 10em;
-    margin-left: -10em;
+    width: 35%;
+    // margin-left: -10em;
 }
 #amount{
     color: #DE5050;
 }
 .main_student_detail_4{
-    width: 1em;
-    margin-right: 2em;
+    width: 5%;
+    // margin-right: 2em;
 }
 
 
@@ -130,20 +148,20 @@ span img {
     border-top-left-radius: 15px;
 }
 .main_brkdwn_stdnt_debt_session_1{
-    width: 3em;
-    margin-left: 2em;
+    width: 25%;
+    // margin-left: 2em;
 }
 .main_brkdwn_stdnt_debt_session_2{
-    width: 5em;
-    margin-left: -4em;
+    width: 30%;
+    // margin-left: -4em;
 }
 .main_brkdwn_stdnt_debt_session_3{
-    width: 8em;
-    margin-left: -4em;
+    width: 30%;
+    // margin-left: -4em;
 }
 .main_brkdwn_stdnt_debt_session_4{
-    width: 15em;
-    margin-right: 2em;
+    width: 25%;
+    // margin-right: 2em;
     display: flex;
     justify-content: space-between;
 }
@@ -154,4 +172,148 @@ span img {
     padding: 1em;
     background-color: white;
     border-bottom: 2px solid lightblue;
+}
+
+@media screen and (max-width: 1008px){
+    .main_student_detail_1{
+        width: 20%;
+        // margin-left: 1em;
+    }
+    .main_student_detail_2{
+        width: 40%;
+        // margin-left: -10em;
+    }
+    .main_student_detail_3{
+        width: 35%;
+        // margin-left: -10em;
+    }
+    #amount{
+        color: #DE5050;
+    }
+    .main_student_detail_4{
+        width: 5%;
+        // margin-right: 2em;
+    }
+
+    .main_brkdwn_stdnt_debt_session_1{
+        width: 25%;
+        // margin-left: 2em;
+    }
+    .main_brkdwn_stdnt_debt_session_2{
+        width: 30%;
+        // margin-left: -4em;
+    }
+    .main_brkdwn_stdnt_debt_session_3{
+        width: 30%;
+        // margin-left: -4em;
+    }
+    .main_brkdwn_stdnt_debt_session_4{
+        width: 25%;
+        // margin-right: 2em;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 831px){
+    .main_student_detail_1{
+        width: 17%;
+        // margin-left: 1em;
+    }
+    .main_student_detail_2{
+        width: 52%;
+        // margin-left: -10em;
+    }
+    .main_student_detail_3{
+        width: 32%;
+        // margin-left: -10em;
+    }
+    #amount{
+        color: #DE5050;
+    }
+    .main_student_detail_4{
+        width: 3%;
+        // margin-right: 2em;
+    }
+
+    .main_brkdwn_stdnt_debt_session_1{
+        width: 22%;
+        // margin-left: 2em;
+    }
+    .main_brkdwn_stdnt_debt_session_2{
+        width: 27%;
+        // margin-left: -4em;
+    }
+    .main_brkdwn_stdnt_debt_session_3{
+        width: 30%;
+        // margin-left: -4em;
+    }
+    .main_brkdwn_stdnt_debt_session_4{
+        width: 31%;
+        // margin-right: 2em;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 724px){
+    .body {
+        background-color: #F6FAFF;
+        padding: 1em 0.8em;
+    }
+    .nav_items:not(:first-child){
+        display: none;        
+    }
+    .nav_links_2{
+        display: none;
+    }
+    // .nav_links{
+    //     display: none;
+    // }
+    .main_student_detail_1{
+        width: 17%;
+        // margin-left: 1em;
+    }
+    .main_student_detail_2{
+        width: 46%;
+        // margin-left: -10em;
+    }
+    .main_student_detail_3{
+        width: 32%;
+        // margin-left: -10em;
+    }
+    #amount{
+        color: #DE5050;
+    }
+    .main_student_detail_4{
+        width: 3%;
+        // margin-right: 2em;
+    }
+
+    .main_brkdwn_stdnt_debt_session_1{
+        width: 20%;
+        // margin-left: 2em;
+    }
+    .main_brkdwn_stdnt_debt_session_2{
+        width: 21%;
+        // margin-left: -4em;
+    }
+    .main_brkdwn_stdnt_debt_session_3{
+        width: 34%;
+        // margin-left: -4em;
+    }
+    .main_brkdwn_stdnt_debt_session_4{
+        width: 31%;
+        // margin-right: 2em;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 600px){
+
+}
+
+@media screen and (max-width: 400px){
+
 }

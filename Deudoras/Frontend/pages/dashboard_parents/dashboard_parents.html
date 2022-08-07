@@ -7,42 +7,43 @@
     <title>Dashboard Parents</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../../../../css/dashboard_parents.min.css.map">
-    <link rel="stylesheet" href="../../../../css/dashboard_parents.min.css">
+    <link rel="stylesheet" href="../../style/dashboard_parents/dashboard_parents.min.css.map">
+    <link rel="stylesheet" href="../../style/dashboard_parents/dashboard_parents.min.css">
     <!-- <link rel="stylesheet" href="../../style/dashboard_parents/dash-parents.css"> -->
 </head>
 <body>
-    <nav class="navv">
-        <div class="nav_links">
-            <div class="nav_links_1">
-                <span class="nav_items">Logo</span>
-                <span class="nav_items dash">Dashboard</span>
-                <span class="nav_items">Profile</span>
-                <span class="nav_items">History</span>
-                <span class="nav_items article">Articles</span>
-            </div>
-            <div class="nav_links_2">
-                <span class="nav_items_2">
-                    <i class="fa-regular fa-bell"></i>
-                </span>
-                <span class="nav_items_2">
-                    <img class="nav_items_2--img" src="../../assets/dashboard_parents/rose.jpg" alt="pic">
-                </span>
-                <span class="nav_items_2">
-                    <div class="dropdown" style="display: inline-block;">
-                        <i class="fa-solid fa-chevron-down dropdown-toggle" type="" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"></i>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-lock"></i> Change Password</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-circle-question"></i> Help</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</a></li>
-                        </ul>
+    <div class="body_sidebar">
+        <nav class="navv">
+            <div class="nav_links">
+                <div class="nav_links_1">
+                    <div class="nav_items "><img class="logo" src="../../assets/dashboard_parents/project debtor logo svg 1.jpg" alt=""></div>
+                    <div class="nav_items dash">Dashboard</div>
+                    <div class="nav_items"><i class="fa-regular fa-user"></i> Profile</div>
+                    <div class="nav_items"><i class="fa-solid fa-receipt"></i> History</div>
+                    <div class="nav_items article"><i class="fa-solid fa-book-open"></i> Articles</div>
+                </div>
+                <div class="nav_links_2">
+                    <div class="nav_items_2">
+                        <i class="fa-regular fa-bell"></i>
+                </div>
+                    <div class="nav_items_2">
+                        <img class="nav_items_2--img" src="../../assets/dashboard_parents/rose.jpg" alt="pic">
                     </div>
-                    
-                </span>
-            </div>
-        </div>        
-    </nav>
-    <main>
+                    <span class="nav_items_2">
+                        <div class="dropdown" style="display: inline-block;">
+                            <i class="fa-solid fa-chevron-down dropdown-toggle" type="" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-lock"></i> Change Password</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-circle-question"></i> Help</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</a></li>
+                            </ul>
+                        </div>
+                        
+                    </span>
+                </div>
+            </div>       
+        </nav>
+        <main>
         <div class="main_one">
             <h1 class="main_welcome">Welcome, Mr. John!</h1>
             <p class="main_child_info">See how much your child is currently defaulting on his/her school fees today</p>
@@ -100,7 +101,8 @@
                 </div>
             </div>
         </section>
-    </main>
+        </main>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
