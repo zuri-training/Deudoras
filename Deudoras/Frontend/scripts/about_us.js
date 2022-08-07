@@ -5,5 +5,5 @@ let btnOpen = document.querySelector(".mobileBtnOpen");
 
 // scripting
 
-btnOpen.addEventListener("click", () => (mobileNav.style.display = "block"));
+btnOpen.addEventListener("click", () => (mobileNav.style.display = "flex"));
 btnClose.addEventListener("click", () => (mobileNav.style.display = "none"));
