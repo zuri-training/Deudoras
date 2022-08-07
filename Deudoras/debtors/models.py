@@ -1,3 +1,4 @@
+from tkinter import CASCADE
 from django.db import models
 
 # Create your models here.
@@ -12,10 +13,11 @@ class School(models.Model):
 
 class Debtors(models.Model):
     name = models.CharField(max_length=200)
-    student = models.IntegerField()
+    student_id = models.IntegerField()
     student_class = models.CharField(max_length=200)
     info = models.TextField()
     school_id = models.ForeignKey(School,on_delete=models.DO_NOTHING)
+    amount_owed = models.DecimalField(max_digits=15,decimal_places=2)
 
 class User(models.Model):
     name = models.CharField(max_length=200)
@@ -28,7 +30,9 @@ class Comment(models.Model):
     school_id = models.ForeignKey(School,on_delete=models.DO_NOTHING)
     comment = models.TextField()
     datetime = models.DateTimeField()
+    # section_id = models.ForeignKey(School,on_delete=models.CASCADE)
 
 class Contend(models.Model):
     proof_of_pay = models.FileField()
     details = models.TextField()
+    student_id = models.ForeignKey(Debtors,on_delete=models.CASCADE)
