@@ -20,7 +20,7 @@ from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
 # Create your views here.
 
 def Landing(request):
-    return render(request, "index.html")
+    return render(request, "debtors/index.html")
 
 
 def SchoolHome(request):
