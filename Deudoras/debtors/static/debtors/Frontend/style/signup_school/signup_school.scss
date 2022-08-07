@@ -1,0 +1,334 @@
+@import "./reset";
+@import "./variable";
+
+// color & typoyography
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: $Background-col;
+
+  @include large {
+    background-color: transparent;
+  }
+}
+
+h3 {
+  color: $p-c-dark-blue;
+  font-size: clamp(1rem, 3.5vw, 1.5rem);
+  line-height: 2rem;
+  font-weight: 600;
+  // margin-bottom: 0.5rem;
+  @include medium {
+    font-size: clamp(1rem, 3.5vw, 1.5rem);
+  }
+  @include mmedium {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+  }
+}
+p {
+  color: $para-color;
+  font-size: clamp(0.7rem, 3.5vw, 1rem);
+  line-height: 1.7rem;
+  font-weight: 400;
+  @include mmedium {
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+    line-height: 2rem;
+  }
+}
+label span {
+  color: $danger;
+}
+button {
+  background-color: $p-c-dark-blue;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 1rem;
+  width: 100%;
+  border-radius: 8px;
+  color: white;
+  margin-top: 1.5rem;
+  margin-bottom: 0.7rem;
+  box-shadow: 0px 2px 3px rgba(3, 4, 94, 0.3),
+    0px 6px 10px 4px rgba(3, 4, 94, 0.15);
+}
+label {
+  color: $light-greyish;
+  font-weight: 600;
+  font-size: clamp(0.7rem, 3.5vw, 1rem);
+
+  @include mmedium {
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+  }
+}
+.alreadyAccount {
+  color: $grayishbalck;
+  font-size: 0.8rem;
+  span {
+    color: $p-c-dark-blue;
+  }
+}
+// alignment
+.Container {
+  width: 90%;
+
+  margin: 0 auto;
+
+  @include medium {
+    width: 60%;
+  }
+  @include large {
+    width: 90%;
+    // padding-top: 1.5rem;
+  }
+  @include mmedium {
+    padding-block: 2rem;
+  }
+}
+img {
+  width: 60%;
+  @include medium {
+    width: unset;
+  }
+}
+.mobile-tab {
+  width: unset;
+  display: none;
+  @include medium {
+    display: block;
+  }
+  @include large {
+    display: none;
+  }
+}
+.mobile {
+  @include medium {
+    display: none;
+  }
+}
+.desktop {
+  display: none;
+  @include large {
+    display: block;
+  }
+}
+.logo-fix {
+  width: unset;
+}
+
+#main {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 1.5rem;
+  justify-content: center;
+  height: 100vh;
+
+  @include large {
+    flex-direction: row;
+    gap: 0;
+    align-items: stretch;
+  }
+
+  &_2 {
+    @include large {
+      background-color: $Background-col;
+      padding-bottom: 2rem;
+      width: 50%;
+    }
+  }
+  &_1 {
+    @include large {
+      background-color: white;
+      padding-block: 2rem;
+      width: 50%;
+    }
+  }
+}
+.main_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 0;
+
+  @include large {
+    margin-bottom: 0;
+  }
+}
+.desktop-logo {
+  align-self: end;
+  @include mmedium {
+    margin-bottom: 3rem;
+  }
+}
+.desktop-hero-img {
+  @include mmedium {
+    margin-bottom: 2rem;
+  }
+}
+.progress-bar {
+  @include large {
+    display: flex;
+    gap: 1em;
+    margin-bottom: 1rem;
+
+    div {
+      width: 45px;
+      height: 10px;
+      background-color: $light-lightGrey;
+      border-radius: 12px;
+    }
+    .active {
+      width: 70px;
+      background-color: $p-c-dark-blue;
+    }
+  }
+  @include mmedium {
+    margin-bottom: 2rem;
+  }
+}
+// .info-p {
+//   width: 60%;
+// }
+.info {
+  @include large {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    p {
+      width: 70%;
+    }
+  }
+}
+.form_header {
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+
+  @include medium {
+    gap: 4px;
+    text-align: center;
+  }
+  @include large {
+    text-align: left;
+    margin-bottom: 3rem;
+  }
+  @include mmedium {
+    margin-bottom: 5rem;
+  }
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  @include large {
+    gap: 2rem;
+  }
+  @include mmedium {
+    gap: 3.5rem;
+  }
+  input,
+  select {
+    padding: 0.7rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    border: 1px solid $light-greyish;
+    @include medium {
+      padding: 1rem;
+    }
+  }
+  &_item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+
+// Page 2
+ul {
+  background: #fbfcfd;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  padding: 0.8rem 2rem;
+  margin-bottom: 1.5rem;
+  @include medium {
+    margin-bottom: 2rem;
+  }
+  @include large {
+    margin-bottom: 2.8rem;
+  }
+  li {
+    list-style-type: disc;
+    list-style-position: inside;
+  }
+}
+.checkbox {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  span {
+    color: #575894;
+  }
+}
+
+.logo-top {
+  padding-top: 1.5rem;
+  @include large {
+    padding-top: 0;
+  }
+}
+.page-3_confirmError {
+  background-color: #f0b1b1;
+  color: $danger;
+  width: 100%;
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 0.7rem;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  @include medium {
+    padding: 2rem;
+    font-size: 1rem;
+  }
+  @include large {
+    font-size: 1.2rem;
+  }
+}
+.school-danger {
+  color: $danger;
+  font-size: 0.7rem;
+  @include medium {
+    font-size: 1rem;
+  }
+  @include large {
+    font-size: 1.2rem;
+  }
+}
+.site-tip {
+  @include large {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+#Signup_School_Form {
+  margin-top: 0;
+}
+.hero-p3 {
+  width: 80%;
+}
+.page2,
+.page3,
+.page2-second,
+.page3-second,
+.page3-header,
+.page-3_confirmError,
+.school-danger {
+  display: none;
+}

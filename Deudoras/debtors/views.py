@@ -65,7 +65,7 @@ def SchoolSignup(request):
         return redirect('schoolsignin')
 
 
-    return render(request, 'login/SchoolSignup.html')
+    return render(request, 'debtors/signup_school.html')
 
 
 def UserSignup(request):
@@ -154,5 +154,12 @@ def UserSignin(request):
 def signout(request):
     logout(request)
     messages.success(request, "logged out succesfully")
-    return redirect('home')
+    return redirect('debtors/index.html')
 
+def need_help(request):
+    return render(request,'debtors/need_help.html')
+def school_dasboard(request,id):
+    return render(request, 'debtors/school_dashboard.html')
+def about_us(request):
+    
+    return render(request,'debtors/about us.html')
