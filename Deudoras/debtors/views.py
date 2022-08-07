@@ -160,6 +160,9 @@ def need_help(request):
     return render(request,'debtors/need_help.html')
 def school_dasboard(request,id):
     return render(request, 'debtors/school_dashboard.html')
+
 def about_us(request):
     
     return render(request,'debtors/about us.html')
+def user_dashboard(request):
+    return render(request,'debtors/dashboard_parents.html')

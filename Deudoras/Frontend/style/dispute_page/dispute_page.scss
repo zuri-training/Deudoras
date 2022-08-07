@@ -1,0 +1,14 @@
+@import "./reset", "./variable";
+
+.main {
+    display: flex;
+}
+
+.main_sidebar{
+    width: 10%;
+    background-color: $primary-col-dash;
+    height: 100vh;
+}
+.main_main{
+    width: 90%;
+}
