@@ -13,6 +13,7 @@ urlpatterns = [
     path('help', views.need_help,name='Help'),
     path('scdashboard',views.school_dasboard, name = 'School dashboard'),
     # path('usdashboard',),
-    path('about us', views.about_us, name=' About us')
+    path('about us', views.about_us, name=' About us'),
+    path('userdashboard',views.user_dashboard,name='User dashboard')
 
 ]
