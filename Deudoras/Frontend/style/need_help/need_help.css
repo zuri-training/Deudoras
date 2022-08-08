@@ -9,7 +9,7 @@
 }
 body {
   font-family: "Manrope", sans-serif;
-  background-color: #d3d2d2;
+  background-color: #f5f5f5;
 }
 nav {
   display: flex;
@@ -102,10 +102,55 @@ li {
   line-height: 66px;
   color: #03045e;
 }
+main {
+  margin-top: 132px;
+}
+.rowbar h3 {
+  font-weight: 500;
+  font-size: 20px;
+  color: #03045e;
+}
+.rowbar p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.005em;
+  color: #03045e;
+}
+.margin {
+  margin-left: 12px;
+}
+.help-icons {
+  width: 35px;
+  height: 35px;
+}
+.last-section {
+  margin-top: 35.9px;
+  margin-bottom: 100px;
+  background: linear-gradient(269.13deg, #8181ae 0%, rgba(3, 4, 94, 0.45) 100%);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  height: 128px;
+}
+.row-questions {
+  display: flex;
+  align-items: center;
+}
+.row-question-1 p {
+  font-family: var(--primary-color);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.005em;
+  color: #03045e;
+  margin-top: 45px;
+  margin-left: 4px;
+}
 /*footer css*/
 .footer {
   background-color: var(--primary-color);
-  height: 40vh;
+  height: 47vh;
 }
 .fluid {
   display: flex;
@@ -115,26 +160,48 @@ li {
 }
 .navigation {
   display: flex;
-  color: white;
-  margin-top: 50px;
+  color: #ffffff;
+  margin-top: 80px;
 }
 .navigation li a {
   font-size: 12px;
-  padding-right: 40px;
+  padding-right: 100px;
 }
 .company,
 .platform,
 .community,
 li a {
-  color: white;
+  color: #ffffff;
+  font-family: var(--font-family);
+  font-weight: 400px;
+}
+.li {
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 33px;
 }
 .description {
-  margin-right: 30%;
+  margin-right: 25%;
   margin-left: 10%;
+  margin-top: -14px;
+}
+.footer-logo {
+  width: 180px;
+  height: 50px;
 }
 .description p {
   font-size: 12px;
   color: white;
   margin-top: 10px;
-  margin-left: 60px;
+  margin-left: 32px;
+}
+.socials {
+  margin-left: 12.5%;
+}
+.socials img {
+  width: 20px;
+  height: 20px;
+  margin-right: 18px;
 }
