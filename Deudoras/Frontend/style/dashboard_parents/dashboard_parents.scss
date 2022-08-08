@@ -26,7 +26,10 @@ div.body_sidebar{
     justify-content: center;
 }
 .nav_items {
-    padding: 1em 0;
+    padding: 1em 5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     cursor: pointer;
     color: $background-col-white;
     width: 100%;
