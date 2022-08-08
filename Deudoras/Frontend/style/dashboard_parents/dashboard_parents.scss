@@ -132,26 +132,38 @@ div.main_top_two{
 .main_student_summary_1{
     background-color: $primary-col-dash;
     color: $primary-col-white;
-    padding: 1em;
+    padding: 1em 0;
     border-radius: 5px;
+    width: 22%;
 }
 .main_student_summary_2{
     background-color: $primary-col-white;
     color: $primary-col-dash;
-    padding: 1em;
+    padding: 1em 0;
     border-radius: 5px;
+    width: 22%;
 }
 .main_student_summary_3{
     background-color: $primary-col-white;
     color: $primary-col-dash;
-    padding: 1em;
+    padding: 1em 0;
     border-radius: 5px;
+    width: 22%;
 }
 .main_student_summary_4{
     background-color: $primary-col-white;
     color: $primary-col-dash;
-    padding: 1em;
+    padding: 1em 0;
     border-radius: 5px;
+    width: 22%;
+}
+.summa_1{
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 1.5em;
+}
+.summa_2{
+    padding: 0 1.5em;
 }
 .main_student_detail {
     display: flex;
