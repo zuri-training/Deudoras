@@ -1,0 +1,130 @@
+@media only screen and (min-width: 300px) and (max-width: 760px){
+    body{
+        font-family: 'Manrope';
+        background-color: white;
+        margin-left: 100px;
+        margin-top: 20px;
+        margin-right: 50px;
+        width: 100%;
+    }
+}
+/*
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+    body{
+        font-family: 'Manrope';
+        background-color: white;
+    }
+}
+@media only screen and (min-width: 720px){
+    body{
+        font-family: 'Manrope';
+        background-color: white;
+    }
+} */
+
+#sec{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px
+    margin-bottom: 
+}
+#subsec1, #subsec2{
+  width: 100%;
+}
+#sebsec2{
+  height:
+}
+.left{
+    background-color: #FEFEFE;
+    padding-right:20px;
+    padding-left: 20px;
+    margin-left: 100px;   
+    margin-right: 40px
+}
+.right{
+    background-color: rgb(217, 237, 243);
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+    margin-right: 40px;
+    height: 100%;
+    margin-left: 60px;
+    margin-bottom: 20px;
+    width: 70%;
+}
+.reg{
+    color: #03045E;
+}
+input{
+    height: 30px;
+    width: 200px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px 5px 5px 5px;
+}
+#submit{
+    margin-bottom: 10px;
+    width: 205px;
+    background-color: #03045E;
+    color: white;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 10px;
+}
+a{
+    color: #03045E;
+    text-decoration: none;
+    font-weight: bold;
+}
+.bot{
+    text-align: center;
+    font-family: 'Manrope';
+    line-height: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+}
+.required:after{
+    content: " *";
+    color: red;
+}
+.oned{
+  text-align: right;
+  width: 200px;
+  padding-left: 80px;
+}
+.bota{
+  margin-bottom: 20px;
+  margin-top: 200px;
+}
+.twoe{
+  margin-top: 200px;
+  margin-bottom: 40px;
+  width: 250px;
+  height: 200px;
+}
+.pass{
+    margin-left: 0px;
+    text-align: left;
+    font-size: 10px;
+    text-align: left;
+    margin-bottom: -4px;
+}
+.check{
+  width: 20px;
+  height: 20px;
+}
+
+.botan{
+  margin-top: 40px;
+}
+
+
+
+
+
+
+
+
+
