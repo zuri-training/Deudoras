@@ -165,10 +165,17 @@ def about_us(request):
     return render(request,'debtors/about us.html')
 
 def loginSchool(request):
-    return render(request,'debtors/login/login-school')
+    return render(request,'debtors/login/login-school.html')
 
 def loginStudents(request):
-    return render(request,'debtors/login/login-students')
+    return render(request,'debtors/login/login-students.html')
 
 def loginUser(request):
-    return render(request,'debtors/login/login-user')
+    return render(request,'debtors/login/login-users.html')
+
+
+def signupuser1(request):
+    return render(request, 'debtors/SignUpNormalUser1.html')
+
+def signupuser2(request):
+    return render(request, 'debtors/SignUpNormalUser2.html')

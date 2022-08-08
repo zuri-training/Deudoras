@@ -1,3 +1,4 @@
+from unicodedata import name
 from django.contrib import admin
 from django.urls import path, include
 from . import views
@@ -16,12 +17,10 @@ urlpatterns = [
     path('about us', views.about_us, name=' About us'),
     # path('userdashboard',views.user_dashboard,name='User dashboard')
 
-def loginSchool(request):
-    return render(request,'debtors/login/login-school')
+ path('loginSchool',views.loginSchool, name=' Sclogin'),
+ path('loginStudent',views.loginStudents , name=' Stlogin'),
+ path('loginuser',views.loginUser , name='userlogin'),
+  path('signupuser1',views.signupuser1 , name='signup1'),
+   path('signupuser2',views.signupuser2 , name='signup2'),
 
-def loginStudents(request):
-    return render(request,'debtors/login/login-students')
-
-def loginUser(request):
-    return render(request,'debtors/login/login-user')
 ]
