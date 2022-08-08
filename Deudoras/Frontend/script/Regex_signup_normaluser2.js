@@ -3,6 +3,8 @@ var myInput = document.getElementById("password").value;
 var myInput2 = document.getElementById("cpassword").value;
 
 
+
+
 if(myInput == ""){
     document.getElementById("message1").innerHTML = "**Fill the password please!";
     return false;
@@ -18,19 +20,20 @@ if(myInput.length < 8){
     return false;
 }
 
-/*
+
 var numbers = /[0-9]/g;
-if not (myInput.match(numbers)){
+if (!myInput.match(numbers)){
     document.getElementById("message1").innerHTML = "**Password length must contain a number";
     return false;
 }    
+  
 
-var upperCaseLettters = /[A-Z]/g;
-if not (myInput.match(upperCaseLetters)){
+var upperCaseLetters = /[A-Z]/g;
+if (!myInput.match(upperCaseLetters)){
     document.getElementById("message1").innerHTML = "**Password length must contain an uppercase";
     return false;
-}*/
- 
+}
+  
     
 if(myInput != myInput2){
     document.getElementById("message2").innerHTML = "**Passwords are not same";
@@ -41,21 +44,34 @@ if(myInput != myInput2){
 }
 }
 
+/*
+togglePassword.addEventListener('click', function () {
+  // toggle the type attribute
+  const type =
+    password.getAttribute('type') === 'password' ? 'text' : 'password'
+  password.setAttribute('type', type)
+
+  // toggle the icon
+  this.classList.toggle('bi-eye')
+}*/
+
 
 /* check box for password */
 function myFunction(){
-  if (myInput.type === "password"){
-    myInput.type = "text";
+  var p = document.getElementById("password");
+  if (p.type === "password"){
+    p.type = "text";
   }else{
-    myInput.type = "password";
+    p.type = "password";
   }
 }
 
 /* check box for confirm password */
 function myFunc(){
-  if (myInput2.type === "password"){
-    myInput2.type = "text";
+  var cp = document.getElementById("cpassword");
+  if (cp.type === "password"){
+    cp.type = "text";
   }else{
-    myInput2.type = "password";
+    cp.type = "password";
   }
-}
+} 
