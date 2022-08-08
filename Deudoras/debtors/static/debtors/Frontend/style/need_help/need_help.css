@@ -4,18 +4,137 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --primary-color: #03045e;
+}
 body {
   font-family: "Manrope", sans-serif;
+  background-color: #d3d2d2;
+}
+nav {
+  display: flex;
+  width: 90%;
+  margin: 24px auto;
+  justify-content: center;
+  height: 15vh;
+}
+nav img {
+  width: 91px;
+  height: 35px;
+  margin-top: 6px;
+  width: 10%;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
 }
 
+.nav-section {
+  display: flex;
+  width: 90%;
+}
+.nav-links {
+  margin-right: 35%;
+}
+.nav-links ul {
+  display: flex;
+  padding: 9px;
+  gap: 4px;
+}
+.nav-links li a {
+  padding: 0px 10px;
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.005em;
+  color: #000814;
+  margin-right: 24px;
+}
+.active {
+  color: #03034e;
+  font-weight: bolder;
+}
+.nav-button-1 {
+  border: none;
+  font-family: var(--font-family);
+  background: var(--background-color);
+  padding: 9px 18px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.005em;
+  color: #000814;
+}
+.nav-button-2 {
+  border: none;
+
+  width: 97px;
+  height: 40px;
+  background: #03045e;
+  border-radius: 8px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13.2px;
+  line-height: 18px;
+  letter-spacing: 0.0125em;
+  color: #ffffff;
+}
+.head {
+  background: linear-gradient(266.86deg, #8182af 0%, rgba(3, 4, 94, 0.46) 100%);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+}
+.faq {
+  margin-top: 9px;
+  text-align: center;
+}
+.faq h1 {
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 66px;
+  color: #03045e;
+}
 /*footer css*/
+.footer {
+  background-color: var(--primary-color);
+  height: 40vh;
+}
 .fluid {
   display: flex;
-  width: 80%;
+  width: 100%;
   margin: auto;
   align-items: center;
-  justify-content: center;
 }
 .navigation {
   display: flex;
+  color: white;
+  margin-top: 50px;
+}
+.navigation li a {
+  font-size: 12px;
+  padding-right: 40px;
+}
+.company,
+.platform,
+.community,
+li a {
+  color: white;
+}
+.description {
+  margin-right: 30%;
+  margin-left: 10%;
+}
+.description p {
+  font-size: 12px;
+  color: white;
+  margin-top: 10px;
+  margin-left: 60px;
 }

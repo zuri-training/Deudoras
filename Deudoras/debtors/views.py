@@ -7,12 +7,12 @@ from django.http import HttpResponse
 from django.shortcuts import redirect, render
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
-# from geeksforgeeks import settings
+
 from django.contrib import messages
 from django.core.mail import EmailMessage, send_mail
 from django.contrib.sites.shortcuts import get_current_site
 from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
-# from . tokens import generate_token
+
 # from django.utils.encoding import force_bytes, force_text
 
 
@@ -25,11 +25,11 @@ def Landing(request):
 
 
 def SchoolHome(request):
-    return render(request, "login/school.html")
+    return  render(request, 'debtors/school_dashboard.html')
 
 
 def UserHome(request):
-    return render(request, "login/user.html")
+    return render(request,'debtors/dashboard_parents.html')
 
 
 def SchoolSignup(request):
@@ -38,7 +38,7 @@ def SchoolSignup(request):
         school_name = request.POST['schoolname']
         email = request.POST['email']
         location = request.POST['location']
-        registration_number = request.POST['registration number']
+        # registration_number = request.POST['registration number']
         password = request.POST['pass1']
         confirm_password = request.POST['pass2']
 
@@ -158,11 +158,17 @@ def signout(request):
 
 def need_help(request):
     return render(request,'debtors/need_help.html')
-def school_dasboard(request,id):
-    return render(request, 'debtors/school_dashboard.html')
+
 
 def about_us(request):
     
     return render(request,'debtors/about us.html')
-def user_dashboard(request):
-    return render(request,'debtors/dashboard_parents.html')
+
+def loginSchool(request):
+    return render(request,'debtors/login/login-school')
+
+def loginStudents(request):
+    return render(request,'debtors/login/login-students')
+
+def loginUser(request):
+    return render(request,'debtors/login/login-user')
