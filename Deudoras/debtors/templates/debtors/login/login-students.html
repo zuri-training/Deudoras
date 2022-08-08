@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../style/login/login-school.css" />
+    <link rel="stylesheet" href="{% static 'debtors/Frontend/style/login/login-student.css'%}" />
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
     <title>Document</title>
   </head>
@@ -17,17 +18,17 @@
           <p>Please fill this form to access your account</p>
         </article>
         <form action="" class="form" id="form">
-          <div class="form-controller ">
-            <label for="school-email">School Email Address</label>
+          <div class="form-controller">
+            <label for="school-email">Student ID</label>
             <input
               type="email"
-              placeholder="Enter your email address"
+              placeholder="I4IG557890"
               name="email"
-              id="email"
+              id="student-id"
             />
             <small>error messages</small>
           </div>
-          <div class="form-controller ">
+          <div class="form-controller">
             <label for="school-email">Password</label>
             <input
               class="password"
@@ -36,7 +37,7 @@
               name="password"
               id="password"
             />
-            <button type="button" class="btn-eye"><i class="bi bi-eye-slash" id="togglePassword"></i></button>
+            <button class="btn-eye"><i class="bi bi-eye-slash" id="togglePassword"></i></button>
             <small>error messages</small>
           </div>
           <div class="form-controll box">
@@ -47,7 +48,7 @@
             <a class="forgot" href="">Forgot password?</a>
           </div>
           <div class="form-controller">
-            <button class="btn">LOG IN</button>
+            <button type="submit" class="btn">LOG IN</button>
           </div>
           
         </form>
@@ -56,13 +57,13 @@
         </div>
              <section class="container-content2">
         <div class="logo">
-          <img src="../../assets/login_assets/project debtor logo svg 1.png" alt="" />
+          <img src="{% static 'debtors/Frontend/assets/login_assets/project debtor logo svg 1.png'%}" alt="" />
         </div>
         <div class="image">
-          <img src="../../assets/login_assets/woman.png" alt="" />
+          <img src="{% static 'debtors/Frontend/assets/login_assets/woman.png'%}" alt="" />
         </div>
       </section>
     </main>
-    <script src="../../scripts/login/login-school.js"></script>
+    <script src="{% static 'debtors/Frontend/scripts/login/login-student.js'%}"></script>
   </body>
 </html>
