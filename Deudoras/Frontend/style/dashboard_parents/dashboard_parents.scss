@@ -125,6 +125,34 @@ div.main_top_two{
     color: #75C26A;
     font-size: 1.3em;
 }
+.main_student_summary{
+    display: flex;
+    justify-content: space-between;
+}
+.main_student_summary_1{
+    background-color: $primary-col-dash;
+    color: $primary-col-white;
+    padding: 1em;
+    border-radius: 5px;
+}
+.main_student_summary_2{
+    background-color: $primary-col-white;
+    color: $primary-col-dash;
+    padding: 1em;
+    border-radius: 5px;
+}
+.main_student_summary_3{
+    background-color: $primary-col-white;
+    color: $primary-col-dash;
+    padding: 1em;
+    border-radius: 5px;
+}
+.main_student_summary_4{
+    background-color: $primary-col-white;
+    color: $primary-col-dash;
+    padding: 1em;
+    border-radius: 5px;
+}
 .main_student_detail {
     display: flex;
     justify-content: space-between;
