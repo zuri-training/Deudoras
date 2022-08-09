@@ -1,0 +1,217 @@
+@import "../signup_school/reset";
+@import "../signup_school/variable";
+// color
+main {
+  background-color: $back-Col-main;
+}
+h2 {
+  color: $p-c-dark-blue;
+  font-size: clamp(1rem, 3.5vw, 1.3rem);
+  line-height: 2rem;
+  font-weight: 600;
+  // margin-bottom: 0.5rem;
+  @include medium {
+    font-size: clamp(1.4rem, 3.5vw, 2.5rem);
+  }
+}
+h2 {
+  color: $p-c-dark-blue;
+  font-size: clamp(1.25rem, 3.5vw, 2rem);
+  line-height: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+h4 {
+  color: $p-c-dark-blue;
+  font-size: clamp(0.7rem, 3.5vw, 1.45rem);
+  line-height: 1rem;
+  font-weight: 400;
+}
+p {
+  color: $para-color;
+  font-size: 0.65rem;
+  line-height: 1rem;
+  font-weight: 400;
+  @include medium {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+}
+li,
+button {
+  font-size: 1rem;
+
+  cursor: pointer;
+  // @include medium {
+  //   font-size: 1.25rem;
+  // }
+}
+li {
+  color: $li-color;
+}
+button {
+  font-size: 0.65rem;
+  @include large {
+    font-size: 1rem;
+  }
+}
+// alignment
+.Container {
+  width: 95%;
+  margin: 0 auto;
+  @include medium {
+    width: 98%;
+  }
+  @include large {
+    width: 95%;
+  }
+}
+.mobile {
+  @include medium {
+    display: none;
+  }
+}
+.desktop {
+  display: none;
+  @include large {
+    display: block;
+  }
+}
+.tablet {
+  display: none;
+  @include medium {
+    display: block;
+  }
+  @include large {
+    display: none;
+  }
+}
+.desktop-tablet {
+  display: none;
+  @include medium {
+    display: flex;
+  }
+}
+#mobile-nav {
+  display: none;
+  flex-direction: column;
+  height: 100vh;
+  width: 50%;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  gap: 4rem;
+  z-index: 100000;
+
+  .activeMobileNav {
+    background-color: $p-c-dark-blue;
+    color: white;
+  }
+  #close {
+    align-self: end;
+    margin-right: 10%;
+    padding-top: 1.5rem;
+  }
+  button {
+    align-self: center;
+    font-size: 14px;
+    background-color: transparent;
+    border: 1px solid #03034e;
+    padding: 11px 16px;
+    border-radius: 8px;
+    color: $li-color;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+
+    li {
+      font-size: 1rem;
+      padding-block: 1rem;
+      padding-left: 1.5rem;
+      width: 80%;
+    }
+  }
+}
+.mobileMain {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include medium {
+    display: none;
+  }
+  .logo {
+    display: flex;
+
+    gap: 1rem;
+    align-items: center;
+  }
+}
+.search {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: white;
+  padding: 0.5rem;
+  box-shadow: 0px 1px 3px 1px rgba(3, 4, 94, 0.15),
+    0px 1px 2px rgba(3, 4, 94, 0.3);
+  border-radius: 8px;
+  &_noti {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    p {
+      padding: 0.3rem;
+      border-radius: 50%;
+      background-color: $p-c-dark-blue;
+      color: white;
+      font-size: 20px;
+    }
+  }
+}
+main {
+  @include medium {
+    display: flex;
+  }
+}
+// desktop sidebar
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+  height: 100vh;
+  min-width: 250px;
+  background-color: $p-c-dark-blue;
+  color: white;
+  .desklogo {
+    align-self: start;
+    padding-left: 40px;
+    margin-bottom: 6rem;
+    margin-top: 26px;
+  }
+  .navItem {
+    display: flex;
+    flex-direction: column;
+  }
+  .navItemMB {
+    margin-top: 10rem;
+  }
+  span {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 40px;
+    font-size: 20px;
+  }
+  .activeMenuDesktop {
+    background-color: white;
+    color: $p-c-dark-blue;
+  }
+  .danger-btn {
+    background: #ff3e1d;
+    align-self: center;
+    cursor: pointer;
+    padding: 15px 20px;
+  }
+}

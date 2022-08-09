@@ -4,28 +4,238 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="../../scripts/school_dashboard script/school_dashboard.js"
+      defer
+    ></script>
     <title>Debt Tracking Website (Deudoras) - Dashboard for School</title>
+    <link
+      rel="stylesheet"
+      href="../../style/school_dashboard/school_dashboard.css"
+    />
   </head>
   <body>
     <main>
-      <section id="info"></section>
+      <nav id="mobile-nav">
+        <img
+          src="../../assets/about us assests/hamClose.png"
+          id="close"
+          alt="close button"
+        />
+        <ul>
+          <li>Dashboard</li>
+          <li class="activeMobileNav">Profile</li>
+          <li>Schools</li>
+          <li>Debtors List</li>
+          <li>Articles</li>
+          <li>Help</li>
+        </ul>
+        <button>Log Out</button>
+      </nav>
+
+      <aside class="sidebar desktop">
+        <img
+          src="../../assets/school_dashboard assets/desktoplogo.png"
+          alt=""
+          class="desktop desklogo"
+        />
+        <img src="" alt="tablet-logo" class="tablet" />
+
+        <nav>
+          <div class="navItem">
+            <span class="activeMenuDesktop"
+              ><img
+                src="../../assets/school_dashboard assets/dashboardIcon.png"
+                alt=""
+              />Dashboard</span
+            >
+            <span
+              ><img
+                src="../../assets/school_dashboard assets/profile.png"
+                alt=""
+              />Profile</span
+            >
+            <span
+              ><img
+                src="../../assets/school_dashboard assets/teacher.png"
+                alt=""
+              />Schools</span
+            >
+            <span
+              ><img
+                src="../../assets/school_dashboard assets/receipt-item.png"
+                alt=""
+              />Debtors List</span
+            >
+            <span
+              ><img
+                src="../../assets/school_dashboard assets/book.png"
+                alt=""
+              />Article</span
+            >
+          </div>
+          <div class="navItem navItemMB">
+            <span
+              ><img
+                src="../../assets/school_dashboard assets/device-message.png"
+                alt=""
+              />Need Help?</span
+            >
+            <span class="danger-btn">
+              <img
+                src="../../assets/school_dashboard assets/logout.png"
+                alt=""
+              />Log Out
+            </span>
+          </div>
+        </nav>
+      </aside>
+      <section class="Content">
+        <div class="Container">
+          <section class="first-section">
+            <div class="mobileMain">
+              <div class="logo">
+                <img
+                  src="../../assets/about us assests/HamOPen.png"
+                  alt="hamopen"
+                  class="mobileBtnOpen"
+                />
+                <img src="" alt="mobile-logo" />
+              </div>
+  
+              <div class="search">
+                <img
+                  src="../../assets/school_dashboard assets/icon-bell.png"
+                  alt="notificationIcon"
+                />
+                <div class="search_noti">
+                  <p>B</p>
+                  <img
+                    src="../../assets/signup_school assets/"
+                    alt="dropdownIcon"
+                  />
+                </div>
+              </div>
+            </div>
+            <div>
+              <div>
+                <h2>Welcome, RoseBorn Secondary School.</h2>
+                <p class="desktop-tablet">
+                  Learn whether your child is currently defaulting on his/her
+                  school fees today.
+                </p>
+              </div>
+              <div class="desktop-tablet search">
+                <div>
+                  <img src="" alt="searchIcon" />
+                  <input placeholder="Search (Ctrl+/)" />
+                </div>
+                <div class="search_noti">
+                  <img
+                    src="../../assets/school_dashboard assets/icon-bell.png"
+                    alt="notificationIcon"
+                  />
+                  <div>
+                    <p>B</p>
+                    <img
+                      src="../../assets/signup_school assets/"
+                      alt="dropdownIcon"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="second-section desktop-tablet">
+            <div class="card">
+              <h4>Total Debt Recoveries</h4>
+              <img
+                src="../../assets/school_dashboard assets/transactions-icon.png"
+                alt=""
+              />
+              <h3>N30,000,000</h3>
+              <div>
+                <div class="progress">
+                  <div>
+                    <p>Recovery Target</p>
+                    <div>
+                      <span
+                        class="progressBar"
+                        style="background-color: #435971; width: 78%"
+                      ></span>
+                    </div>
+                  </div>
+                  <p>78%</p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                src="../../assets/school_dashboard assets/transactions-icon.png"
+                alt=""
+              />
+              <h4>Numbers of Schools</h4>
+              <h3>3,000</h3>
+              <div><img src="#" alt="dangerDrop" />13.24%</div>
+            </div>
+            <div class="card">
+              <h4>Recent Articles</h4>
+              <p>
+                I have paid my son’s school fees, but my name is still showing
+                that I have not paid, why?
+              </p>
+              <p>
+                I have paid my son’s school fees, but my name is still showing
+                that I have not paid, why?
+              </p>
+              <p>
+                I have paid my son’s school fees, but my name is still showing
+                that I have not paid, why?
+              </p>
+            </div>
+            <div class="card">
+              <h4>Recent Disputes</h4>
+              <div>
+                <img src="" alt="people" />
+                <div>
+                  <p>
+                    I have paid my son’s school fees, but my name is still showing
+                    that I have not paid, why?
+                  </p>
+                  <p>Adesanmi Beth</p>
+                </div>
+                <div>
+                  <img src="" alt="people" />
+                  <div>
+                    <p>
+                      Please update my outstanding payment 20,000 naira so update
+                      it.
+                    </p>
+                    <p>John Vic</p>
+                  </div>
+                </div>
+                <div>
+                  <img src="" alt="people" />
+                  <div>
+                    <p>
+                      I have been trying to update my paymrnt but its not working,
+                      I was told to pay directly to the school.....
+                    </p>
+                    <p>Eunice Goffery</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="third-section">
+            <h2>Recently Uploaded</h2>
+            <table>
+              <th></th>
+            </table>
+          </section>
+        </section>
+        </div>
+        
     </main>
-    <script
-      crossorigin
-      src="https://unpkg.com/react@18/umd/react.production.min.js"
-    ></script>
-    <script
-      crossorigin
-      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
-    ></script>
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-    <script
-      src="../../scripts/school_dashboard script/school_dashboard.js"
-      type="text/babel"
-    ></script>
-    <script type="text/babel">
-      const domContainer = document.querySelector("#info");
-      ReactDOM.render(<School_dashboard />, domContainer);
-    </script>
   </body>
 </html>
