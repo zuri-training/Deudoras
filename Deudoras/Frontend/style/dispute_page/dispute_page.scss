@@ -11,13 +11,14 @@ div.body_sidebar{
 .navv {
     padding: 1em 0 2em 0;
     background-color: $primary-col-dash;
-    height: 100vh;
+    height: auto;
     width: 20%;
 }
 .nav_links {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 }
 .nav_links_logo{
     display: flex;
@@ -82,7 +83,7 @@ h2.log_out{
 
 
 main{
-    padding: 4em 2em 0 2em;
+    padding: 4em 2em 2em 2em;
     width: 70vw;
 }
 section.main_one{
@@ -127,8 +128,18 @@ section.main_two{
     border-radius: 5px;
     padding: 0.4em;
     padding-left: 1em;
-    width: 25em;
+    width: 27em;
     border: 1px solid $secondary-col-dash;
+}
+.inputt2{
+    width: 10em;
+    padding: 0.4em;
+    border-radius: 5px;
+}
+.inputt3{
+    width: 15em;
+    padding: 0.4em;
+    border-radius: 5px;
 }
 .message{
     display: block;
@@ -137,10 +148,14 @@ section.main_two{
     display: block;
     background-color: $primary-col-dash;
     color: $primary-col-white;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    font-size: 1em;
+    padding: 0.4em;
 }
 div.main_two_sch{
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
     margin-top: 2em;
     margin-bottom: 2em;
 }
@@ -151,13 +166,42 @@ div.main_two_sch1{
 div.main_two_sch2{
     display: flex;
     flex-direction: column;
+    margin-left: 2em;
 }
-button.upload{
+div.upload{    
+    margin-bottom: 4em;
+}
+::-webkit-file-upload-button {
     background-color: $primary-col-dash ;
     padding: 0.4em;
     color: $primary-col-white;
-    margin-bottom: 2em;
+    margin-bottom: 3em;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    // background: black;
+    // color: red;
+    // padding: 1em;
 }
 textarea.textarea{
     margin-bottom: 2em;
 }
+
+
+// 1135px first breaking point
+@media screen and (max-width: 1135px){
+    .nav_items {
+        // padding: 1em 3em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        color: $background-col-white;
+        width: 100%;
+        // text-align: center;
+    }
+    .space {
+        padding-right: 0;
+    }
+}
+
