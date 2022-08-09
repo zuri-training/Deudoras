@@ -38,6 +38,8 @@ div.body_sidebar{
     justify-content: center;
     margin-top: 3em;
 }
+
+
 .nav_items {
     padding: 1em 3em;
     display: flex;
@@ -47,13 +49,23 @@ div.body_sidebar{
     color: $background-col-white;
     width: 100%;
     text-align: center;
+    font-size: 1.1em;
 }
 .space{
     padding-right: 1.3em;
 }
-h2.log_out{
+.space2{
+    padding-right: 1.3em;
+}
+@media screen and (max-width: 1243px){
+    .space2{
+        padding-right: 3px;
+    }
+}
+.log_out{
     background-color: $danger-dash;
-    padding: 0.8em 0.8em;
+    // padding: 0.8em 0.8em;
+    // width: 80%;
     border-radius: 5px;
 }
 .nav_items:visited{
@@ -82,8 +94,9 @@ h2.log_out{
 }
 
 
+
 main{
-    padding: 4em 2em 2em 2em;
+    padding: 4em 2em 2em 4em;
     width: 70vw;
 }
 section.main_one{
@@ -106,8 +119,6 @@ div.main_one_info{
 div.main_one_noti{
     width: 15%;
 }
-
-
 
 
 section.main_two{
@@ -187,6 +198,8 @@ textarea.textarea{
 }
 
 
+//////////////////////////////////////////////////
+
 // 1135px first breaking point
 @media screen and (max-width: 1135px){
     .nav_items {
@@ -202,6 +215,17 @@ textarea.textarea{
     }
     .space {
         padding-right: 0;
+        font-size: 2em;
+        margin-bottom: 0.5em;
+    }
+    .space2{
+        margin-bottom: 0.5em;
+        font-size: 2em;
     }
 }
 
+@media screen and (max-width: 952px){
+    .nav_items h2{
+        font-size: 0.8em;
+    }
+}
