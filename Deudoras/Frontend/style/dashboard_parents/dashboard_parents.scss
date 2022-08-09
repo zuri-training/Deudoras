@@ -50,13 +50,18 @@ div.nav_links_logo{
 .space{
     padding-right: 1.3em;
 }
+h2.log_out{
+    background-color: $danger-dash;
+    padding: 0.8em 0.8em;
+    border-radius: 5px;
+}
 .nav_items:visited{
     color: $primary-col-dash;
     // background-color: $background-col-dash;
 }
 .logo{
-    width: 12em;
-    height: 4em;
+    width: 15em;
+    height: 5em;
     margin-bottom: 3em;
     margin-top: 2em;
 }
@@ -105,7 +110,7 @@ main{
     margin-bottom: 2em;
 }
 div.main_top_one{
-    width: 90%;    
+    width: 85%;
     align-self: center;
 }
 .search{
@@ -247,8 +252,8 @@ p.total_debt_amt{
     text-align: left;
     padding: 1em;
     background-color: #E8F2FF;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
+    // border-top-right-radius: 15px;
+    // border-top-left-radius: 15px;
 }
 // .main_brkdwn_stdnt_debt_session_1{
     
