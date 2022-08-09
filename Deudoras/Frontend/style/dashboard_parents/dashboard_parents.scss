@@ -25,15 +25,25 @@ div.body_sidebar{
     align-items: center;
     justify-content: center;
 }
-.nav_items {
-    padding: 1em 5em;
+.nav_links_2{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3em;
+}
+.nav_items {
+    padding: 1em 3em;
+    display: flex;
+    // justify-content: center;
     align-items: center;
     cursor: pointer;
     color: $background-col-white;
     width: 100%;
     text-align: center;
+}
+.space{
+    padding-right: 1.3em;
 }
 .nav_items:visited{
     color: $primary-col-dash;
@@ -137,28 +147,32 @@ div.main_top_two{
     color: $primary-col-white;
     padding: 1em 0;
     border-radius: 5px;
-    width: 22%;
+    width: 23%;
+    border: 2px solid #C1C4DB;
 }
 .main_student_summary_2{
     background-color: $primary-col-white;
     color: $primary-col-dash;
     padding: 1em 0;
     border-radius: 5px;
-    width: 22%;
+    width: 23%;
+    border: 2px solid #C1C4DB;
 }
 .main_student_summary_3{
     background-color: $primary-col-white;
     color: $primary-col-dash;
     padding: 1em 0;
     border-radius: 5px;
-    width: 22%;
+    width: 23%;
+    border: 2px solid #C1C4DB;
 }
 .main_student_summary_4{
     background-color: $primary-col-white;
     color: $primary-col-dash;
     padding: 1em 0;
     border-radius: 5px;
-    width: 22%;
+    width: 23%;
+    border: 2px solid #C1C4DB;
 }
 .summa_1{
     display: flex;
@@ -167,6 +181,12 @@ div.main_top_two{
 }
 .summa_2{
     padding: 0 1.5em;
+}
+p.total_debt{
+    font-size: 1em;
+}
+p.total_debt_amt{
+    font-size: 1.4em;
 }
 .main_student_detail {
     display: flex;
@@ -225,24 +245,18 @@ div.main_top_two{
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
 }
-.main_brkdwn_stdnt_debt_session_1{
-    width: 25%;
-    // margin-left: 2em;
-}
-.main_brkdwn_stdnt_debt_session_2{
-    width: 30%;
-    // margin-left: -4em;
-}
-.main_brkdwn_stdnt_debt_session_3{
-    width: 30%;
-    // margin-left: -4em;
-}
-.main_brkdwn_stdnt_debt_session_4{
-    width: 25%;
-    // margin-right: 2em;
-    display: flex;
-    justify-content: space-between;
-}
+// .main_brkdwn_stdnt_debt_session_1{
+    
+// }
+// .main_brkdwn_stdnt_debt_session_2{
+    
+// }
+// .main_brkdwn_stdnt_debt_session_3{
+    
+// }
+// .main_brkdwn_stdnt_debt_session_4{
+    
+// }
 .main_brkdwn_stdnt_debt_detail{
     display: flex;
     justify-content: space-between;
