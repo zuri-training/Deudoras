@@ -110,17 +110,23 @@ div.main_one_noti{
 
 
 section.main_two{
-    margin-top: 4em;
+    margin-top: 3em;
     display: flex;
     flex-direction: column;
     width: 70%;
+}
+.title{
+    font-size: 0.8em;
+    font-weight: 400;
+    font-family:"Manrope",sans-serif;
 }
 .fullName{
     display: block;
 }
 .inputt{
     border-radius: 5px;
-    padding: 0.3em;
+    padding: 0.4em;
+    padding-left: 1em;
     width: 25em;
     border: 1px solid $secondary-col-dash;
 }
@@ -135,6 +141,8 @@ section.main_two{
 div.main_two_sch{
     display: flex;
     justify-content: space-between;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 div.main_two_sch1{
     display: flex;
@@ -148,4 +156,8 @@ button.upload{
     background-color: $primary-col-dash ;
     padding: 0.4em;
     color: $primary-col-white;
+    margin-bottom: 2em;
+}
+textarea.textarea{
+    margin-bottom: 2em;
 }
