@@ -10,5 +10,18 @@ urlpatterns = [
     path('schoolsignup', views.SchoolSignup, name='SchoolSignup'),
     path('schoolsignin', views.SchoolSignin, name='schoolsignin'),
     path('signout', views.signout, name='signout'),
+    path('help', views.need_help,name='Help'),
+    # path('scdashboard',views.school_dasboard, name = 'School dashboard'),
+    # path('usdashboard',),
+    path('about us', views.about_us, name=' About us'),
+    # path('userdashboard',views.user_dashboard,name='User dashboard')
 
+def loginSchool(request):
+    return render(request,'debtors/login/login-school')
+
+def loginStudents(request):
+    return render(request,'debtors/login/login-students')
+
+def loginUser(request):
+    return render(request,'debtors/login/login-user')
 ]

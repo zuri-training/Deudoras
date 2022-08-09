@@ -1,3 +1,4 @@
+{% load static%}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Need help</title>
-    <link rel="stylesheet" href="../../style/need_help/need_help.css" />
+    <link rel="stylesheet" href="{% static 'debtors/Frontend/style/need_help/need_help.css'%}" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
@@ -15,14 +16,35 @@
   </head>
   <body>
     <header class="header">
-      <nav class="nav"></nav>
-      <div class="container-fluid">
+      <nav class="nav">
+        <img
+          src="../../assets/need_help assets/project debtor logo svg 2.png"
+          alt=""
+        />
+        <div class="nav-section">
+          <div class="nav-links">
+            <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="">Articles</a></li>
+              <li><a href="">Contact us</a></li>
+              <li><a class="active" href="">Help</a></li>
+            </ul>
+          </div>
+          <div class="nav-buttons">
+            <button class="nav-button-1">Log In</button>
+            <button class="nav-button-2">Sign Up</button>
+          </div>
+        </div>
+      </nav>
+      <div class="container-fluid head">
         <div class="row">
           <div class="col-sm-4">
-            <img src="../../assets/need_help assets/girl1.png" alt="" />
+            <img src="{% static 'debtors/Frontend/assets/need_help assets/girl1.png'%}" alt="" />
           </div>
           <div class="col-sm-4">
-            <div>
+            <div class="faq">
+              <h1>HELP CENTRE</h1>
               <h2>THE FAQS</h2>
               <p>Have any questions? We're here to assist you.</p>
             </div>
@@ -31,7 +53,7 @@
             </div>
           </div>
           <div class="col-sm-4">
-            <img src="../../assets/need_help assets/girl2.png" alt="" />
+            <img src="{% static 'debtors/Frontend/assets/need_help assets/girl2.png'%}" alt="" />
           </div>
         </div>
       </div>
@@ -40,7 +62,7 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-4">
-            <img src="../../assets/need_help assets/Group 5986.png" alt="" />
+            <img src="{% static 'debtors/Frontend/assets/need_help assets/Group 5986.png'%}" alt="" />
             <h3>What is Deudoras</h3>
             <p>
               Deudoras is a platform that allows schools in Gbagada locality to
@@ -49,7 +71,7 @@
             </p>
           </div>
           <div class="col-sm-4">
-            <img src="../../assets/need_help assets/Group 5989.png" alt="" />
+            <img src="{% static 'debtors/Frontend/assets/need_help assets/Group 5989.png'%}" alt="" />
             <h3>How does it work?</h3>
             <p>
               Schools in Gbagada locality register their schools and list the
@@ -58,7 +80,7 @@
             </p>
           </div>
           <div class="col-sm-4">
-            <img src="../../assets/need_help assets/check mark.png" alt="" />
+            <img src="{% static 'debtors/Frontend/assets/need_help assets/check mark.png'%}" alt="" />
             <h3>How do I check my Status</h3>
             <p>
               You can check your debt status by registering as a user and
@@ -73,7 +95,7 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-4">
-            <img src="../../assets/need_help assets/Group 5992.png" alt="" />
+            <img src="{% static 'debtors/Frontend/assets/need_help assets/Group 5992.png'%}" alt="" />
             <h3>Can't upload proof?</h3>
 
             <p>
@@ -82,7 +104,7 @@
             </p>
           </div>
           <div class="col-sm-4">
-            <img src="../../assets/need_help assets/" alt="" />
+            <img src="{% static 'debtors/Frontend/assets/need_help assets/'%}" alt="" />
             <h3>How do I clear my debts?</h3>
 
             <p>
@@ -91,7 +113,7 @@
             </p>
           </div>
           <div class="col-sm-4">
-            <img src="../../assets/need_help assets/Group 6031.png" alt="" />
+            <img src="{% static 'debtors/Frontend/assets/need_help assets/Group 6031.png'%}" alt="" />
             <h3>How long is the review?</h3>
 
             <p>
@@ -123,7 +145,10 @@
     <footer class="footer">
       <div class="fluid">
         <div class="description">
-          <img src="" alt="" />
+          <img
+            src="../../assets/need_help assets/project debtor logo svg 1 (1).png"
+            alt=""
+          />
           <p>
             deudoras@gmail.com <br />
             +234 000 0000 000 (NIG)
