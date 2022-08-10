@@ -78,7 +78,13 @@ div.body_sidebar{
     margin-bottom: 3em;
     margin-top: 2em;
 }
-
+.logo2{
+    width: 4em;
+    height: 4em;
+    margin-bottom: 3em;
+    margin-top: 2em;
+    display: none;
+}
 .svg-white{
     color: white;
 }
@@ -200,7 +206,26 @@ textarea.textarea{
 
 //////////////////////////////////////////////////
 
-// 1135px first breaking point
+// 1143px first breaking point
+@media screen and (max-width: 1143px){
+    section.main_two{
+        margin-top: 8em;
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+    }
+    div.main_two_sch{
+        display: flex;
+        // justify-content: space-between;
+        margin-top: 4em;
+        margin-bottom: 4em;
+    }
+    .submit{
+        margin-bottom: 2em;
+    }
+}
+
+// 1135px second breaking point
 @media screen and (max-width: 1135px){
     .nav_items {
         // padding: 1em 3em;
@@ -222,6 +247,9 @@ textarea.textarea{
         margin-bottom: 0.5em;
         font-size: 2em;
     }
+    .logo{
+        margin-bottom: 0.5em;
+    }
 }
 
 @media screen and (max-width: 952px){
@@ -231,6 +259,9 @@ textarea.textarea{
     //logo disappear here
     .logo{
         display: none;
+    }
+    .logo2{
+        display: block;
     }
 }
 
