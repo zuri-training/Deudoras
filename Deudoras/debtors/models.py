@@ -13,6 +13,7 @@ class School(models.Model):
     location = models.TextField()
     CAC = models.IntegerField()
     Local_government = models.CharField(max_length=200)
+    
 
 class Debtors(models.Model):
     id = models.AutoField(primary_key=True)
@@ -20,10 +21,12 @@ class Debtors(models.Model):
     student_id = models.IntegerField()
     student_class = models.CharField(max_length=200)
     address = models.CharField(max_length=200)
-    school_id = models.ForeignKey(School,on_delete=models.DO_NOTHING)
+    school_id = models.ForeignKey(School,on_delete=models.CASCADE)
     contact = models.IntegerField()
 
 class Debt(models.Model):
+    School_id = models.ForeignKey(School, on_delete=models.CASCADE)
+    debtor_id = models.ForeignKey(Debtors, on_delete=models.CASCADE)
     id = models.AutoField(primary_key=True)
     session = models.CharField(max_length=200)
     stclass = models.CharField(max_length=200)
@@ -43,7 +46,7 @@ class Dispute(models.Model):
     datetime = models.DateTimeField()
     status = models.CharField(max_length=200)
     proofofpayment = models.FileField()
-    debt_id = models.ForeignKey(Debt,on_delete=CASCADE)
+    debt_id = models.ForeignKey(Debt,on_delete=models.CASCADE)
     
 
 class Article(models.Model):
@@ -53,4 +56,4 @@ class Article(models.Model):
     date = models.DateField()
     image = models.FileField()
     document = models.FileField()
-    summary = models.CharField()
+    summary = models.CharField(max_length=200)
