@@ -210,7 +210,7 @@ textarea.textarea{
         align-items: center;
         cursor: pointer;
         color: $background-col-white;
-        width: 100%;
+        width: auto;
         // text-align: center;
     }
     .space {
@@ -228,4 +228,16 @@ textarea.textarea{
     .nav_items h2{
         font-size: 0.8em;
     }
+    //logo disappear here
+    .logo{
+        display: none;
+    }
+}
+
+//754px
+@media screen and (max-width: 754px){
+    .nav_items h2{
+        font-size: 0.8em;
+    }
+    //discription disappear here
 }
