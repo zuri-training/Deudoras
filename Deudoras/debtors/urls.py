@@ -3,7 +3,7 @@ from django.contrib import admin
 from django.urls import path, include
 from . import views
 urlpatterns = [
-    path('', views.Landing, name='landing'),
+    path('', views.Landing, name='home'),
     path('userhome', views.UserHome, name='UserHome'),
    #  path('usersignup', views.UserSignup, name='UserSignup'),
     path('usersignin', views.UserSignin, name='usersignin'),
@@ -17,7 +17,7 @@ urlpatterns = [
     path('about us', views.about_us, name='About us'),
     # path('userdashboard',views.user_dashboard,name='User dashboard')
 
- path('loginSchool',views.loginSchool, name=' Sclogin'),
+ path('loginSchool',views.SchoolSignin, name=' Sclogin'),
  path('loginStudent',views.loginStudents , name=' Stlogin'),
  path('loginuser',views.loginUser , name='userlogin'),
   path('signupuser1',views.signupuser1 , name='signup1'),
