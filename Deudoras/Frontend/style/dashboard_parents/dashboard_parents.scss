@@ -292,6 +292,30 @@ p.total_debt{
 p.total_debt_amt{
     font-size: 1.4em;
 }
+@media screen and (max-width: 1146px){
+    p.total_debt{
+        font-size: 0.9em;
+    }
+    p.total_debt_amt{
+        font-size: 1.1em;
+    }
+    p.summa_2{
+        font-size: 0.9em;
+    }
+}
+@media screen and (max-width: 1026px){
+    p.summa_2{
+        font-size: 0.6em;
+        padding: 0 2.3em;
+    }
+    .main_student {
+        margin-bottom: 3em;
+        width: 100%;
+    }
+    div.session-record{
+        width: 110%;
+    }
+}
 .main_student_detail {
     display: flex;
     justify-content: space-between;
