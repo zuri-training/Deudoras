@@ -701,6 +701,7 @@ footer {
     width: 100%;
     padding: 1em;
     justify-content: flex-start;
+    height: 65vh;
   }
   .footer-content {
     width: 30%;
