@@ -13,6 +13,16 @@
       rel="stylesheet"
       href="../../style/school_dashboard/school_dashboard.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400&family=Public+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <main>
@@ -23,53 +33,110 @@
           alt="close button"
         />
         <ul>
-          <li>Dashboard</li>
+          <li><a href="school_dashboard.html">Dashboard</a></li>
           <li class="activeMobileNav">Profile</li>
-          <li>Schools</li>
+          <li><a href="school_dashboard_school.html">Schools</a></li>
           <li>Debtors List</li>
           <li>Articles</li>
           <li>Help</li>
         </ul>
         <button>Log Out</button>
       </nav>
+      <aside class="desktop">
+        <div class="sidebar">
+          <img
+            src="../../assets/school_dashboard assets/desktoplogo.png"
+            alt=""
+            class="desktop desklogo"
+          />
+          <img src="" alt="tablet-logo" class="tablet" />
 
-      <aside class="sidebar desktop">
+          <nav>
+            <div class="navItem">
+              <span class="activeMenuDesktop"
+                ><img
+                  src="../../assets/school_dashboard assets/dashboardIcon.png"
+                  alt=""
+                /><a href="school_dashboard.html">Dashboard</a></span
+              >
+              <span
+                ><img
+                  src="../../assets/school_dashboard assets/profile.png"
+                  alt=""
+                />Profile</span
+              >
+              <span
+                ><img
+                  src="../../assets/school_dashboard assets/teacher.png"
+                  alt=""
+                />
+                <a href="school_dashboard_school.html">Schools</a>
+              </span>
+              <span
+                ><img
+                  src="../../assets/school_dashboard assets/receipt-item.png"
+                  alt=""
+                />Debtors List</span
+              >
+              <span
+                ><img
+                  src="../../assets/school_dashboard assets/book.png"
+                  alt=""
+                />Article</span
+              >
+            </div>
+            <div class="navItem navItemMB">
+              <span
+                ><img
+                  src="../../assets/school_dashboard assets/device-message.png"
+                  alt=""
+                />Need Help?</span
+              >
+              <span class="danger-btn">
+                <img
+                  src="../../assets/school_dashboard assets/logout.png"
+                  alt=""
+                />Log Out
+              </span>
+            </div>
+          </nav>
+        </div>
+      </aside>
+      <aside class="tablet tablet-sidebar">
         <img
-          src="../../assets/school_dashboard assets/desktoplogo.png"
+          src="../../assets/school_dashboard assets/tab log.png"
           alt=""
-          class="desktop desklogo"
+          class="tabletLOgo"
         />
-        <img src="" alt="tablet-logo" class="tablet" />
-
         <nav>
           <div class="navItem">
             <span class="activeMenuDesktop"
               ><img
-                src="../../assets/school_dashboard assets/dashboardIcon.png"
+                src="../../assets/school_dashboard assets/dashTab.png"
                 alt=""
-              />Dashboard</span
+              /><a href="school_dashboard.html">Dashboard</a></span
             >
             <span
               ><img
-                src="../../assets/school_dashboard assets/profile.png"
+                src="../../assets/school_dashboard assets/profileTab.png"
                 alt=""
               />Profile</span
             >
             <span
               ><img
-                src="../../assets/school_dashboard assets/teacher.png"
+                src="../../assets/school_dashboard assets/ion_school-outline tab.png"
                 alt=""
-              />Schools</span
+              /><a href="school_dashboard_school.html">Schools</a></span
             >
             <span
               ><img
-                src="../../assets/school_dashboard assets/receipt-item.png"
+                src="../../assets/school_dashboard assets/receipt-item tab.png"
                 alt=""
               />Debtors List</span
             >
             <span
               ><img
-                src="../../assets/school_dashboard assets/book.png"
+                src="../../assets/school_dashboard assets/book tab.png"
                 alt=""
               />Article</span
             >
@@ -77,13 +144,13 @@
           <div class="navItem navItemMB">
             <span
               ><img
-                src="../../assets/school_dashboard assets/device-message.png"
+                src="../../assets/school_dashboard assets/device-message tab.png"
                 alt=""
               />Need Help?</span
             >
             <span class="danger-btn">
               <img
-                src="../../assets/school_dashboard assets/logout.png"
+                src="../../assets/school_dashboard assets/logout tab.png"
                 alt=""
               />Log Out
             </span>
@@ -102,7 +169,7 @@
                 />
                 <img src="" alt="mobile-logo" />
               </div>
-  
+
               <div class="search">
                 <img
                   src="../../assets/school_dashboard assets/icon-bell.png"
@@ -117,7 +184,7 @@
                 </div>
               </div>
             </div>
-            <div>
+            <div class="firstSectionArticle">
               <div>
                 <h2>Welcome, RoseBorn Secondary School.</h2>
                 <p class="desktop-tablet">
@@ -126,8 +193,11 @@
                 </p>
               </div>
               <div class="desktop-tablet search">
-                <div>
-                  <img src="" alt="searchIcon" />
+                <div class="serach-on">
+                  <img
+                    src="../../assets/school_dashboard assets/bx-search-alt.png"
+                    alt="searchIcon"
+                  />
                   <input placeholder="Search (Ctrl+/)" />
                 </div>
                 <div class="search_noti">
@@ -135,10 +205,10 @@
                     src="../../assets/school_dashboard assets/icon-bell.png"
                     alt="notificationIcon"
                   />
-                  <div>
+                  <div class="dropFlex">
                     <p>B</p>
                     <img
-                      src="../../assets/signup_school assets/"
+                      src="../../assets/school_dashboard assets/arrow-down.png"
                       alt="dropdownIcon"
                     />
                   </div>
@@ -147,38 +217,40 @@
             </div>
           </section>
           <section class="second-section desktop-tablet">
-            <div class="card">
+            <div class="card card1">
               <h4>Total Debt Recoveries</h4>
               <img
                 src="../../assets/school_dashboard assets/transactions-icon.png"
                 alt=""
               />
               <h3>N30,000,000</h3>
-              <div>
+              <div class="progressContain">
                 <div class="progress">
-                  <div>
+                  <div class="progressFlex">
                     <p>Recovery Target</p>
-                    <div>
-                      <span
-                        class="progressBar"
-                        style="background-color: #435971; width: 78%"
-                      ></span>
+                    <div class="progressBar">
+                      <span style="width: 78%"></span>
                     </div>
                   </div>
                   <p>78%</p>
                 </div>
               </div>
             </div>
-            <div class="card">
+            <div class="card card2">
+              <h4>Numbers of Schools</h4>
               <img
                 src="../../assets/school_dashboard assets/transactions-icon.png"
                 alt=""
               />
-              <h4>Numbers of Schools</h4>
               <h3>3,000</h3>
-              <div><img src="#" alt="dangerDrop" />13.24%</div>
+              <div class="dangerText">
+                <img
+                  src="../../assets/school_dashboard assets/Path.png"
+                  alt="dangerDrop"
+                />-13.24%
+              </div>
             </div>
-            <div class="card">
+            <div class="card card3">
               <h4>Recent Articles</h4>
               <p>
                 I have paid my son’s school fees, but my name is still showing
@@ -193,49 +265,146 @@
                 that I have not paid, why?
               </p>
             </div>
-            <div class="card">
+            <div class="card card4">
               <h4>Recent Disputes</h4>
-              <div>
-                <img src="" alt="people" />
+              <div class="backwhite">
+                <img
+                  src="../../assets/school_dashboard assets/arash.png"
+                  alt="people"
+                  class="avater"
+                />
                 <div>
                   <p>
-                    I have paid my son’s school fees, but my name is still showing
-                    that I have not paid, why?
+                    I have paid my son’s school fees, but my name is still
+                    showing that I have not paid, why?
                   </p>
-                  <p>Adesanmi Beth</p>
+                  <p class="specialPara">Adesanmi Beth</p>
                 </div>
+              </div>
+              <div class="backwhite">
+                <img
+                  src="../../assets/school_dashboard assets/arash.png"
+                  alt="people"
+                  class="avater"
+                />
                 <div>
-                  <img src="" alt="people" />
-                  <div>
-                    <p>
-                      Please update my outstanding payment 20,000 naira so update
-                      it.
-                    </p>
-                    <p>John Vic</p>
-                  </div>
+                  <p>
+                    Please update my outstanding payment 20,000 naira so update
+                    it.
+                  </p>
+                  <p class="specialPara">John Vic</p>
                 </div>
+              </div>
+              <div class="backwhite">
+                <img
+                  src="../../assets/school_dashboard assets/arash.png"
+                  alt="people"
+                  class="avater"
+                />
                 <div>
-                  <img src="" alt="people" />
-                  <div>
-                    <p>
-                      I have been trying to update my paymrnt but its not working,
-                      I was told to pay directly to the school.....
-                    </p>
-                    <p>Eunice Goffery</p>
-                  </div>
+                  <p>
+                    I have been trying to update my paymrnt but its not working,
+                    I was told to pay directly to the school.....
+                  </p>
+                  <p class="specialPara">Eunice Goffery</p>
                 </div>
               </div>
             </div>
           </section>
           <section class="third-section">
-            <h2>Recently Uploaded</h2>
-            <table>
-              <th></th>
-            </table>
+            <h3>Recently Uploaded</h3>
+            <div class="tablepadding">
+              <table>
+                <thead>
+                  <tr>
+                    <th class="snrow">S/N</th>
+                    <th class="srow">Student ID</th>
+                    <th class="nrow">Name of School</th>
+                    <th class="arow arth">Amount Outstanding</th>
+                    <th class="brow"></th>
+                  </tr>
+                </thead>
+              </table>
+              <div class="table">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td class="sn_no snrow">001</td>
+                      <td class="srow">STU20001</td>
+                      <td class="nrow">Glorious Kids International School</td>
+                      <td class="arow">NGN 40,000</td>
+                      <td class="brow"><button>View</button></td>
+                    </tr>
+                    <tr class="special-bg-table">
+                      <td class="sn_no snrow"></td>
+                      <td class="srow"></td>
+                      <td class="nrow"></td>
+                      <td class="arow"></td>
+                      <td class="brow"></td>
+                    </tr>
+                    <tr>
+                      <td class="sn_no snrow">001</td>
+                      <td class="srow">STU20001</td>
+                      <td class="nrow">Glorious Kids International School</td>
+                      <td class="arow">NGN 40,000</td>
+                      <td class="brow"><button>View</button></td>
+                    </tr>
+                    <tr class="special-bg-table">
+                      <td class="sn_no snrow"></td>
+                      <td class="srow"></td>
+                      <td class="nrow"></td>
+                      <td class="arow"></td>
+                      <td class="brow"></td>
+                    </tr>
+                    <tr>
+                      <td class="sn_no snrow">001</td>
+                      <td class="srow">STU20001</td>
+                      <td class="nrow">Glorious Kids International School</td>
+                      <td class="arow">NGN 40,000</td>
+                      <td class="brow"><button>View</button></td>
+                    </tr>
+                    <tr class="special-bg-table">
+                      <td class="sn_no snrow"></td>
+                      <td class="srow"></td>
+                      <td class="nrow"></td>
+                      <td class="arow"></td>
+                      <td class="brow"></td>
+                    </tr>
+                    <tr>
+                      <td class="sn_no snrow">001</td>
+                      <td class="srow">STU20001</td>
+                      <td class="nrow">Glorious Kids International School</td>
+                      <td class="arow">NGN 40,000</td>
+                      <td class="brow"><button>View</button></td>
+                    </tr>
+                    <tr class="special-bg-table">
+                      <td class="sn_no snrow"></td>
+                      <td class="srow"></td>
+                      <td class="nrow"></td>
+                      <td class="arow"></td>
+                      <td class="brow"></td>
+                    </tr>
+                    <tr>
+                      <td class="sn_no snrow">001</td>
+                      <td class="srow">STU20001</td>
+                      <td class="nrow">Glorious Kids International School</td>
+                      <td class="arow">NGN 40,000</td>
+                      <td class="brow"><button>View</button></td>
+                    </tr>
+                    <tr class="special-bg-table">
+                      <td class="sn_no snrow"></td>
+                      <td class="srow"></td>
+                      <td class="nrow"></td>
+                      <td class="arow"></td>
+                      <td class="brow"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </section>
-        </section>
         </div>
-        
+      </section>
     </main>
   </body>
 </html>
