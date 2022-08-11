@@ -358,9 +358,9 @@ p.total_debt_amt{
 // .main_brkdwn_stdnt_debt_session_3{
     
 // }
-// .main_brkdwn_stdnt_debt_session_4{
-    
-// }
+.main_brkdwn_stdnt_debt_session_4{
+    padding-right: 3em;
+}
 .main_brkdwn_stdnt_debt_detail{
     display: flex;
     justify-content: space-between;
@@ -368,6 +368,7 @@ p.total_debt_amt{
     padding: 1em;
     background-color: white;
     border-bottom: 2px solid lightblue;
+    // margin-right: -2em;
 }
 
 // 1135px second breaking point
