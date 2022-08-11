@@ -4,7 +4,8 @@ body {
     background-color: #F6FAFF;
 }
 div.body_sidebar{
-    display: flex;    
+    display: flex;
+    justify-content: space-between;
 }
 
 
@@ -102,8 +103,8 @@ div.body_sidebar{
 
 
 main{
-    padding: 4em 2em 2em 4em;
-    width: 70vw;
+    padding: 4em 2em 2em 2em;
+    width: 90%;
 }
 section.main_one{
     display: flex;
@@ -122,9 +123,33 @@ div.main_one_info{
     font-size: 1em;
     color: $primary-col-dash;
 }
+@media screen and (max-width: 1124px){
+    .main_one_info-text{
+        font-size: 1.5em;
+    }
+    .main_one_info-text2{
+        font-size: 0.9em;
+    }
+}
 div.main_one_noti{
     width: 15%;
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 8em;
+    // align-items: center;
 }
+.fa-bell{
+    font-size: 1.5em;
+}
+.nav_items_2--img{
+    border-radius: 50%;
+}
+// div.main_top_two{
+//     width: 10%;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+// }
 
 
 section.main_two{
@@ -157,6 +182,17 @@ section.main_two{
     width: 15em;
     padding: 0.4em;
     border-radius: 5px;
+}
+@media screen and (max-width: 696px){
+    .inputt{
+        width: 24em;
+    }
+    .inputt2{
+        width: 8.5em;
+    }
+    .inputt3{
+        width: 13.5em;
+    }
 }
 .message{
     display: block;
@@ -262,13 +298,24 @@ textarea.textarea{
     }
     .logo2{
         display: block;
+        margin-bottom: 2em;
     }
 }
 
 //754px
 @media screen and (max-width: 754px){
+    .nav_items{
+        padding: 0.7em 3em;
+    }
     .nav_items h2{
         font-size: 0.8em;
+    }
+    .space{
+        margin-bottom: 0.4em;
+    }
+    .log_out{
+        background-color: transparent;
+        border-radius: 5px;
     }
     //discription disappear here
 }
