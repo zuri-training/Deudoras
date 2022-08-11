@@ -79,7 +79,6 @@ li {
   font-family: var(--font-family);
   background: var(--background-color);
   padding: 9px 18px;
-
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -110,6 +109,37 @@ li {
   line-height: 22px;
   letter-spacing: 0.005em;
   color: #03034e;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #fafbfc;
+  box-shadow: 0px 1px 3px 1px rgba(3, 4, 94, 0.15),
+    0px 1px 2px rgba(3, 4, 94, 0.3);
+  padding: 10px;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: var(--primary-color);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: var(--font-family);
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 /* section 1 and it's divisions*/
 .section-1 {
