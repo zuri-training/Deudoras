@@ -3,27 +3,30 @@ from tkinter import CASCADE
 from xml.parsers.expat import model
 from django.db import models
 from django.contrib.auth.models import User
-from django.contrib.auth.models import AbstractBaseUser,BaseUserManager
+from django.contrib.auth.models import AbstractBaseUser,BaseUserManager, PermissionsMixin
 
 
-
+# from .forms import NewUserForm
 
 # Create your models here.
 
 class MyAccountManager(BaseUserManager):
     def create_user(self, email,name,password =None):
-        user = self.model(email =self.normalize_email(email),name =name)
+        user = self.model(email =self.normalize_email(email),
+        name =name)
         user.set_password(password)
         user.save(using=self._db)
         return user
     def create_superuser(self,email,name,password):
-        user = self.model(email =self.normalize_email(email),name =name)
+        user = self.create_user(email =self.normalize_email(email), 
+        name =name )
         user.set_password(password)
-        user.save(using=self._db)
+        
         user.is_admin = True
         user.is_staff = True
         user.is_superuser = True
-
+        user.save(using=self._db)
+        return user
 def get_profile_image_filepath(self,filename):
     return f'profile_images/{self.pk}/{"profile_image.png"}'
 
@@ -38,22 +41,23 @@ def get_article_image_filepath(self,filename):
 def get_default_image():
     return 'jj.png'
 
-class Account(AbstractBaseUser):
+class Account(AbstractBaseUser, PermissionsMixin):
 
-    email = models.EmailField(verbose_name='email',max_length=60, unique=True)
+    email = models.EmailField(verbose_name='email',max_length=60, unique=True,null=True)
     
     name = models.CharField(max_length=50)
-    date_joined = models.DateTimeField(verbose_name='date joined' , auto_now=True)
+    date_joined = models.DateTimeField(verbose_name='date joined' , auto_now_add=True)
     last_login  = models.DateTimeField(verbose_name='last login' , auto_now=True)
     is_admin = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
     is_superuser = models.BooleanField(default=False)
     is_staff = models.BooleanField(default=False)
     is_superuser = models.BooleanField(default=False)
-    
-    objects =MyAccountManager()
+    username = None
+    objects = MyAccountManager()
 
     USERNAME_FIELD ='email'
+    REQUIRED_FIELDS= ['name']
 
 
     def __str__(self):
@@ -66,8 +70,9 @@ class Account(AbstractBaseUser):
 
 
 
+    
 class School(models.Model):
-    school = models.OneToOneField(Account,null=True, on_delete= models.CASCADE)
+    account = models.OneToOneField(Account,null=True, on_delete= models.CASCADE)
     logo = models.ImageField(upload_to = get_profile_image_filepath)
     location = models.TextField()
     CAC = models.IntegerField()

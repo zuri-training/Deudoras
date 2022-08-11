@@ -1,3 +1,4 @@
+from unicodedata import name
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import Group
@@ -15,11 +16,18 @@ from django.contrib.sites.shortcuts import get_current_site
 from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
 from .decorators import not_user,users
 # from django.utils.encoding import force_bytes, force_text
-
-from .models import School,Debtors,Debt, Article
+from django.contrib.auth.forms import UserCreationForm
+from .models import School,Debtors,Debt, Article, Account,MyAccountManager
 # from Deudoras import debtors
 
 # Create your views here.
+def user_try(request):
+    form = NewUserForm(request.POST)
+    if form.is_valid():
+        form.save()
+    context = {'form': form}
+    return render(request,'debtors/test.html',context)
+
 
 
 def Landing(request):
@@ -44,13 +52,16 @@ def SchoolSignup(request):
     #     if password != confirm_password:
     # #         messages.error(request, "Passwords didn't matched!!")
     # #         return redirect('home')
-        myuser = School.objects.create(name =school_name ,email = email, password =password,location =location, CAC =cac, Local_government =lga)
-        group = Group.objects.get(name ='customer')
-        user = group.add(group)
+        # account = MyAccountManager.create_user(email=email,name=school_name,password=password)
+        acc=Account.objects.create(email=email,name =school_name, password =password)
+
+        myuser = School.objects.create(account= Account.objects.get(email =email,name =school_name,password= password),location =location, CAC =cac, Local_government =lga)
+        group = Group.objects.get(name ='Schools')
+        acc.groups.add(group)
         # School.objects.create(user)
         
         myuser.is_active = True
-        myuser.save()
+        
 
         messages.success(request, 'Your account has been succesfully created')
 
@@ -61,9 +72,9 @@ def add_debtor(request):
     
     # if form._
     if request.method == "POST":
-        school_name = request.POST.get('SchoolName')
-        email = request.POST.get('SchoolEmail')
-        location = request.POST.get('SchoolAddress')
+        name = request.POST.get('name')
+        email = request.POST.get('Email')
+        location = request.POST.get('Address')
         lga = request.POST.get('LGA')
         cac = request.POST.get('SchoolCAC')
         password = request.POST.get('Password')
@@ -77,19 +88,20 @@ def add_debtor(request):
     #     if password != confirm_password:
     # #         messages.error(request, "Passwords didn't matched!!")
     # #         return redirect('home')
-        myuser = School.objects.create(name =school_name ,email = email, password =password,location =location, CAC =cac, Local_government =lga)
-        group = Group.objects.get(name ='customer')
-        user = group.add(group)
+        # account = MyAccountManager.create_user(email=email,name=school_name,password=password)
+        acc=Account.objects.create(email=email,name =school_name, password =password)
+
+        myuser = School.objects.create(account= Account.objects.get(email =email,name =school_name,password= password),location =location, CAC =cac, Local_government =lga)
+        group = Group.objects.get(name ='Schools')
+        acc.groups.add(group)
         # School.objects.create(user)
         
         myuser.is_active = True
-        myuser.save()
+        
 
         messages.success(request, 'Your account has been succesfully created')
 
         return render(request,"debtors/login/login-school.html")
-
-    return render(request,"debtors/signup_school.html")
 def need_help(request):
     return render(request,'debtors/need_help.html')
 
@@ -98,10 +110,6 @@ def about_us(request):
     
     return render(request,'debtors/about us.html')
 
-@login_required
-def debt_by_debtor(request,pk):
-    debt = Debt.objects.get(debtors_id = pk)
-    return render(request,"debtors/debts.html",{'debts':debt})
 def SchoolSignin(request):
 
     if request.method == 'POST':
@@ -144,6 +152,13 @@ def UserSignin(request):
 
 
     return render(request, "debtorslogin/usersignin.html")
+
+
+@login_required
+def debt_by_debtor(request,pk):
+    debt = Debt.objects.get(debtors_id = pk)
+    return render(request,"debtors/debts.html",{'debts':debt})
+
     
 
 
