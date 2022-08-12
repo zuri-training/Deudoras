@@ -115,62 +115,8 @@ p.main_school_name{
     font-weight: 400;
     color: $primary-col-dash;
 }
-div.main_debt_info{
-    margin-bottom: 1.6em;
+
+div.student-cont{
     display: flex;
     justify-content: space-between;
-}
-p.search_debt_name{
-    background-color: $primary-col-dash;
-    color: $primary-col-white;
-    text-align: center;
-    align-self: center;
-    padding: 0.6em;
-    border-radius: 5px;
-}
-.upload_debtor{
-    background-color: $primary-col-dash;
-    color: $primary-col-white;
-    border-radius: 5px;
-    border: 2px solid transparent;
-}
-.main_brkdwn_stdnt_debt{
-    margin-top: 1em;
-    margin-bottom: 0.5em;
-    width: auto;
-}
-.main_brkdwn_stdnt_debt_head{
-    font-size: 1.1em;
-    margin-bottom: 1em;
-    color: #02034E;
-}
-.main_brkdwn_stdnt_debt_session{
-    display: flex;
-    justify-content: space-between;
-    text-align: left;
-    padding: 1em;
-    background-color: #E8F2FF;
-    // border-top-right-radius: 15px;
-    // border-top-left-radius: 15px;
-}
-// .main_brkdwn_stdnt_debt_session_1{
-    
-// }
-// .main_brkdwn_stdnt_debt_session_2{
-    
-// }
-// .main_brkdwn_stdnt_debt_session_3{
-    
-// }
-.main_brkdwn_stdnt_debt_session_4{
-    padding-right: 3em;
-}
-.main_brkdwn_stdnt_debt_detail{
-    display: flex;
-    justify-content: space-between;
-    text-align: left;
-    padding: 1em;
-    background-color: white;
-    border-bottom: 2px solid lightblue;
-    // margin-right: -2em;
 }
