@@ -106,7 +106,7 @@ def SchoolSignin(request):
     if request.method == 'POST':
         email = request.POST.get('email')
         password = request.POST.get('password')
-
+        print('done')
         user = authenticate(request, email=email, password=password)
 
         if user is not None:
