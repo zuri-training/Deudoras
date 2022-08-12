@@ -115,6 +115,11 @@ p.main_school_name{
     font-weight: 400;
     color: $primary-col-dash;
 }
+div.main_debt_info{
+    margin-bottom: 1.6em;
+    display: flex;
+    justify-content: space-between;
+}
 p.search_debt_name{
     background-color: $primary-col-dash;
     color: $primary-col-white;
@@ -123,9 +128,11 @@ p.search_debt_name{
     padding: 0.6em;
     border-radius: 5px;
 }
-div.main_debt_info{
-    display: flex;
-    justify-content: space-between;
+.upload_debtor{
+    background-color: $primary-col-dash;
+    color: $primary-col-white;
+    border-radius: 5px;
+    border: 2px solid transparent;
 }
 .main_brkdwn_stdnt_debt{
     margin-top: 1em;
