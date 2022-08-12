@@ -8,10 +8,18 @@ from .models import School,Account
 
 # Create your forms here.
 
-# class NewSchool(ModelForm):
+# class NewSchool(UserCreationForm):
 # 	class Meta:
-# 		model = School
-# 		fields = ("name","email","CAC","location","Local_government")
+# 		model = Account
+		
+# 		fields = ('name' ,
+#         'email'  ,
+#         'location' ,
+#         'contact'
+#         )
+# 	def save(self,commit):
+
+
 # Widgets ={
 # 			"name": forms.TextInput(attrs ={'class': 'form_item' ,'id':'SchoolName','label' : 'School Name', 'placeholder':"Ava Memorial College"})
 # 			,"email": forms.EmailField(attrs ={'class': 'form_item' ,'id':'SchoolEmail','label' : 'School Email Address', 'placeholder':"Avacollege@yahoo.com"})

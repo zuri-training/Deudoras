@@ -75,24 +75,15 @@ def add_debtor(request):
         name = request.POST.get('name')
         email = request.POST.get('Email')
         location = request.POST.get('Address')
-        lga = request.POST.get('LGA')
-        cac = request.POST.get('SchoolCAC')
-        password = request.POST.get('Password')
-        print(email)
-        # if location != 'gbagada':
-    #         messages.error(request, "School is outside our jurisdiction.")
-    #         return redirect('home')
-    #     if User.objects.filter(email=email.exists()):
-    # #         messages.error(request, "Email Already Registered! Try Login Instead")
-    # #         return redirect('home')
-    #     if password != confirm_password:
-    # #         messages.error(request, "Passwords didn't matched!!")
-    # #         return redirect('home')
-        # account = MyAccountManager.create_user(email=email,name=school_name,password=password)
-        acc=Account.objects.create(email=email,name =school_name, password =password)
+        contact = request.POST.get('contact')
+        
+        
+       
+        acc=Account.objects.create(email=email,name =name, password ='0000')
 
-        myuser = School.objects.create(account= Account.objects.get(email =email,name =school_name,password= password),location =location, CAC =cac, Local_government =lga)
-        group = Group.objects.get(name ='Schools')
+        myuser = Debtors.objects.create(account= Account.objects.get(email =email,name =name,password= '0000')
+        ,address =location, contact =contact)
+        group = Group.objects.get(name ='Student')
         acc.groups.add(group)
         # School.objects.create(user)
         
