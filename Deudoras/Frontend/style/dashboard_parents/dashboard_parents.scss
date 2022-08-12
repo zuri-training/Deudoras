@@ -203,6 +203,11 @@ main{
     align-items: center;
     margin-bottom: 2em;
 }
+@media screen and (max-width: 1134px){
+    .main_top{
+        margin-bottom: 4em;
+    }
+}
 div.main_top_one{
     width: 85%;
     align-self: center;
@@ -233,6 +238,11 @@ div.main_top_two{
     color: #3D7A9A;
     font-size: 1.3em;
 }
+@media screen and (max-width: 1134px){
+    .main_child_info{
+        margin-bottom: 3em;
+    }
+}
 .main_student{
     margin-bottom: 3em;
     width: 90%;
@@ -245,6 +255,13 @@ div.main_top_two{
 .main_student_summary{
     display: flex;
     justify-content: space-between;
+}
+@media screen and (max-width: 1134px){
+    .main_student_summary{
+        margin-top: 5em;
+        margin-bottom: 5em;
+    }
+
 }
 .main_student_summary_1{
     background-color: $primary-col-dash;
@@ -568,12 +585,12 @@ p.total_debt_amt{
         background-color: #F6FAFF;
         padding: 1em 0.8em;
     }
-    .nav_items:not(:first-child){
-        display: none;        
-    }
-    .nav_links_2{
-        display: none;
-    }
+    // .nav_items:not(:first-child){
+    //     display: none;        
+    // }
+    // .nav_links_2{
+    //     display: none;
+    // }
     // .nav_links{
     //     display: none;
     // }
