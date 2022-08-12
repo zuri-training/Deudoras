@@ -4,8 +4,6 @@ const password = document.querySelector('#password')
 const togglePassword = document.querySelector('#togglePassword')
 
 form.addEventListener('submit', (e) => {
-  e.preventDefault()
-
   checkInputs()
 })
 
@@ -62,7 +60,3 @@ togglePassword.addEventListener('click', function () {
   // toggle the icon
   this.classList.toggle('bi-eye')
 })
-
-const login = async () => {
-  const response = await fetch(``) 
-}
