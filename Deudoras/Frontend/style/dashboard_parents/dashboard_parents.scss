@@ -316,6 +316,28 @@ p.total_debt_amt{
         width: 110%;
     }
 }
+@media screen and (max-width: 884px){
+    .summa_2{
+        padding: 0 1em;
+    }
+    p.summa_2{
+        padding: 0 1.5em;
+    }
+}
+@media screen and (max-width: 780px){
+    p.total_debt_amt{
+        font-size: 1em;
+    }
+}
+@media screen and (max-width: 690px){
+    .summa_2{
+        padding: 0 0.3em;
+    }
+
+p.total_debt_amt{
+    font-size: 1em;
+}
+}
 .main_student_detail {
     display: flex;
     justify-content: space-between;
