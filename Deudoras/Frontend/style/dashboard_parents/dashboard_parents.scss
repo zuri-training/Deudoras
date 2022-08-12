@@ -331,14 +331,18 @@ div.main_top_two{
     div.main_student_summary_1{
         width: 100%;
         text-align: center;
+        margin-bottom: 1.5em;
     }
     div.main_student_summary_2{
         width: 100%;
         text-align: center;
+        margin-bottom: 1.5em;
     }
     div.main_student_summary_3{
         width: 100%;
         text-align: center;
+        margin-bottom: 1.5em;
+        color: rgb(167, 167, 14);
     }
     div.main_student_summary_4{
         width: 100%;
@@ -422,6 +426,14 @@ div.offcanvas-list{
 p.total_debt_amt{
     font-size: 1em;
 }
+}
+@media screen and (max-width: 547px){
+    p.total_debt{
+        font-size: 1.4em;
+    }
+    p.total_debt_amt{
+        font-size: 8.6em;
+    }
 }
 .main_student_detail {
     display: flex;
