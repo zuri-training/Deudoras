@@ -7,8 +7,8 @@
     <title>Dashboard Parents</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../../style/dispute_page/dispute_page.min.css.map">
-    <link rel="stylesheet" href="../../style/dispute_page/dispute_page.min.css">
+    <link rel="stylesheet" href="../../style/debtors_list/debtors_list.min.css.map">
+    <link rel="stylesheet" href="../../style/debtors_list/debtors_list.min.css">
     <!-- <link rel="stylesheet" href="../../style/dashboard_parents/dash-parents.css"> -->
 </head>
 <body>
@@ -40,16 +40,49 @@
         <main>
           <div>
             <div>
-              <p>Bernard Nursery & Primary School Debtors List</p>
+              <p class="main_school_name">Bernard Nursery & Primary School Debtors List</p>
             </div>
-            <div>
-              <p>Debtor's name</p>
-              <input type="text" placeholder="search">
-              <button>Upload debtors list</button>
+            <div class="main_debt_info">
+              <p class="search_debt_name">Debtor's name</p>
+              <input class="search-bar" type="text" placeholder="search">
+              <button class="upload_debtor">Upload debtors list</button>
             </div>
           </div>
           
-          <div></div>
+          <section class="main_brkdwn_stdnt_debt">
+            <div class="session-record">
+              <div class="main_brkdwn_stdnt_debt_session">
+                <span class="main_brkdwn_stdnt_debt_session_1">Student ID</span>
+                <span class="main_brkdwn_stdnt_debt_session_2">Name of student</span>
+                <span class="main_brkdwn_stdnt_debt_session_3">Amount Outstanding</span>
+                <span class="main_brkdwn_stdnt_debt_session_4">Update</span>
+              </div>
+              <div class="main_brkdwn_stdnt_debt_detail">
+                <span class="main_brkdwn_stdnt_debt_session_1">2020/2021</span>
+                <span class="main_brkdwn_stdnt_debt_session_2">SSS 2</span>
+                <div class="main_brkdwn_stdnt_debt_session_3" id="amount">
+                  <span class="">NGN10,000</span>
+                </div>
+                <span class="main_brkdwn_stdnt_debt_session_4"><a href="" type="button">Edit</a></span>
+              </div>
+              <div class="main_brkdwn_stdnt_debt_detail">
+                <span class="main_brkdwn_stdnt_debt_session_1">2018/2019</span>
+                <span class="main_brkdwn_stdnt_debt_session_2">JSS 3</span>
+                <div class="main_brkdwn_stdnt_debt_session_3" id="amount">
+                  <span class="">NGN10,000</span>
+                </div>
+                <span class="main_brkdwn_stdnt_debt_session_4"><a href="" type="button">Edit</a></span>
+              </div>
+              <div class="main_brkdwn_stdnt_debt_detail">
+                <span class="main_brkdwn_stdnt_debt_session_1">2018/2019</span>
+                <span class="main_brkdwn_stdnt_debt_session_2">JSS 3</span>
+                <div class="main_brkdwn_stdnt_debt_session_3" id="amount">
+                  <span class="">NGN10,000</span>
+                </div>
+                <span class="main_brkdwn_stdnt_debt_session_4"><a href="" type="button">Edit</a></span>
+              </div>
+            </div>
+          </section>
         </main>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
