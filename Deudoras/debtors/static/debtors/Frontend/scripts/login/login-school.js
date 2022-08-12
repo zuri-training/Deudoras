@@ -62,3 +62,7 @@ togglePassword.addEventListener('click', function () {
   // toggle the icon
   this.classList.toggle('bi-eye')
 })
+
+const login = async () => {
+  const response = await fetch(``) 
+}

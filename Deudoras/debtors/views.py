@@ -110,9 +110,12 @@ def SchoolSignin(request):
         user = authenticate(request, email=email, password=password)
 
         if user is not None:
-            school_name =user.school_name
+            school_name =user.name
+            id = user.id
+            
             login(request, user)
-            return render(request, "school_dashboard.html", {'name':school_name})
+            context= {'name':name,'id' :id} 
+            return render(request, "debtors/school_dashboard.html",context)
 
         else:
             messages.error(request, "Bad credentials!!")
@@ -120,7 +123,7 @@ def SchoolSignin(request):
 
         
 
-    return render(request, "login/schoolsignin.html")
+    return render(request, "debtors/login/login-school.html")
 
 
 def UserSignin(request):
