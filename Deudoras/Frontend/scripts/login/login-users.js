@@ -4,8 +4,6 @@ const password = document.querySelector('#password')
 const togglePassword = document.querySelector('#togglePassword')
 
 form.addEventListener('submit', (e) => {
-  e.preventDefault()
-
   checkInputs()
 })
 
