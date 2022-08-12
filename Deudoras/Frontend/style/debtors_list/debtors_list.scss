@@ -107,7 +107,22 @@ main{
     padding: 4em 2em 2em 2em;
     width: 90%;
 }
-
+div.main_school_name-container{
+    margin-bottom: 1.5em;
+}
+p.main_school_name{
+    font-size: 1.7em;
+    font-weight: 400;
+    color: $primary-col-dash;
+}
+p.search_debt_name{
+    background-color: $primary-col-dash;
+    color: $primary-col-white;
+    text-align: center;
+    align-self: center;
+    padding: 0.6em;
+    border-radius: 5px;
+}
 div.main_debt_info{
     display: flex;
     justify-content: space-between;
