@@ -2,13 +2,10 @@ const form = document.getElementById('form')
 const email = document.getElementById('email')
 const password = document.querySelector('#password')
 const togglePassword = document.querySelector('#togglePassword')
-const loginButton = document.querySelector('#btn')
 
-// form.addEventListener('submit', (e) => {
-//   e.preventDefault()
-
-//   checkInputs()
-// })
+form.addEventListener('submit', (e) => {
+  checkInputs()
+})
 
 function checkInputs() {
   const emailValue = email.value.trim()
@@ -62,8 +59,4 @@ togglePassword.addEventListener('click', function () {
 
   // toggle the icon
   this.classList.toggle('bi-eye')
-})
-
-loginButton.addEventListener('click', () => {
-
 })
