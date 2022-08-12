@@ -4,6 +4,7 @@ const password = document.querySelector('#password')
 const togglePassword = document.querySelector('#togglePassword')
 
 form.addEventListener('submit', (e) => {
+  e.preventDefault()
   checkInputs()
 })
 
@@ -15,6 +16,7 @@ function checkInputs() {
     setError(email, 'Email required')
   } else if (ValidateEmail(email)) {
     email.setCustomValidity('')
+
     setSuccess(email, 'Success')
   } else {
     email.setCustomValidity('email.@example/com')
@@ -23,12 +25,11 @@ function checkInputs() {
 
   if (passwordValue === '') {
     setError(password, 'Password required')
-  }
-  //  else if (passwordCheck(password)) {
-  //   setSuccess(password, 'success')
-  // }
-  else {
+  } else if (passwordValue !== '' && emailValue === '') {
+    setError(email, 'email required')
+  } else {
     setSuccess(password, 'success')
+    document.getElementById('form').submit()
   }
 }
 

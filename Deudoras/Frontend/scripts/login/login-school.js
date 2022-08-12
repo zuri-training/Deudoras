@@ -4,6 +4,8 @@ const password = document.querySelector('#password')
 const togglePassword = document.querySelector('#togglePassword')
 
 form.addEventListener('submit', (e) => {
+  e.preventDefault()
+
   checkInputs()
 })
 
@@ -23,8 +25,11 @@ function checkInputs() {
 
   if (passwordValue === '') {
     setError(password, 'Password required')
+  } else if (passwordValue !== '' && emailValue === '') {
+    setError(email, 'email required')
   } else {
     setSuccess(password, 'success')
+    document.getElementById('form').submit()
   }
 }
 

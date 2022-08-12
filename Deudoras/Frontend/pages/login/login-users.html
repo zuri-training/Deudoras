@@ -23,8 +23,7 @@
               type="email"
               placeholder="Enter your email address"
               name="email"
-              id="email" oninvalid="checkInputs(this)"
-            oninput="checkInputs(this)"
+              id="email" 
             />
             <small>error messages</small>
           </div>
@@ -49,7 +48,7 @@
             <a class="forgot" href="">Forgot password?</a>
           </div>
           <div class="form-controller">
-            <button type="submit" class="btn">LOG IN</button>
+            <button type="submit" onclick="checkInputs()" class="btn">LOG IN</button>
           </div>
           <div class="form-controller log-google">
             <p class="log"><span>or log in using</span></p>

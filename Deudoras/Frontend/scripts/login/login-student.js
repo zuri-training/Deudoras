@@ -4,6 +4,7 @@ const password = document.querySelector('#password')
 const togglePassword = document.querySelector('#togglePassword')
 
 form.addEventListener('submit', (e) => {
+  e.preventDefault()
   checkInputs()
 })
 
@@ -13,13 +14,22 @@ function checkInputs() {
 
   if (studentIdValue === '') {
     setError(studentId, 'Student ID required')
+    // document.getElementById('form').preventDefault()
+  } else if (studentIdValue !== '' && passwordValue === '') {
+    setError(password, 'password required')
   } else {
     setSuccess(studentId, 'success')
+    document.getElementById('form').submit()
   }
 
   if (passwordValue === '') {
+    // document.getElementById('form').preventDefault()
     setError(password, 'Password required')
+  } else if (passwordValue !== '' && studentIdValue === '') {
+    setError(studentId, 'student ID required')
   } else {
+    document.getElementById('form').submit()
+
     setSuccess(password, 'success')
   }
 }
