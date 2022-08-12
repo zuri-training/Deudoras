@@ -115,7 +115,7 @@ def SchoolSignin(request):
             
             login(request, user)
             context= {'name':name,'id' :id} 
-            return render(request, "debtors/school_dashboard.html",context)
+            return render(request, "debtors/school_dashboard.html/name",context)
 
         else:
             messages.error(request, "Bad credentials!!")
@@ -194,9 +194,9 @@ def signout(request):
 
 
 
-@users(allowed_roles=['school'])
+# @users(allowed_roles=['school'])
 
-def SchoolHome(request,pk):
+def SchoolHome(request):
     return  render(request, 'debtors/school_dashboard.html/')
 def Debtors(request,pk):
     debtor = Debtors.objects.get(School_id = pk )
@@ -208,6 +208,9 @@ def debt_by_school(request,pk):
     debt = Debt.objects.get(school_id = pk)
     return render(request,"debtors/debtors.html",{'debts':debt})
 
+def Articles(request):
+    articles = Article.objects.all()
+    return render(request,'debtors/school_list.html',{'articles': articles})
 
 
 
@@ -221,8 +224,7 @@ def debt_by_school(request,pk):
 
 
 
-
-@users(allowed_roles=['student'])
+# @users(allowed_roles=['student'])
 
 def UserHome(request,pk):
     # , pk
