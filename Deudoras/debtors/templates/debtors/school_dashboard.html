@@ -34,14 +34,15 @@
           alt="close button"
         />
         <ul>
-          <li><a href="school_dashboard.html">Dashboard</a></li>
+          <li><a href="">Dashboard</a></li>
           <li class="activeMobileNav">Profile</li>
-          <li><a href="school_dashboard_school.html">Schools</a></li>
-          <li>Debtors List</li>
-          <li>Articles</li>
-          <li>Help</li>
+          <li><a href="{% url 'School list' %}">Schools</a></li>
+          <li><a href="{% url 'debtors list' %}">Debtors List</li>
+          
+          <li<a href="{% url 'Articles' %}">>Articles</li>
+          <li<a href="{% url 'Help' %}">Help</li>
         </ul>
-        <button>Log Out</button>
+        <button><a href="{% url 'signout' %}">Log Out</button>
       </nav>
       <aside class="desktop">
         <div class="sidebar">
@@ -58,7 +59,7 @@
                 ><img
                   src="{% static 'debtors/Frontend/assets/school_dashboard assets/dashboardIcon.png'%}"
                   alt=""
-                /><a href="school_dashboard.html">Dashboard</a></span
+                /><a href=" ">Dashboard</a></span
               >
               <span
                 ><img
@@ -71,7 +72,7 @@
                   src="{% static 'debtors/Frontend/assets/school_dashboard assets/teacher.png'%}"
                   alt=""
                 />
-                <a href="school_dashboard_school.html">Schools</a>
+                <a href="{% url 'School list' %}">Schools</a>
               </span>
               <span
                 ><img
@@ -91,13 +92,13 @@
                 ><img
                   src="{% static 'debtors/Frontend/assets/school_dashboard assets/device-message.png'%}"
                   alt=""
-                />Need Help?</span
+                /><a href="{% url 'Help' %}">Need Help?</span
               >
               <span class="danger-btn">
                 <img
                   src="{% static 'debtors/Frontend/assets/school_dashboard assets/logout.png'%}"
                   alt=""
-                />Log Out
+                /><a href="{% url 'signout' %}">Log Out
               </span>
             </div>
           </nav>
@@ -115,7 +116,7 @@
               ><img
                 src="{% static 'debtors/Frontend/assets/school_dashboard assets/dashTab.png'%}"
                 alt=""
-              /><a href="school_dashboard.html">Dashboard</a></span
+              /><a href="">Dashboard</a></span
             >
             <span
               ><img

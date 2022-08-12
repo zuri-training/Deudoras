@@ -67,6 +67,11 @@ class Account(AbstractBaseUser, PermissionsMixin):
         return self.is_admin
     def has_module_perms(self,app_label):
         return True
+    def schools(self,list):
+        objects=[]
+        for i in list:
+            objects.append(Account.object.get(id = i))
+        return objects
 
 
 
@@ -78,6 +83,8 @@ class School(models.Model):
     CAC = models.IntegerField()
     certificate = models.FileField()
     Local_government = models.CharField(max_length=200)
+    def list(self):
+        return School.object.all()
     
 
 class Debtors(models.Model):
@@ -90,6 +97,8 @@ class Debtors(models.Model):
     address = models.CharField(max_length=200)
     school_id = models.ForeignKey(School,on_delete=models.CASCADE)
     contact = models.IntegerField()
+    def list(self,pk):
+        return Debtors.object.get(school_id=pk)
 
 class Debt(models.Model):
     School_id = models.ForeignKey(School, on_delete=models.CASCADE)
@@ -99,6 +108,11 @@ class Debt(models.Model):
     stclass = models.CharField(max_length=200)
     amount = models.DecimalField( max_digits=12, decimal_places=2)
     term = models.IntegerField()
+    def sum(self,pk):
+        list = Debt.objects.get(debtor_id =pk)
+        add = sum(list)
+        return add
+
 
 class User(models.Model):
     name = models.CharField(max_length=200)

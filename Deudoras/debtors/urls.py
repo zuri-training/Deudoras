@@ -22,5 +22,7 @@ urlpatterns = [
  path('loginuser',views.loginUser , name='userlogin'),
   path('signupuser1',views.signupuser1 , name='signup1'),
    path('signupuser2',views.signupuser2 , name='signup2'),
-
+path('schools',views.Schools, name='School list'),
+path('schools',views.Debtors, name='debtors list'),
+path('schools',views.Articles, name='Articles'),
 ]
