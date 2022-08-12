@@ -115,8 +115,27 @@ p.main_school_name{
     font-weight: 400;
     color: $primary-col-dash;
 }
-
+section.student_personal_detail{
+    width: 70%;
+}
 div.student-cont{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 3em;
+}
+div.student-cont2{
+    display: flex;
+    flex-direction: column;
+}
+
+div.section_next{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+.upload_debtor{
+    background-color: $primary-col-dash;
+    color: $primary-col-white;
+    border-radius: 5px;
+    border: 2px solid transparent;
 }
