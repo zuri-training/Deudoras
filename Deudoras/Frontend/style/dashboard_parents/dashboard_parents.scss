@@ -1,4 +1,4 @@
-@import "./reset", "./variables";
+@import "./reset", "./variable";
 
 body {
     background-color: #F6FAFF;
@@ -96,6 +96,11 @@ div.body_sidebar{
     height: auto;
     width: 20%;
 }
+@media screen and (max-width: 764px){
+    .navv {
+        display: none;
+    }
+}
 .nav_links {
     display: flex;
     flex-direction: column;
@@ -167,6 +172,11 @@ div.body_sidebar{
     margin-top: 2em;
     display: none;
 }
+.logo3{
+    width: 12em;
+    height: 3em;
+    background-color: $primary-col-dash;
+}
 .svg-white{
     color: white;
 }
@@ -184,6 +194,9 @@ div.body_sidebar{
     height: 30px;
     border-radius: 50%;
 }
+.offcanvas-start{
+    width: 60vw;
+}
 
 
 
@@ -191,6 +204,11 @@ main{
     width: 80%;
     padding: 2em 2em;
     padding-left: 2em;
+}
+@media screen and (max-width: 764px){
+    main{
+        width: 100%;
+    }
 }
 .main_one {
     color: #02034e;
@@ -206,6 +224,11 @@ main{
 @media screen and (max-width: 1134px){
     .main_top{
         margin-bottom: 4em;
+    }
+}
+@media screen and (max-width: 764px){
+    .main_top{
+        display: none;
     }
 }
 div.main_top_one{
@@ -227,6 +250,10 @@ div.main_top_two{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.main_top_three{
+    display: flex;
+    justify-content: space-between;
 }
 .main_welcome{
     margin: 0 0 0.6em 0;
@@ -263,6 +290,11 @@ div.main_top_two{
     }
 
 }
+@media screen and (max-width: 574px){
+    .main_student_summary{
+        flex-direction: column;
+    }
+}
 .main_student_summary_1{
     background-color: $primary-col-dash;
     color: $primary-col-white;
@@ -295,6 +327,24 @@ div.main_top_two{
     width: 23%;
     border: 2px solid #C1C4DB;
 }
+@media screen and (max-width: 574px){
+    div.main_student_summary_1{
+        width: 100%;
+        text-align: center;
+    }
+    div.main_student_summary_2{
+        width: 100%;
+        text-align: center;
+    }
+    div.main_student_summary_3{
+        width: 100%;
+        text-align: center;
+    }
+    div.main_student_summary_4{
+        width: 100%;
+        text-align: center;
+    }
+}
 .summa_1{
     display: flex;
     justify-content: flex-end;
@@ -303,11 +353,29 @@ div.main_top_two{
 .summa_2{
     padding: 0 1.5em;
 }
+p.summa_2{
+    border-top: 1px solid $primary-col-dash;
+}
+p.summa_2.box1{
+    border-top: 1px solid $primary-col-white;
+}
 p.total_debt{
     font-size: 1em;
 }
 p.total_debt_amt{
     font-size: 1.4em;
+}
+.offcanvas-body{
+    padding: 0 0;
+}
+div.offcanvas-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70vh;
+}
+.off-item{
+    text-align: center;
 }
 @media screen and (max-width: 1146px){
     p.total_debt{
@@ -433,6 +501,19 @@ p.total_debt_amt{
     border-bottom: 2px solid lightblue;
     // margin-right: -2em;
 }
+@media screen and (max-width: 574px){
+    .main_brkdwn_stdnt_debt_detail{
+        font-size: 0.8em;
+    }
+}
+@media screen and (max-width: 452px){
+    .main_brkdwn_stdnt_debt_detail{
+        font-size: 0.6em;
+    }
+}
+
+
+/////////////////////////////////////////////////
 
 // 1135px second breaking point
 @media screen and (max-width: 1135px){
