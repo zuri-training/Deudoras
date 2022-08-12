@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script
-      src="../../scripts/school_dashboard script/school_dashboard.js"
+      src="{% static 'debtors/Frontend/scripts/school_dashboard script/school_dashboard.js'%}"
       defer
     ></script>
     <title>Debt Tracking Website (Deudoras) - Dashboard for School</title>
     <link
       rel="stylesheet"
-      href="../../style/school_dashboard/school_dashboard.css"
+      href="{% static 'debtors/Frontend/style/school_dashboard/school_dashboard.css'%}"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,7 +29,7 @@
     <main>
       <nav id="mobile-nav">
         <img
-          src="../../assets/about us assests/hamClose.png"
+          src="{% static 'debtors/Frontend/assets/about us assests/hamClose.png'%}"
           id="close"
           alt="close button"
         />
@@ -45,7 +46,7 @@
       <aside class="desktop">
         <div class="sidebar">
           <img
-            src="../../assets/school_dashboard assets/desktoplogo.png"
+            src="{% static 'debtors/Frontend/assets/school_dashboard assets/desktoplogo.png'%}"
             alt=""
             class="desktop desklogo"
           />
@@ -55,32 +56,32 @@
             <div class="navItem">
               <span class="activeMenuDesktop"
                 ><img
-                  src="../../assets/school_dashboard assets/dashboardIcon.png"
+                  src="{% static 'debtors/Frontend/assets/school_dashboard assets/dashboardIcon.png'%}"
                   alt=""
                 /><a href="school_dashboard.html">Dashboard</a></span
               >
               <span
                 ><img
-                  src="../../assets/school_dashboard assets/profile.png"
+                  src="{% static 'debtors/Frontend/assets/school_dashboard assets/profile.png'%}"
                   alt=""
                 />Profile</span
               >
               <span
                 ><img
-                  src="../../assets/school_dashboard assets/teacher.png"
+                  src="{% static 'debtors/Frontend/assets/school_dashboard assets/teacher.png'%}"
                   alt=""
                 />
                 <a href="school_dashboard_school.html">Schools</a>
               </span>
               <span
                 ><img
-                  src="../../assets/school_dashboard assets/receipt-item.png"
+                  src="{% static 'debtors/Frontend/assets/school_dashboard assets/receipt-item.png'%}"
                   alt=""
                 />Debtors List</span
               >
               <span
                 ><img
-                  src="../../assets/school_dashboard assets/book.png"
+                  src="{% static 'debtors/Frontend/assets/school_dashboard assets/book.png'%}"
                   alt=""
                 />Article</span
               >
@@ -88,13 +89,13 @@
             <div class="navItem navItemMB">
               <span
                 ><img
-                  src="../../assets/school_dashboard assets/device-message.png"
+                  src="{% static 'debtors/Frontend/assets/school_dashboard assets/device-message.png'%}"
                   alt=""
                 />Need Help?</span
               >
               <span class="danger-btn">
                 <img
-                  src="../../assets/school_dashboard assets/logout.png"
+                  src="{% static 'debtors/Frontend/assets/school_dashboard assets/logout.png'%}"
                   alt=""
                 />Log Out
               </span>
@@ -104,7 +105,7 @@
       </aside>
       <aside class="tablet tablet-sidebar">
         <img
-          src="../../assets/school_dashboard assets/tab log.png"
+          src="{% static 'debtors/Frontend/assets/school_dashboard assets/tab log.png'%}"
           alt=""
           class="tabletLOgo"
         />
@@ -112,31 +113,31 @@
           <div class="navItem">
             <span class="activeMenuDesktop"
               ><img
-                src="../../assets/school_dashboard assets/dashTab.png"
+                src="{% static 'debtors/Frontend/assets/school_dashboard assets/dashTab.png'%}"
                 alt=""
               /><a href="school_dashboard.html">Dashboard</a></span
             >
             <span
               ><img
-                src="../../assets/school_dashboard assets/profileTab.png"
+                src="{% static 'debtors/Frontend/assets/school_dashboard assets/profileTab.png'%}"
                 alt=""
               />Profile</span
             >
             <span
               ><img
-                src="../../assets/school_dashboard assets/ion_school-outline tab.png"
+                src="{% static 'debtors/Frontend/assets/school_dashboard assets/ion_school-outline tab.png'%}"
                 alt=""
               /><a href="school_dashboard_school.html">Schools</a></span
             >
             <span
               ><img
-                src="../../assets/school_dashboard assets/receipt-item tab.png"
+                src="{% static 'debtors/Frontend/assets/school_dashboard assets/receipt-item tab.png'%}"
                 alt=""
               />Debtors List</span
             >
             <span
               ><img
-                src="../../assets/school_dashboard assets/book tab.png"
+                src="{% static 'debtors/Frontend/assets/school_dashboard assets/book tab.png'%}"
                 alt=""
               />Article</span
             >
@@ -144,13 +145,13 @@
           <div class="navItem navItemMB">
             <span
               ><img
-                src="../../assets/school_dashboard assets/device-message tab.png"
+                src="{% static 'debtors/Frontend/assets/school_dashboard assets/device-message tab.png'%}"
                 alt=""
               />Need Help?</span
             >
             <span class="danger-btn">
               <img
-                src="../../assets/school_dashboard assets/logout tab.png"
+                src="{% static 'debtors/Frontend/assets/school_dashboard assets/logout tab.png'%}"
                 alt=""
               />Log Out
             </span>
@@ -163,7 +164,7 @@
             <div class="mobileMain">
               <div class="logo">
                 <img
-                  src="../../assets/about us assests/HamOPen.png"
+                  src="{% static 'debtors/Frontend/assets/about us assests/HamOPen.png'%}"
                   alt="hamopen"
                   class="mobileBtnOpen"
                 />
@@ -172,13 +173,13 @@
 
               <div class="search">
                 <img
-                  src="../../assets/school_dashboard assets/icon-bell.png"
+                  src="{% static 'debtors/Frontend/assets/school_dashboard assets/icon-bell.png'%}"
                   alt="notificationIcon"
                 />
                 <div class="search_noti">
                   <p>B</p>
                   <img
-                    src="../../assets/signup_school assets/"
+                    src="{% static 'debtors/Frontend/assets/signup_school assets/'%}"
                     alt="dropdownIcon"
                   />
                 </div>
@@ -195,20 +196,20 @@
               <div class="desktop-tablet search">
                 <div class="serach-on">
                   <img
-                    src="../../assets/school_dashboard assets/bx-search-alt.png"
+                    src="{% static 'debtors/Frontend/assets/school_dashboard assets/bx-search-alt.png'%}"
                     alt="searchIcon"
                   />
                   <input placeholder="Search (Ctrl+/)" />
                 </div>
                 <div class="search_noti">
                   <img
-                    src="../../assets/school_dashboard assets/icon-bell.png"
+                    src="{% static 'debtors/Frontend/assets/school_dashboard assets/icon-bell.png'%}"
                     alt="notificationIcon"
                   />
                   <div class="dropFlex">
                     <p>B</p>
                     <img
-                      src="../../assets/school_dashboard assets/arrow-down.png"
+                      src="{% static 'debtors/Frontend/assets/school_dashboard assets/arrow-down.png'%}"
                       alt="dropdownIcon"
                     />
                   </div>
@@ -220,7 +221,7 @@
             <div class="card card1">
               <h4>Total Debt Recoveries</h4>
               <img
-                src="../../assets/school_dashboard assets/transactions-icon.png"
+                src="{% static 'debtors/Frontend/assets/school_dashboard assets/transactions-icon.png'%}"
                 alt=""
               />
               <h3>N30,000,000</h3>
@@ -239,13 +240,13 @@
             <div class="card card2">
               <h4>Numbers of Schools</h4>
               <img
-                src="../../assets/school_dashboard assets/transactions-icon.png"
+                src="{% static 'debtors/Frontend/assets/school_dashboard assets/transactions-icon.png'%}"
                 alt=""
               />
               <h3>3,000</h3>
               <div class="dangerText">
                 <img
-                  src="../../assets/school_dashboard assets/Path.png"
+                  src="{% static 'debtors/Frontend/assets/school_dashboard assets/Path.png'%}"
                   alt="dangerDrop"
                 />-13.24%
               </div>
@@ -269,7 +270,7 @@
               <h4>Recent Disputes</h4>
               <div class="backwhite">
                 <img
-                  src="../../assets/school_dashboard assets/arash.png"
+                  src="{% static 'debtors/Frontend/assets/school_dashboard assets/arash.png'%}"
                   alt="people"
                   class="avater"
                 />
@@ -283,7 +284,7 @@
               </div>
               <div class="backwhite">
                 <img
-                  src="../../assets/school_dashboard assets/arash.png"
+                  src="{% static 'debtors/Frontend/assets/school_dashboard assets/arash.png'%}"
                   alt="people"
                   class="avater"
                 />
@@ -297,7 +298,7 @@
               </div>
               <div class="backwhite">
                 <img
-                  src="../../assets/school_dashboard assets/arash.png"
+                  src="{% static 'debtors/Frontend/assets/school_dashboard assets/arash.png'%}"
                   alt="people"
                   class="avater"
                 />
