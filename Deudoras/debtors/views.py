@@ -1,161 +1,98 @@
+from unicodedata import name
 from django.shortcuts import render
-
-
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import Group
+from . import forms
 # Create your views here.
 from imaplib import _Authenticator
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
-
+from . import models
 from django.contrib import messages
 from django.core.mail import EmailMessage, send_mail
 from django.contrib.sites.shortcuts import get_current_site
 from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
-
+from .decorators import not_user,users
 # from django.utils.encoding import force_bytes, force_text
-
-
+from django.contrib.auth.forms import UserCreationForm
+from .models import School,Debtors,Debt, Article, Account,MyAccountManager
+# from Deudoras import debtors
 
 # Create your views here.
+def user_try(request):
+    form = NewUserForm(request.POST)
+    if form.is_valid():
+        form.save()
+    context = {'form': form}
+    return render(request,'debtors/test.html',context)
+
 
 
 def Landing(request):
     return render(request, "debtors/index.html")
-
-
-def SchoolHome(request):
-    return  render(request, 'debtors/school_dashboard.html')
-
-
-def UserHome(request):
-    return render(request,'debtors/dashboard_parents.html')
-
-
 def SchoolSignup(request):
     
+    # if form._
     if request.method == "POST":
-        school_name = request.POST['schoolname']
-        email = request.POST['email']
-        location = request.POST['location']
-        # registration_number = request.POST['registration number']
-        password = request.POST['pass1']
-        confirm_password = request.POST['pass2']
+        school_name = request.POST.get('SchoolName')
+        email = request.POST.get('SchoolEmail')
+        location = request.POST.get('SchoolAddress')
+        lga = request.POST.get('LGA')
+        cac = request.POST.get('SchoolCAC')
+        password = request.POST.get('Password')
+        print(email)
+        # if location != 'gbagada':
+    #         messages.error(request, "School is outside our jurisdiction.")
+    #         return redirect('home')
+    #     if User.objects.filter(email=email.exists()):
+    # #         messages.error(request, "Email Already Registered! Try Login Instead")
+    # #         return redirect('home')
+    #     if password != confirm_password:
+    # #         messages.error(request, "Passwords didn't matched!!")
+    # #         return redirect('home')
+        # account = MyAccountManager.create_user(email=email,name=school_name,password=password)
+        acc=Account.objects.create(email=email,name =school_name, password =password)
 
-        if location != 'gbagada':
-            messages.error(request, "School is outside our jurisdiction.")
-            return redirect('home')
-        
-        if User.objects.filter(email=email.exists()):
-            messages.error(request, "Email Already Registered! Try Login Instead")
-            return redirect('home')
-        
-        if password != confirm_password:
-            messages.error(request, "Passwords didn't matched!!")
-            return redirect('home')
-        
-
-        myuser = User.objects.create_user(school_name, email, password)
+        myuser = School.objects.create(account= Account.objects.get(email =email,name =school_name,password= password),location =location, CAC =cac, Local_government =lga)
+        group = Group.objects.get(name ='Schools')
+        acc.groups.add(group)
+        # School.objects.create(user)
         
         myuser.is_active = True
-        myuser.save()
+        
 
         messages.success(request, 'Your account has been succesfully created')
 
-        return redirect('schoolsignin')
+        return render(request,"debtors/login/login-school.html")
 
-
-    return render(request, 'debtors/signup_school.html')
-
-
-def UserSignup(request):
+    return render(request,"debtors/signup_school.html")
+def add_debtor(request):
     
+    # if form._
     if request.method == "POST":
-        username = request.POST['username']
-        user_email = request.POST['user_email']
-        debtors_id = request.POST['debtors_id']
-        user_password = request.POST['password1']
-        confirm_user_password = request.POST['password2']
+        name = request.POST.get('name')
+        email = request.POST.get('Email')
+        location = request.POST.get('Address')
+        contact = request.POST.get('contact')
         
-
-        if User.objects.filter(username=username.exists()):
-            messages.error(request, "Username Already Registered! Try a different one.")
-            return redirect('landing')
-
-        if User.objects.filter(user_email=user_email.exists()):
-            messages.error(request, "Email Already Registered! Try Login instead")
-            return redirect('landing')
         
-        if user_password != confirm_user_password:
-            messages.error(request, "Passwords didn't matched!!")
-            return redirect('landing')
-        
+       
+        acc=Account.objects.create(email=email,name =name, password ='0000')
 
-        myuser = User.objects.create_user(username, user_email, user_password)
+        myuser = Debtors.objects.create(account= Account.objects.get(email =email,name =name,password= '0000')
+        ,address =location, contact =contact)
+        group = Group.objects.get(name ='Student')
+        acc.groups.add(group)
+        # School.objects.create(user)
         
         myuser.is_active = True
-        myuser.save()
+        
 
         messages.success(request, 'Your account has been succesfully created')
 
-        return redirect('usersignin')
-
-
-    return render(request, 'login/UserSignup.html')
-
-
-def SchoolSignin(request):
-
-    if request.method == 'POST':
-        email = request.POST['email']
-        password = request.POST['pass1']
-
-        user = authenticate(email=email, password=password)
-
-        if user is not None:
-            school_name =user.school_name
-            login(request, user)
-            return render(request, "login/landing.html", {'name':school_name})
-
-        else:
-            messages.error(request, "Bad credentials!!")
-            return redirect('landing')
-
-        return redirect('landing')
-
-
-    return render(request, "login/schoolsignin.html")
-    
-
-def UserSignin(request):
-
-    if request.method == 'POST':
-        email = request.POST['email']
-        password = request.POST['password1']
-
-        user = authenticate(email=email, password=password)
-
-        if user is not None:
-            username =user.username
-            login(request, user)
-            return render(request, "login/landing.html", {'name':username})
-
-        else:
-            messages.error(request, "Bad credentials!!")
-            return redirect('landing')
-
-        return redirect('landing')
-
-
-    return render(request, "login/usersignin.html")
-
-
-
-def signout(request):
-    logout(request)
-    messages.success(request, "logged out succesfully")
-    return redirect('debtors/index.html')
-
+        return render(request,"debtors/login/login-school.html")
 def need_help(request):
     return render(request,'debtors/need_help.html')
 
@@ -164,11 +101,157 @@ def about_us(request):
     
     return render(request,'debtors/about us.html')
 
-def loginSchool(request):
-    return render(request,'debtors/login/login-school')
+def SchoolSignin(request):
+
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+
+        user = authenticate(request, email=email, password=password)
+
+        if user is not None:
+            school_name =user.name
+            id = user.id
+            
+            login(request, user)
+            context= {'name':name,'id' :id} 
+            return render(request, "debtors/school_dashboard.html",context)
+
+        else:
+            messages.error(request, "Bad credentials!!")
+            
+
+        
+
+    return render(request, "debtors/login/login-school.html")
+
+
+def UserSignin(request):
+
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+
+        user = authenticate(email=email, password=password)
+
+        if user is not None:
+            username =user.username
+            login(request, user)
+            return render(request, "debtors/userdashboard.html", {'name':username})
+
+        else:
+            messages.error(request, "Bad credentials!!")
+
+        return redirect('landing')
+
+
+    return render(request, "debtorslogin/usersignin.html")
+
+
+@login_required
+def debt_by_debtor(request,pk):
+    debt = Debt.objects.get(debtors_id = pk)
+    return render(request,"debtors/debts.html",{'debts':debt})
+
+    
+
+
+
+
+
+
+
 
 def loginStudents(request):
-    return render(request,'debtors/login/login-students')
+    return render(request,'debtors/login/login-students.html')
 
 def loginUser(request):
-    return render(request,'debtors/login/login-user')
+    return render(request,'debtors/login/login-users.html')
+
+
+def signupuser1(request):
+    return render(request, 'debtors/SignUpNormalUser1.html')
+
+def signupuser2(request):
+    return render(request, 'debtors/SignUpNormalUser2.html')
+
+
+
+
+
+
+
+def signout(request):
+    logout(request)
+    messages.success(request, "logged out succesfully")
+    return redirect('debtors/index.html')
+
+
+
+
+
+
+
+
+
+@users(allowed_roles=['school'])
+
+def SchoolHome(request,pk):
+    return  render(request, 'debtors/school_dashboard.html/')
+def Debtors(request,pk):
+    debtor = Debtors.objects.get(School_id = pk )
+    return render(request, 'debtors/debtors_list.html',{'debtors': debtor})
+def Schools(request):
+    schools = School.objects.all()
+    return render(request,'debtors/school_list.html',{'schools': schools})
+def debt_by_school(request,pk):
+    debt = Debt.objects.get(school_id = pk)
+    return render(request,"debtors/debtors.html",{'debts':debt})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@users(allowed_roles=['student'])
+
+def UserHome(request,pk):
+    # , pk
+    user = Debtors.objects.get(id = pk)
+    debt = request.user.Debt.all()
+    return render(request,'debtors/dashboard_parents.html',{'debt':debt,'user':user})
+
+
+
+    #     
+        
+    #     
+        
+    #     
+        
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+

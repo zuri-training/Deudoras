@@ -147,7 +147,7 @@ ConfirmPassword.addEventListener("change", (e) => {
   console.log(ConfirmPasswordRegex);
   return ConfirmPasswordRegex;
 });
-console.log(ConfirmPasswordRegex);
+conso6le.log(ConfirmPasswordRegex);
 
 signUpbtn.addEventListener("click", (e) => {
   if (!ConfirmPasswordRegex && !SchoolpasswordRegex) {
