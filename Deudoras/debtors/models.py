@@ -125,6 +125,7 @@ class User(models.Model):
     # section_id = models.ForeignKey(School,on_delete=models.CASCADE)
 
 class Dispute(models.Model):
+    school_id = debtor_id = models.ForeignKey(School,on_delete=models.CASCADE)
     details = models.TextField()
     debtor_id = models.ForeignKey(Debtors,on_delete=models.CASCADE)
     status = models.CharField(max_length=200)
