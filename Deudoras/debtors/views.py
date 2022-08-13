@@ -207,7 +207,19 @@ def SchoolHome(request):
     schools =School.objects.all()
     n_schools = len(schools)
 
+
+
+
     return  render(request, 'debtors/school_dashboard.html')
+
+
+
+
+
+
+
+
+    
 def Debtors(request,pk):
     debtor = Debtors.objects.get(School_id = pk )
     return render(request, 'debtors/debtors_list.html',{'debtors': debtor})
@@ -228,7 +240,7 @@ def Articles(request):
 
 
 def Contactus(request):
-    return render (request,'debtors/contactus.html')
+    return render (request,'debtors/contact.html')
 
 
 
