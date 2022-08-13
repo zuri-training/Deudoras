@@ -1157,7 +1157,257 @@ li a {
 }
 @media screen and (max-width: 670px) {
 }
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 425px) {
+  nav {
+    position: relative;
+  }
+  .nav-section {
+    display: none;
+  }
+
+  .mobile-nav {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: absolute;
+    top: 1em;
+    background-color: #ffffff;
+    gap: 2em;
+    padding: 10px;
+    height: 564vh;
+    display: none;
+  }
+  .menu {
+    display: flex;
+    position: absolute;
+    top: 2em;
+    border: none;
+    background-color: #e1eff8;
+  }
+  .close-btn {
+    display: flex;
+    width: 10%;
+    position: absolute;
+    right: 1em;
+    background-color: #ffffff;
+    border: none;
+  }
+  .mobile-links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin-top: 3em;
+  }
+
+  .mobile-links ul li {
+    list-style: none;
+  }
+  .mobile-links ul li a {
+    text-decoration: none;
+    color: var(--primary-color);
+  }
+  .mobile-sign {
+    display: flex;
+  }
+  .mobile-sign ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5em;
+  }
+  .mobile-sign ul a {
+    text-decoration: none;
+    color: var(--primary-color);
+  }
+
+  .aktive {
+    background: #03045e;
+    color: #fff;
+    width: 70%;
+    padding: 8px;
+    text-align: left;
+  }
+  .mobile-signup {
+    background-color: #ffffff;
+    border: 1px solid #03045e;
+    padding: 8px;
+    border-radius: 8px;
+    color: #03034e;
+    margin: 0 auto;
+    position: absolute;
+    left: 25%;
+  }
+  /* End of mobile side bar */
+  .nav-img {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+  }
+  .nav-img img {
+    width: 30%;
+  }
+  .section-1 {
+    flex-direction: column;
+    width: 100%;
+  }
+  .division-1 {
+    width: 100%;
+    margin-left: 55%;
+  }
+  .division-2 {
+    width: 100%;
+    margin-left: 5%;
+  }
+  .division-2 > img {
+    width: 570px;
+    height: 370px;
+  }
+  #first-button {
+    position: absolute;
+    top: 130vh;
+  }
+  .container-1 {
+    width: 100%;
+    margin-left: 25%;
+  }
+  .container-1 h3 {
+    text-align: center;
+    font-size: 37px;
+    font-weight: 700;
+    line-height: 33px;
+  }
+  .container-1 p {
+    width: 100%;
+    margin-left: -1%;
+    text-align: justify;
+  }
+  .layout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 82px;
+  }
+  #layout-reverse {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .simplicity {
+    width: 100%;
+    margin-left: 48%;
+    padding-bottom: 7em;
+  }
+  .simplicity-image {
+    width: 100%;
+    margin-left: 55%;
+    margin-bottom: 39px;
+  }
+  .simplicity-image img {
+    height: 350px;
+  }
+  .contention {
+    width: 100%;
+    margin-left: 54%;
+    padding-bottom: 7em;
+  }
+  .contention-image {
+    width: 100%;
+    margin-left: 55%;
+    margin-bottom: 39px;
+  }
+  .contention-image img {
+    height: 350px;
+  }
+  .privacy {
+    width: 100%;
+    margin-left: 48%;
+    padding-bottom: 7em;
+  }
+  .privacy-image {
+    width: 100%;
+    margin-left: 55%;
+    margin-bottom: 39px;
+  }
+  .privacy-image img {
+    height: 350px;
+  }
+  .work {
+    width: 100%;
+    margin: auto;
+  }
+  .work h2 {
+    width: 100%;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 30px;
+    text-align: center;
+    margin-left: 2.5em;
+  }
+  .work p {
+    width: 100%;
+    text-align: justify;
+    margin-left: 6em;
+    font-size: 18px;
+  }
+  .plate-1,
+  .plate-2,
+  .plate-3,
+  .plate-4 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .plate-1-image {
+    width: 100%;
+    margin-left: 50%;
+  }
+  .sign-up {
+    width: 100%;
+    margin-left: 6em;
+    margin-bottom: 2em;
+  }
+  .sign-up h2 {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 33px;
+    color: #000814;
+    margin-bottom: 0.9em;
+  }
+  .step-2 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000814;
+  }
+  .plate-2 {
+    flex-direction: column-reverse;
+  }
+  .data-image {
+    width: 100%;
+    margin-left: 25%;
+  }
+  .data {
+    width: 100%;
+    margin-left: 3em;
+  }
+  .data h2 {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 33px;
+    color: #000814;
+    margin-bottom: 0.9em;
+  }
+  .data-1 {
+    margin-top: -3em;
+  }
+  .data-2 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000814;
+  }
 }
 @media screen and (max-width: 375px) {
 }
