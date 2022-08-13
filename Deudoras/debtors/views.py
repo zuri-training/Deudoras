@@ -1,3 +1,4 @@
+from itertools import count
 from unicodedata import name
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
@@ -198,8 +199,10 @@ def signout(request):
 # @users(allowed_roles=['school'])
 
 def SchoolHome(request):
-    user = request.user
-    print(user.id)
+    user = request.user.id
+    # sum = Debt.school_sum(user)
+    # n_schools = count(School.objects.all())
+
     return  render(request, 'debtors/school_dashboard.html')
 def Debtors(request,pk):
     debtor = Debtors.objects.get(School_id = pk )
