@@ -200,8 +200,12 @@ def signout(request):
 
 def SchoolHome(request):
     user = request.user.id
-    # sum = Debt.school_sum(user)
-    # n_schools = count(School.objects.all())
+    ob = Debt.objects.filter(School_id =user)
+    sum = 0
+    for i in ob:
+        sum+= i.amount
+    schools =School.objects.all()
+    n_schools = len(schools)
 
     return  render(request, 'debtors/school_dashboard.html')
 def Debtors(request,pk):
@@ -223,7 +227,8 @@ def Articles(request):
 
 
 
-
+def Contactus(request):
+    return render (request,'debtors/contactus.html')
 
 
 

@@ -16,7 +16,7 @@ urlpatterns = [
     # path('usdashboard',),
     path('about us', views.about_us, name='About us'),
     # path('userdashboard',views.user_dashboard,name='User dashboard')
-
+path('contact us', views.Contactus, name = 'Contact us'),
  path('loginSchool',views.SchoolSignin, name='Sclogin'),
  path('loginStudent',views.loginStudents , name='Stlogin'),
  path('loginuser',views.loginUser , name='userlogin'),
