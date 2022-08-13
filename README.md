@@ -1,8 +1,42 @@
 proj_debtors-team -39
 
+Environment Setup
+Follow these commands to run the project on your local machine :
+
+Open your terminal
+
+Clone the project
+
+git clone https://github.com/zuri-training/Team-39-project-my-debtors.git
+Enter the project directory
+
+cd deudoras
+Create a virtual env
+
+python -m venv env
+Activate your env(for windows)
+
+env\Scripts\activate.bat
+(for linux or mac)
+
+source env/bin/activate
+Install Project Dependencies
+
+pip install -r requirements.txt
+Make Migrations
+
+python manage.py makemigrations
+python manage.py migrate
+Create Superuser
+
+python manage.py createsuperuser
+Run the server
+
+python manage.py runserver
+
 Background
 
-This is a platform that allows schools in a locality to list the directory  of people owing them to help them avoid going to other schools around the area without paying off their debts. It is a platform where school owners can upload the database of students who owe them to the platform  to enable track their debtors and the platform makes the database accessible to other schools in the locality that have registered with
+This is a platform that allows schools in a locality to list the directory of people owing them to help them avoid going to other schools around the area without paying off their debts. It is a platform where school owners can upload the database of students who owe them to the platform to enable track their debtors and the platform makes the database accessible to other schools in the locality that have registered with
 
 Table of Content
 
@@ -16,9 +50,9 @@ Table of Content
 
 About the project
 
-Many school owners experience financial losses as a result of  students who owe and then change their school in order not to pay up their outstanding debts. That is why we came up with Deudoras, a platform for schools to be able to track these debtors even when they try to enroll in another school within their locality.
+Many school owners experience financial losses as a result of students who owe and then change their school in order not to pay up their outstanding debts. That is why we came up with Deudoras, a platform for schools to be able to track these debtors even when they try to enroll in another school within their locality.
 
-Deudoras is a website application that enables school owners in  Gbagada locality to upload the database of students who are debtors on the platform and make this list of students available to other schools in the community that are registered on the platform. The website application will help school administrators track down debtors and this will go a long way in helping them recover their funds.
+Deudoras is a website application that enables school owners in Gbagada locality to upload the database of students who are debtors on the platform and make this list of students available to other schools in the community that are registered on the platform. The website application will help school administrators track down debtors and this will go a long way in helping them recover their funds.
 
         Link to the project research plan
 
