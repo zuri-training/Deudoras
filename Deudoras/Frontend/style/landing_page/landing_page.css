@@ -24,17 +24,23 @@ body {
 }
 nav {
   display: flex;
-  width: 80%;
-  margin: 24px auto;
-  justify-content: center;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1em;
 }
 .nav-img {
-  width: 10%;
+  margin-left: 1em;
+  width: 20%;
 }
 .nav-img img {
-  width: 91px;
-  height: 35px;
-  margin-top: 6px;
+  width: 50%;
+}
+.mobile-nav {
+  display: none;
+}
+.menu {
+  display: none;
 }
 a {
   text-decoration: none;
@@ -49,15 +55,13 @@ li {
 }
 .nav-section {
   display: flex;
-  width: 90%;
-}
-.nav-links {
-  margin-left: 40px;
+  width: 80%;
+  justify-content: space-between;
 }
 .nav-links ul {
   display: flex;
-  padding: 9px;
-  gap: 4px;
+  justify-content: space-between;
+  margin-top: 0.5em;
 }
 .nav-links li a {
   padding: 0px 10px;
@@ -68,11 +72,11 @@ li {
   line-height: 22px;
   letter-spacing: 0.005em;
   color: #000814;
-  margin-right: 24px;
+  margin-right: 2.1em;
 }
 .nav-buttons {
   display: flex;
-  margin-left: 24%;
+  margin-right: 8.5em;
 }
 .nav-button-1 {
   border: none;
@@ -88,7 +92,6 @@ li {
 }
 .nav-button-2 {
   border: none;
-
   width: 97px;
   height: 40px;
   background: #03045e;
@@ -528,7 +531,7 @@ li {
   justify-content: center;
 }
 .completion {
-  margin-left: 178px;
+  margin-left: 6em;
   margin-top: 81px;
 }
 .completion-image img {
@@ -580,6 +583,13 @@ li {
   width: 100%;
   padding: 50px 0;
   overflow: hidden;
+}
+.testimonial h3 {
+  text-align: center;
+  font-family: var(--font-family);
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 20px;
 }
 .testimonial .image {
   margin-top: -60px;
@@ -683,6 +693,7 @@ li {
   display: flex;
   margin: auto;
   width: 80%;
+  margin-bottom: 3em;
 }
 .goals {
   width: 100%;
@@ -694,7 +705,7 @@ li {
   margin-left: 140px;
   width: 386px;
   height: 299.73px;
-  margin-bottom: 229px;
+  margin-bottom: 14em;
 }
 .goals h2 {
   font-family: var(--font-family);
@@ -776,11 +787,11 @@ li {
 .navigation {
   display: flex;
   color: #ffffff;
-  margin-top: 80px;
+  margin-top: 5em;
 }
 .navigation li a {
   font-size: 12px;
-  padding-right: 100px;
+  padding-right: 9em;
 }
 .company,
 .platform,
@@ -800,7 +811,7 @@ li a {
 .description {
   margin-right: 25%;
   margin-left: 10%;
-  margin-top: -14px;
+  margin-top: -2em;
 }
 .footer-logo {
   width: 180px;
@@ -809,8 +820,8 @@ li a {
 .description p {
   font-size: 12px;
   color: white;
-  margin-top: 10px;
-  margin-left: 32px;
+  margin-top: 1em;
+  margin-left: 2.5em;
 }
 .socials {
   margin-left: 12.5%;
@@ -818,5 +829,335 @@ li a {
 .socials img {
   width: 20px;
   height: 20px;
-  margin-right: 18px;
+  margin-right: 1.8em;
+}
+/*queries*/
+@media screen and (max-width: 1024px) {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+  }
+  .nav-img {
+    width: 20%;
+    margin-left: 0.2em;
+  }
+  .nav-img img {
+    width: 100%;
+  }
+  .nav-section {
+    width: 100%;
+    margin-left: 2em;
+  }
+  .nav-buttons {
+    margin-right: 2em;
+  }
+  .nav-section ul {
+    gap: 0.2em;
+    display: flex;
+  }
+  .nav-links li a {
+    margin-right: 1.3em;
+  }
+  .socials {
+    margin-top: -1.2em;
+  }
+}
+@media screen and (max-width: 992px) {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+  }
+  .nav-img {
+    width: 25%;
+    margin-left: 0.5em;
+  }
+  .nav-img img {
+    width: 100%;
+  }
+  .nav-section {
+    width: 100%;
+    margin-left: 2em;
+  }
+  .nav-buttons {
+    margin-right: 2em;
+  }
+  .section-1 {
+    width: 100%;
+    justify-content: center;
+  }
+  .division-1 {
+    width: 100%;
+    margin-left: 1.3em;
+  }
+  .division-2 {
+    width: 100%;
+  }
+  .division-2 > img {
+    margin-top: 10px;
+    height: 493px;
+    width: 600px;
+  }
+  .simplicity-image img {
+    height: 450px;
+  }
+  .contention-image img {
+    height: 450px;
+  }
+  .privacy-image img {
+    height: 450px;
+  }
+}
+@media screen and (max-width: 880px) {
+  .division-1 {
+    margin-left: 2em;
+  }
+  .division-2 > img {
+    width: 550px;
+  }
+}
+@media screen and (max-width: 964px) {
+  .nav-links li a {
+    margin-right: 0.09em;
+  }
+  .socials {
+    margin-top: -2em;
+  }
+}
+@media screen and (max-width: 768px) {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+  }
+  .nav-img {
+    width: 20%;
+    margin-left: 0.2em;
+  }
+  .nav-img img {
+    width: 100%;
+  }
+  .nav-section {
+    width: 100%;
+    margin-left: 2em;
+  }
+  .nav-buttons {
+    margin-right: 2em;
+  }
+  .nav-section ul {
+    gap: 0.2em;
+    display: flex;
+  }
+  .nav-links li a {
+    margin-right: 0.1em;
+  }
+  .section-1 {
+    margin-top: 1em;
+  }
+  .division-1 h2 {
+    margin-top: 0.5em;
+  }
+  .division-2 > img {
+    height: 300px;
+    width: 400px;
+    margin-right: 2em;
+  }
+  .container-1 p {
+    font-size: 18px;
+    margin-top: 1em;
+  }
+  .layout {
+    display: flex;
+    margin: auto;
+    width: 90%;
+    justify-content: center;
+    margin-bottom: 82px;
+  }
+  .simplicity {
+    padding: 30px;
+    padding-left: 2.5em;
+    width: 43%;
+  }
+  .simplicity-image {
+    width: 43%;
+    margin-right: 2em;
+  }
+  .s-p1 {
+    display: none;
+  }
+  .simplicity h2 {
+    font-size: 40px;
+  }
+  .simplicity-image img {
+    width: 100%;
+  }
+  .simplicity button {
+    margin-left: 0.05em;
+  }
+  #layout-reverse {
+    flex-direction: row-reverse;
+  }
+  .c-p1 {
+    display: none;
+  }
+  .contention {
+    padding: 30px;
+    padding-left: 2.5em;
+    width: 43%;
+    margin-right: 2em;
+  }
+  .contention-image {
+    width: 43%;
+    margin-right: 2em;
+    margin-left: 2em;
+  }
+  .contention h2 {
+    font-size: 35px;
+  }
+  .privacy {
+    padding: 30px;
+    padding-left: 2.5em;
+    width: 43%;
+  }
+  .privacy-image {
+    width: 43%;
+    margin-right: 2em;
+  }
+  .p-p1 {
+    display: none;
+  }
+  .privacy h2 {
+    font-size: 40px;
+  }
+  .privacy-image img {
+    width: 100%;
+  }
+  .privacy button {
+    margin-left: 0.05em;
+  }
+  .plate-1 {
+    display: flex;
+    margin: auto;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .plate-1-image img {
+    width: 350px;
+    height: 350px;
+    background: url();
+    filter: drop-shadow(0px 9.32px 9.32px rgba(0, 0, 0, 0.25));
+    margin-bottom: 80px;
+  }
+  .sign-up h2 {
+    font-size: 34px;
+  }
+  .step-2 {
+    font-size: 18px;
+  }
+  .plate-2 {
+    display: flex;
+    margin: auto;
+    width: 80%;
+    justify-content: space-between;
+  }
+  .data h2 {
+    font-size: 30px;
+    line-height: 50px;
+  }
+  .data-image img {
+    width: 350px;
+  }
+  .data-2 {
+    font-size: 18px;
+  }
+  .plate-3 {
+    display: flex;
+    margin: auto;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+  }
+  .completion {
+    margin-top: -7em;
+    width: 50%;
+  }
+  .completion-image {
+    width: 50%;
+  }
+  .completion-image img {
+    width: 360px;
+    margin-left: -5em;
+  }
+  .completion h2 {
+    font-size: 30px;
+  }
+  .completion-2 {
+    font-size: 18px;
+  }
+  .plate-4 {
+    display: flex;
+    margin: auto;
+    width: 80%;
+  }
+  .goals {
+    width: 40%;
+  }
+  .goals-image {
+    width: 40%;
+  }
+  .goals-image img {
+    margin-left: 3em;
+    width: 400px;
+
+    margin-bottom: 229px;
+    margin-top: 7em;
+  }
+  .goals h2 {
+    font-size: 38px;
+    line-height: 66px;
+  }
+  .goals p {
+    font-size: 18px;
+  }
+
+  .fluid {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    justify-content: space-between;
+    padding: 0 2em;
+  }
+
+  .navigation li a {
+    font-size: 12px;
+    padding-right: 3em;
+  }
+  .description {
+    margin-right: 18%;
+    margin-left: 10%;
+    margin-top: -2em;
+  }
+  .footer-logo {
+    width: 180px;
+    height: 50px;
+  }
+
+  .socials {
+    margin-left: 16%;
+    margin-top: -2em;
+  }
+}
+@media screen and (max-width: 670px) {
+}
+@media screen and (max-width: 414px) {
+}
+@media screen and (max-width: 375px) {
 }
