@@ -30,46 +30,7 @@
   </head>
   <body>
     <div class="body_sidebar">
-      <!-- <nav class="navv">
-        <div class="nav_links">
-          <div class="nav_links_logo">
-            <img
-              class="logo"
-              src="../../assets/dashboard_parents/project debtor logo svg 2.png"
-              alt=""
-            />
-          </div>
-          <div class="nav_links_1">
-            <div class="nav_items dash active">
-              <i class="space fa-solid fa-square-minus"></i>
-              <h2>Dashboard</h2>
-            </div>
-            <div class="nav_items">
-              <i class="space fa-regular fa-user"></i>
-              <h2>Profile</h2>
-            </div>
-            <div class="nav_items">
-              <i class="space fa-solid fa-receipt"></i>
-              <h2>History</h2>
-            </div>
-            <div class="nav_items article">
-              <i class="space fa-solid fa-book-open"></i>
-              <h2>Articles</h2>
-            </div>
-          </div>
-          <div class="nav_links_2">
-            <div class="nav_items">
-              <h2><i class="space fa-solid fa-laptop-code"></i> Need Help?</h2>
-            </div>
-            <div class="nav_items">
-              <h2 class="log_out">
-                <i class="space fa-solid fa-arrow-right-from-bracket"></i> Log
-                Out
-              </h2>
-            </div>
-          </div>
-        </div>
-      </nav> -->
+      
       <nav class="navv">
         <div class="nav_links">
             <div class="nav_links_logo">
@@ -77,17 +38,17 @@
                 <img class="logo2" src="../../assets/dispute_page/Group.png" alt="">
             </div>
             <div class="nav_links_1">
-                <div class="nav_items dash active"><i class="space fa-solid fa-square-minus"></i> <h2>Dashboard</h2></div>
-                <div class="nav_items"><i class="space fa-regular fa-user"></i> <h2>Profile</h2></div>
-                <div class="nav_items"><i class="space fa-solid fa-receipt"></i> <h2>History</h2></div>
-                <div class="nav_items article"><i class="space fa-solid fa-book-open"></i> <h2>Articles</h2></div>
+                <div onclick="myFunction()" class="nav_items" id="dashboard"><i class="space fa-solid fa-square-minus"></i> <h2>Dashboard</h2></div>
+                <div onclick="myFunction()" class="nav_items " id="profile"><i class="space fa-regular fa-user"></i> <h2>Profile</h2></div>
+                <div onclick="myFunction()" class="nav_items " id="history"><i class="space fa-solid fa-receipt"></i> <h2>History</h2></div>
+                <div onclick="myFunction()" class="nav_items " id="article"><i class="space fa-solid fa-book-open"></i> <h2>Articles</h2></div>
             </div>
             <div class="nav_links_2">
-                <div class="nav_items">
+                <div onclick="myFunction()" class="nav_items" id="needhelp">
                     <i class="space2 fa-solid fa-laptop-code"></i>
                     <h2 class="space2-text"> Need Help?</h2>
                 </div>
-                <div class="nav_items log_out">
+                <div onclick="myFunction()" class="nav_items log_out" id="logout">
                     <i class="space2 fa-solid fa-arrow-right-from-bracket"></i>
                     <h2 class="space2-text"> Log Out</h2>
                 </div>
@@ -148,7 +109,7 @@
           <div class="main_top_three">
             <div>            
               <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                Button
+                <i class="fa-solid fa-bars"></i>
               </button>
               
               <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
@@ -275,7 +236,7 @@
             </div>
           </div>
           
-          
+
         </div>
         <section class="main_brkdwn_stdnt_debt">
           <div class="session-record">
@@ -315,16 +276,30 @@
     </div>
 
 
-
-
-
-    
-
-
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script>
+      
+      let dashboard = document.getElementById("dashboard");
+      let profile = document.getElementById("profile");
+      let history = document.getElementById("history");
+      let article = document.getElementById("article");
+      let needhelp = document.getElementById("needhelp");
+      let logout = document.getElementById("logout");
+
+      function myFunction() {
+        
+        dashboard.classList.toggle("nav_items-inverse");
+        profile.classList.toggle("nav_items-inverse");
+        history.classList.toggle("nav_items-inverse");
+        article.classList.toggle("nav_items-inverse");
+        needhelp.classList.toggle("nav_items-inverse");
+        logout.classList.toggle("nav_items-inverse");
+      }
+
+    </script>
   </body>
 </html>
