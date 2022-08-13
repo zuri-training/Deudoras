@@ -59,10 +59,10 @@ Deudoras is a website application that enables school owners in Gbagada locality
 Tools Used
 
     VS-Code
-    Figma -   Link to Figma File
-    Figjam - Link to Figjam File
-    Lucidchart - Link to Flowchart Schema
-    Github - Link to Github Repository
+    Figma -   https://www.figma.com/file/xweedyiijgngZt24JB44rd/Team-39_MyDebtors-Figma?node-id=305%3A98
+    Figjam - https://www.figma.com/file/GAyXOrMav37WbmE6tUBM5i/User-Research-2-Resources?node-id=0%3A1
+    Lucidchart - https://lucid.app/lucidchart/49f54d9d-bd2c-4b55-b3f3-8fa6ff830985/view?page=8.HAGRnC1py.#
+    Github - https://github.com/zuri-training/Team-39-project-my-debtors
     Django
 
 Tech Stack : Html Css React Python Django

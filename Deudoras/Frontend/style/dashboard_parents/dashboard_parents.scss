@@ -201,6 +201,10 @@ div.body_sidebar{
 .offcanvas-start{
     width: 60vw;
 }
+.off_nav_item-inverse{
+    background-color: $primary-col-dash;
+    color: $primary-col-white;
+}
 button.btn-primary{
     color: $primary-col-dash;
     background-color: $primary-col-white;

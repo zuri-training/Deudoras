@@ -119,14 +119,15 @@
                 </div>
                 <div class="offcanvas-body">        
                   <div class="offcanvas-list">
-                    <div onclick="myFunction()" class="off-item">Dashboard</div>
-                    <div onclick="myFunction2()" class="off-item">Profile</div>
-                    <div onclick="myFunction3()" class="off-item">Schools</div>
-                    <div onclick="myFunction4()" class="off-item">Debtor's List</div>
-                    <div onclick="myFunction5()" class="off-item">Notification</div>
-                    <div onclick="myFunction()" class="off-item">Articles</div>
-                    <div onclick="myFunction()" class="off-item">Help</div>
-                    <div onclick="myFunction()" class="off-item">Log Out</div>
+                    <div onclick="myFunc1()" id="off-dash" class="off-item">Dashboard</div>
+                    <div onclick="myFunc2()" id="off-profile" class="off-item">Profile</div>
+                    <div onclick="myFunc3()" id="off-history" class="off-item">History</div>
+                    <div onclick="myFunc4()" id="off-school" class="off-item">Schools</div>
+                    <div onclick="myFunc5()" id="off-debList" class="off-item">Debtor's List</div>
+                    <div onclick="myFunc6()" id="off-noti" class="off-item">Notification</div>
+                    <div onclick="myFunc7()" id="off-article" class="off-item">Articles</div>
+                    <div onclick="myFunc8()" id="off-help" class="off-item">Help</div>
+                    <div onclick="myFunc9()" id="off-logout" class="off-item">Log Out</div>                 
                   </div>
                 </div>
               </div>
@@ -289,6 +290,185 @@
       let article = document.getElementById("article");
       let needhelp = document.getElementById("needhelp");
       let logout = document.getElementById("logout");
+      
+      let offDash = document.getElementById("off-dash");
+      let offProfile = document.getElementById("off-profile");
+      let offHistory = document.getElementById("off-history");
+      let offSchool = document.getElementById("off-school");
+      let offDebList = document.getElementById("off-debList");
+      let offNoti = document.getElementById("off-noti");
+      let offArticle = document.getElementById("off-article");
+      let offNeedhelp = document.getElementById("off-help");
+      let offLogout = document.getElementById("off-logout");
+
+
+      function myFunc1() {        
+        if (!offDash.classList.contains("off_nav_item-inverse")){
+            offDash.classList.add("off_nav_item-inverse");
+            offProfile.classList.remove("off_nav_item-inverse");
+            offHistory.classList.remove("off_nav_item-inverse");
+            offSchool.classList.remove("off_nav_item-inverse");
+            offDebList.classList.remove("off_nav_item-inverse");
+            offNoti.classList.remove("off_nav_item-inverse");
+            offArticle.classList.remove("off_nav_item-inverse");
+            offNeedhelp.classList.remove("off_nav_item-inverse");
+            offLogout.classList.remove("off_nav_item-inverse");
+        } else {
+          offDash.classList.remove("off_nav_item-inverse");
+          offProfile.classList.remove("off_nav_item-inverse");
+          offHistory.classList.remove("off_nav_item-inverse");
+          offSchool.classList.remove("off_nav_item-inverse");
+          offDebList.classList.remove("off_nav_item-inverse");
+          offNoti.classList.remove("off_nav_item-inverse");
+          offArticle.classList.remove("off_nav_item-inverse");
+          offNeedhelp.classList.remove("off_nav_item-inverse");
+          offLogout.classList.remove("off_nav_item-inverse");
+        }        
+      }
+
+      function myFunc2() {        
+        if (!offProfile.classList.contains("off_nav_item-inverse")){
+            offProfile.classList.add("off_nav_item-inverse");
+            offDash.classList.remove("off_nav_item-inverse");
+            offHistory.classList.remove("off_nav_item-inverse");
+            offSchool.classList.remove("off_nav_item-inverse");
+            offDebList.classList.remove("off_nav_item-inverse");
+            offNoti.classList.remove("off_nav_item-inverse");
+            offArticle.classList.remove("off_nav_item-inverse");
+            offNeedhelp.classList.remove("off_nav_item-inverse");
+            offLogout.classList.remove("off_nav_item-inverse");
+        } else {
+          offDash.classList.remove("off_nav_item-inverse");
+          offProfile.classList.remove("off_nav_item-inverse");
+          offHistory.classList.remove("off_nav_item-inverse");
+          offSchool.classList.remove("off_nav_item-inverse");
+          offDebList.classList.remove("off_nav_item-inverse");
+          offNoti.classList.remove("off_nav_item-inverse");
+          offArticle.classList.remove("off_nav_item-inverse");
+          offNeedhelp.classList.remove("off_nav_item-inverse");
+          offLogout.classList.remove("off_nav_item-inverse");
+        }        
+      }
+
+      function myFunc3() {        
+        if (!offHistory.classList.contains("off_nav_item-inverse")){
+            offHistory.classList.add("off_nav_item-inverse");
+            offDash.classList.remove("off_nav_item-inverse");
+            offProfile.classList.remove("off_nav_item-inverse");
+            offSchool.classList.remove("off_nav_item-inverse");
+            offDebList.classList.remove("off_nav_item-inverse");
+            offNoti.classList.remove("off_nav_item-inverse");
+            offArticle.classList.remove("off_nav_item-inverse");
+            offNeedhelp.classList.remove("off_nav_item-inverse");
+            offLogout.classList.remove("off_nav_item-inverse");
+        } else {
+          offDash.classList.remove("off_nav_item-inverse");
+          offProfile.classList.remove("off_nav_item-inverse");
+          offHistory.classList.remove("off_nav_item-inverse");
+          offSchool.classList.remove("off_nav_item-inverse");
+          offDebList.classList.remove("off_nav_item-inverse");
+          offNoti.classList.remove("off_nav_item-inverse");
+          offArticle.classList.remove("off_nav_item-inverse");
+          offNeedhelp.classList.remove("off_nav_item-inverse");
+          offLogout.classList.remove("off_nav_item-inverse");
+        }        
+      }
+
+      function myFunc4() {        
+        if (!offSchool.classList.contains("off_nav_item-inverse")){
+            offSchool.classList.add("off_nav_item-inverse");
+            offDash.classList.remove("off_nav_item-inverse");
+            offProfile.classList.remove("off_nav_item-inverse");
+            offHistory.classList.remove("off_nav_item-inverse");
+            offDebList.classList.remove("off_nav_item-inverse");
+            offNoti.classList.remove("off_nav_item-inverse");
+            offArticle.classList.remove("off_nav_item-inverse");
+            offNeedhelp.classList.remove("off_nav_item-inverse");
+            offLogout.classList.remove("off_nav_item-inverse");
+        } else {
+          offDash.classList.remove("off_nav_item-inverse");
+          offProfile.classList.remove("off_nav_item-inverse");
+          offHistory.classList.remove("off_nav_item-inverse");
+          offSchool.classList.remove("off_nav_item-inverse");
+          offDebList.classList.remove("off_nav_item-inverse");
+          offNoti.classList.remove("off_nav_item-inverse");
+          offArticle.classList.remove("off_nav_item-inverse");
+          offNeedhelp.classList.remove("off_nav_item-inverse");
+          offLogout.classList.remove("off_nav_item-inverse");
+        }        
+      }
+
+      function myFunc5() {        
+        if (!offDebList.classList.contains("off_nav_item-inverse")){
+            offDebList.classList.add("off_nav_item-inverse");
+            offDash.classList.remove("off_nav_item-inverse");
+            offProfile.classList.remove("off_nav_item-inverse");
+            offHistory.classList.remove("off_nav_item-inverse");
+            offSchool.classList.remove("off_nav_item-inverse");
+            offNoti.classList.remove("off_nav_item-inverse");
+            offArticle.classList.remove("off_nav_item-inverse");
+            offNeedhelp.classList.remove("off_nav_item-inverse");
+            offLogout.classList.remove("off_nav_item-inverse");
+        } else {
+          offDash.classList.remove("off_nav_item-inverse");
+          offProfile.classList.remove("off_nav_item-inverse");
+          offHistory.classList.remove("off_nav_item-inverse");
+          offSchool.classList.remove("off_nav_item-inverse");
+          offDebList.classList.remove("off_nav_item-inverse");
+          offNoti.classList.remove("off_nav_item-inverse");
+          offArticle.classList.remove("off_nav_item-inverse");
+          offNeedhelp.classList.remove("off_nav_item-inverse");
+          offLogout.classList.remove("off_nav_item-inverse");
+        }        
+      }
+
+      function myFunc6() {        
+        if (!offNoti.classList.contains("off_nav_item-inverse")){
+            offNoti.classList.add("off_nav_item-inverse");
+            offDash.classList.remove("off_nav_item-inverse");
+            offProfile.classList.remove("off_nav_item-inverse");
+            offHistory.classList.remove("off_nav_item-inverse");
+            offSchool.classList.remove("off_nav_item-inverse");
+            offDebList.classList.remove("off_nav_item-inverse");
+            offArticle.classList.remove("off_nav_item-inverse");
+            offNeedhelp.classList.remove("off_nav_item-inverse");
+            offLogout.classList.remove("off_nav_item-inverse");
+        } else {
+          offDash.classList.remove("off_nav_item-inverse");
+          offProfile.classList.remove("off_nav_item-inverse");
+          offHistory.classList.remove("off_nav_item-inverse");
+          offSchool.classList.remove("off_nav_item-inverse");
+          offDebList.classList.remove("off_nav_item-inverse");
+          offNoti.classList.remove("off_nav_item-inverse");
+          offArticle.classList.remove("off_nav_item-inverse");
+          offNeedhelp.classList.remove("off_nav_item-inverse");
+          offLogout.classList.remove("off_nav_item-inverse");
+        }        
+      }
+
+      function myFunc7() {        
+        if (!offArticle.classList.contains("off_nav_item-inverse")){
+            offArticle.classList.add("off_nav_item-inverse");
+            offDash.classList.remove("off_nav_item-inverse");
+            offProfile.classList.remove("off_nav_item-inverse");
+            offHistory.classList.remove("off_nav_item-inverse");
+            offSchool.classList.remove("off_nav_item-inverse");
+            offDebList.classList.remove("off_nav_item-inverse");
+            offNoti.classList.remove("off_nav_item-inverse");
+            offNeedhelp.classList.remove("off_nav_item-inverse");
+            offLogout.classList.remove("off_nav_item-inverse");
+        } else {
+          offDash.classList.remove("off_nav_item-inverse");
+          offProfile.classList.remove("off_nav_item-inverse");
+          offHistory.classList.remove("off_nav_item-inverse");
+          offSchool.classList.remove("off_nav_item-inverse");
+          offDebList.classList.remove("off_nav_item-inverse");
+          offNoti.classList.remove("off_nav_item-inverse");
+          offArticle.classList.remove("off_nav_item-inverse");
+          offNeedhelp.classList.remove("off_nav_item-inverse");
+          offLogout.classList.remove("off_nav_item-inverse");
+        }        
+      }
 
       function myFunction() {        
         if (!dashboard.classList.contains("nav_items-inverse")){
