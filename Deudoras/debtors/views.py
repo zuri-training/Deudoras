@@ -65,7 +65,7 @@ def SchoolSignup(request):
 
         messages.success(request, 'Your account has been succesfully created')
 
-        return render(request,"debtors/login/login-school.html")
+        return redirect("Sclogin")
 
     return render(request,"debtors/signup_school.html")
 def add_debtor(request):
@@ -92,7 +92,7 @@ def add_debtor(request):
 
         messages.success(request, 'Your account has been succesfully created')
 
-        return render(request,"debtors/login/login-school.html")
+        return render(request,SchoolSignin)
 def need_help(request):
     return render(request,'debtors/need_help.html')
 
@@ -106,16 +106,17 @@ def SchoolSignin(request):
     if request.method == 'POST':
         email = request.POST.get('email')
         password = request.POST.get('password')
-        print('done')
+        # print('done')
         user = authenticate(request, email=email, password=password)
-
+        print(user)
         if user is not None:
+            print('done')
             school_name =user.name
             id = user.id
             
             login(request, user)
-            context= {'name':name,'id' :id} 
-            return render(request, "debtors/school_dashboard.html/name",context)
+            # context= {'name':name,'id' :id} 
+            return redirect( "SchoolHome")
 
         else:
             messages.error(request, "Bad credentials!!")
@@ -197,7 +198,9 @@ def signout(request):
 # @users(allowed_roles=['school'])
 
 def SchoolHome(request):
-    return  render(request, 'debtors/school_dashboard.html/')
+    user = request.user
+    print(user.id)
+    return  render(request, 'debtors/school_dashboard.html')
 def Debtors(request,pk):
     debtor = Debtors.objects.get(School_id = pk )
     return render(request, 'debtors/debtors_list.html',{'debtors': debtor})
