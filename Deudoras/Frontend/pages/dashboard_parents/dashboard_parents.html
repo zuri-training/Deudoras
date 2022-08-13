@@ -39,16 +39,16 @@
             </div>
             <div class="nav_links_1">
                 <div onclick="myFunction()" class="nav_items" id="dashboard"><i class="space fa-solid fa-square-minus"></i> <h2>Dashboard</h2></div>
-                <div onclick="myFunction()" class="nav_items " id="profile"><i class="space fa-regular fa-user"></i> <h2>Profile</h2></div>
-                <div onclick="myFunction()" class="nav_items " id="history"><i class="space fa-solid fa-receipt"></i> <h2>History</h2></div>
-                <div onclick="myFunction()" class="nav_items " id="article"><i class="space fa-solid fa-book-open"></i> <h2>Articles</h2></div>
+                <div onclick="myFunction2()" class="nav_items " id="profile"><i class="space fa-regular fa-user"></i> <h2>Profile</h2></div>
+                <div onclick="myFunction3()" class="nav_items " id="history"><i class="space fa-solid fa-receipt"></i> <h2>History</h2></div>
+                <div onclick="myFunction4()" class="nav_items " id="article"><i class="space fa-solid fa-book-open"></i> <h2>Articles</h2></div>
             </div>
             <div class="nav_links_2">
-                <div onclick="myFunction()" class="nav_items" id="needhelp">
+                <div onclick="myFunction5()" class="nav_items" id="needhelp">
                     <i class="space2 fa-solid fa-laptop-code"></i>
                     <h2 class="space2-text"> Need Help?</h2>
                 </div>
-                <div onclick="myFunction()" class="nav_items log_out" id="logout">
+                <div onclick="myFunction6()" class="nav_items log_out" id="logout">
                     <i class="space2 fa-solid fa-arrow-right-from-bracket"></i>
                     <h2 class="space2-text"> Log Out</h2>
                 </div>
@@ -292,12 +292,92 @@
 
       function myFunction() {
         
-        dashboard.classList.toggle("nav_items-inverse");
-        profile.classList.toggle("nav_items-inverse");
-        history.classList.toggle("nav_items-inverse");
-        article.classList.toggle("nav_items-inverse");
-        needhelp.classList.toggle("nav_items-inverse");
-        logout.classList.toggle("nav_items-inverse");
+        if (!dashboard.classList.contains("nav_items-inverse")){
+            dashboard.classList.add("nav_items-inverse");
+        } else {
+          dashboard.classList.remove("nav_items-inverse");
+          profile.classList.remove("nav_items-inverse");
+          history.classList.remove("nav_items-inverse");
+          article.classList.remove("nav_items-inverse");
+          needhelp.classList.remove("nav_items-inverse");
+          logout.classList.remove("nav_items-inverse");
+        }
+        
+      }
+
+      function myFunction2() {
+        
+        if (!profile.classList.contains("nav_items-inverse")){
+            profile.classList.add("nav_items-inverse");
+        } else {
+          dashboard.classList.remove("nav_items-inverse");
+          profile.classList.remove("nav_items-inverse");
+          history.classList.remove("nav_items-inverse");
+          article.classList.remove("nav_items-inverse");
+          needhelp.classList.remove("nav_items-inverse");
+          logout.classList.remove("nav_items-inverse");
+        }
+        
+      }
+
+      function myFunction3() {
+        
+        if (!history.classList.contains("nav_items-inverse")){
+            history.classList.add("nav_items-inverse");
+        } else {
+          dashboard.classList.remove("nav_items-inverse");
+          profile.classList.remove("nav_items-inverse");
+          history.classList.remove("nav_items-inverse");
+          article.classList.remove("nav_items-inverse");
+          needhelp.classList.remove("nav_items-inverse");
+          logout.classList.remove("nav_items-inverse");
+        }
+        
+      }
+
+      function myFunction4() {
+        
+        if (!article.classList.contains("nav_items-inverse")){
+            article.classList.add("nav_items-inverse");
+        } else {
+          dashboard.classList.remove("nav_items-inverse");
+          profile.classList.remove("nav_items-inverse");
+          history.classList.remove("nav_items-inverse");
+          article.classList.remove("nav_items-inverse");
+          needhelp.classList.remove("nav_items-inverse");
+          logout.classList.remove("nav_items-inverse");
+        }
+        
+      }
+
+      function myFunction5() {
+        
+        if (!needhelp.classList.contains("nav_items-inverse")){
+            needhelp.classList.add("nav_items-inverse");
+        } else {
+          dashboard.classList.remove("nav_items-inverse");
+          profile.classList.remove("nav_items-inverse");
+          history.classList.remove("nav_items-inverse");
+          article.classList.remove("nav_items-inverse");
+          needhelp.classList.remove("nav_items-inverse");
+          logout.classList.remove("nav_items-inverse");
+        }
+        
+      }
+
+      function myFunction6() {
+        
+        if (!logout.classList.contains("nav_items-inverse")){
+            logout.classList.add("nav_items-inverse");
+        } else {
+          dashboard.classList.remove("nav_items-inverse");
+          profile.classList.remove("nav_items-inverse");
+          history.classList.remove("nav_items-inverse");
+          article.classList.remove("nav_items-inverse");
+          needhelp.classList.remove("nav_items-inverse");
+          logout.classList.remove("nav_items-inverse");
+        }
+        
       }
 
     </script>
