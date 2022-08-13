@@ -113,6 +113,8 @@ li {
   letter-spacing: 0.005em;
   color: #03034e;
 }
+
+/* Dropdown menu css */
 .dropdown {
   position: relative;
   display: inline-block;
@@ -144,6 +146,9 @@ li {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+/* end of dropdown css*/
+
 /* section 1 and it's divisions*/
 .section-1 {
   display: flex;
