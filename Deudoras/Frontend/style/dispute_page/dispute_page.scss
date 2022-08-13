@@ -4,7 +4,8 @@ body {
     background-color: #F6FAFF;
 }
 div.body_sidebar{
-    display: flex;    
+    display: flex;
+    justify-content: space-between;
 }
 
 
@@ -78,7 +79,13 @@ div.body_sidebar{
     margin-bottom: 3em;
     margin-top: 2em;
 }
-
+.logo2{
+    width: 4em;
+    height: 4em;
+    margin-bottom: 3em;
+    margin-top: 2em;
+    display: none;
+}
 .svg-white{
     color: white;
 }
@@ -96,8 +103,8 @@ div.body_sidebar{
 
 
 main{
-    padding: 4em 2em 2em 4em;
-    width: 70vw;
+    padding: 4em 2em 2em 2em;
+    width: 90%;
 }
 section.main_one{
     display: flex;
@@ -116,9 +123,33 @@ div.main_one_info{
     font-size: 1em;
     color: $primary-col-dash;
 }
+@media screen and (max-width: 1124px){
+    .main_one_info-text{
+        font-size: 1.5em;
+    }
+    .main_one_info-text2{
+        font-size: 0.9em;
+    }
+}
 div.main_one_noti{
     width: 15%;
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 8em;
+    // align-items: center;
 }
+.fa-bell{
+    font-size: 1.5em;
+}
+.nav_items_2--img{
+    border-radius: 50%;
+}
+// div.main_top_two{
+//     width: 10%;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+// }
 
 
 section.main_two{
@@ -151,6 +182,17 @@ section.main_two{
     width: 15em;
     padding: 0.4em;
     border-radius: 5px;
+}
+@media screen and (max-width: 696px){
+    .inputt{
+        width: 24em;
+    }
+    .inputt2{
+        width: 8.5em;
+    }
+    .inputt3{
+        width: 13.5em;
+    }
 }
 .message{
     display: block;
@@ -200,7 +242,26 @@ textarea.textarea{
 
 //////////////////////////////////////////////////
 
-// 1135px first breaking point
+// 1143px first breaking point
+@media screen and (max-width: 1143px){
+    section.main_two{
+        margin-top: 8em;
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+    }
+    div.main_two_sch{
+        display: flex;
+        // justify-content: space-between;
+        margin-top: 4em;
+        margin-bottom: 4em;
+    }
+    .submit{
+        margin-bottom: 2em;
+    }
+}
+
+// 1135px second breaking point
 @media screen and (max-width: 1135px){
     .nav_items {
         // padding: 1em 3em;
@@ -222,6 +283,9 @@ textarea.textarea{
         margin-bottom: 0.5em;
         font-size: 2em;
     }
+    .logo{
+        margin-bottom: 0.5em;
+    }
 }
 
 @media screen and (max-width: 952px){
@@ -232,12 +296,26 @@ textarea.textarea{
     .logo{
         display: none;
     }
+    .logo2{
+        display: block;
+        margin-bottom: 2em;
+    }
 }
 
 //754px
 @media screen and (max-width: 754px){
+    .nav_items{
+        padding: 0.7em 3em;
+    }
     .nav_items h2{
         font-size: 0.8em;
+    }
+    .space{
+        margin-bottom: 0.4em;
+    }
+    .log_out{
+        background-color: transparent;
+        border-radius: 5px;
     }
     //discription disappear here
 }
