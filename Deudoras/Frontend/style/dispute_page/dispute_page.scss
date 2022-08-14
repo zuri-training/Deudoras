@@ -106,6 +106,15 @@ main{
     padding: 4em 2em 2em 2em;
     width: 90%;
 }
+.main_top_three{
+    display: none;
+    justify-content: space-between;
+}
+@media screen and (max-width: 764px){
+    .main_top_three{
+        display: flex;
+    }
+}
 section.main_one{
     display: flex;
     justify-content: space-between;

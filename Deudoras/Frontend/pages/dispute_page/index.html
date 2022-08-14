@@ -38,6 +38,34 @@
             </div>       
         </nav>
         <main>
+          <div class="main_top_three">
+            <div><img class="logo3" src="../../assets/dashboard_parents/project debtor logo svg 2.png" alt="Logo"></div>
+          </div>
+            <div>            
+              <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                <i class="fa-solid fa-bars"></i>
+              </button>
+              
+              <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasExampleLabel"> </h5>
+                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">        
+                  <div class="offcanvas-list">
+                    <div onclick="myFunc1()" id="off-dash" class="off-item"><a href="{% url('home') %}">Dashboard</a></div>
+                    <div onclick="myFunc2()" id="off-profile" class="off-item"><a href="{% url('home') %}">Profile</a></div>
+                    <div onclick="myFunc3()" id="off-history" class="off-item"><a href="{% url('home') %}">History</a></div>
+                    <div onclick="myFunc4()" id="off-school" class="off-item"><a href="{% url('School list') %}">Schools</a></div>
+                    <div onclick="myFunc5()" id="off-debList" class="off-item"><a href="{% url('debtors list') %}">Debtor's List</a></div>
+                    <div onclick="myFunc6()" id="off-noti" class="off-item"><a href="{% url('home') %}">Notification</a></div>
+                    <div onclick="myFunc7()" id="off-article" class="off-item"><a href="{% url('Articles') %}">Articles</a></div>
+                    <div onclick="myFunc8()" id="off-help" class="off-item"><a href="{% url('Help') %}">Help</a></div>
+                    <div onclick="myFunc9()" id="off-logout" class="off-item"><a href="{% url('signout') %}">Log Out</a></div>                
+                  </div>
+                </div>
+              </div>
+            </div>            
             <section class="main_one">
                 <div class="main_one_info">
                     <h1 class="main_one_info-text">Have Payment Dispute?</h1>
