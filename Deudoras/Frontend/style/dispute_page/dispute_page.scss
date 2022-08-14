@@ -15,6 +15,11 @@ div.body_sidebar{
     height: auto;
     width: 20%;
 }
+@media screen and (max-width: 764px){
+    .navv {
+        display: none;
+    }
+}
 .nav_links {
     display: flex;
     flex-direction: column;
@@ -86,6 +91,11 @@ div.body_sidebar{
     margin-top: 2em;
     display: none;
 }
+.logo3{
+    width: 12em;
+    height: 3em;
+    background-color: $primary-col-dash;
+}
 .svg-white{
     color: white;
 }
@@ -99,6 +109,30 @@ div.body_sidebar{
     width: 30px;
     height: 30px;
 }
+.offcanvas-start{
+    width: 60vw;
+}
+.offcanvas-body{
+    padding: 0 0;
+}
+div.offcanvas-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90vh;
+}
+.off-item{
+    text-align: center;
+    display: flex;
+    height: 3em;
+    justify-content: center;
+    align-items: center;
+}
+.off_nav_item-inverse{
+    background-color: $primary-col-dash;
+    color: $primary-col-white;
+}
+
 
 
 
@@ -111,8 +145,14 @@ main{
     justify-content: space-between;
 }
 @media screen and (max-width: 764px){
+    main{
+        width: 100%;
+    }
     .main_top_three{
         display: flex;
+    }
+    div div.main_one_noti {
+        display: none;
     }
 }
 section.main_one{
