@@ -18,11 +18,11 @@
         <button class="close-btn" id="close"><img src="../../assets/articles/Vector (5).png" alt=""></button>
         <div class="mobile-links">
           <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">About</a></li>
-            <li class="active"><a href="" class="active">Articles</a></li>
-            <li><a href="">Contact us</a></li>
-            <li><a href="">Help</a></li>
+            <li><a href="{% url('home') %}">Home</a></li>
+            <li><a href="{% url('About us') %}">About</a></li>
+            <li class="active"><a href="{% url('Articles')%}" class="active">Articles</a></li>
+            <li><a href="{% url('Contact us') %}">Contact us</a></li>
+            <li><a href="{% url('Help') %}">Help</a></li>
           </ul>
         </div>
 
@@ -37,11 +37,11 @@
       <div class="nav-links">
         <div class="links">
           <ul>
-            <li><a href="../../index.html">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="" class="desktop-active">Articles</a></li>
-            <li><a href="">Contact us</a></li>
-            <li><a href="">Help</a></li>
+            <li><a href="{% url('home') %}">Home</a></li>
+            <li><a href="{% url('About us') %}">About</a></li>
+            <li><a href="{% url('Articles')%}" class="desktop-active">Articles</a></li>
+            <li><a href="{% url('Contact us') %}">Contact us</a></li>
+            <li><a href="{% url('Help') %}">Help</a></li>
           </ul>
         </div>
         <div class="sign">
@@ -50,15 +50,15 @@
             <div class="dropdown">
               <button class="nav-button-1">Log in</button>
               <div class="dropdown-content">
-                 <a href="#">Log in <br> as a school </a>
-                 <a href="#">Log in as a<br> Parent/student </a>
+                 <a href="{%url('Sclogin')%}">Log in <br> as a school </a>
+                 <a href="{%url('Stlogin')%}">Log in as a<br> Parent/student </a>
               </div>
             </div>
              <div class="dropdown">
               <button class="nav-button-2">Sign Up</button>
               <div class="dropdown-content">
-                 <a href="#">Sign up as a <br> School</a>
-                 <a href="#">Sign up as a <br> Parent or student</a>
+                 <a href="{%url('SchoolSignup')%}">Sign up as a <br> School</a>
+                 <a href="{%url('signup1')%}">Sign up as a <br> Parent or student</a>
               </div>    
           </ul>
         </div>

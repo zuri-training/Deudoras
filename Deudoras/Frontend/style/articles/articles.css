@@ -101,9 +101,12 @@ header {
   gap: 2em;
   display: flex;
 }
+.nav-links ul a {
+  color: #03045e;
+}
 .desktop-active {
   color: #03045e;
-  font-weight: bold;
+  font-weight: 600;
 }
 .links ul {
   display: flex;
