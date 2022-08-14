@@ -201,6 +201,22 @@ div.body_sidebar{
 .offcanvas-start{
     width: 60vw;
 }
+.offcanvas-body{
+    padding: 0 0;
+}
+div.offcanvas-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90vh;
+}
+.off-item{
+    text-align: center;
+    display: flex;
+    height: 3em;
+    justify-content: center;
+    align-items: center;
+}
 .off_nav_item-inverse{
     background-color: $primary-col-dash;
     color: $primary-col-white;
@@ -399,18 +415,7 @@ p.total_debt{
 p.total_debt_amt{
     font-size: 1.4em;
 }
-.offcanvas-body{
-    padding: 0 0;
-}
-div.offcanvas-list{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 90vh;
-}
-.off-item{
-    text-align: center;
-}
+
 @media screen and (max-width: 1146px){
     p.total_debt{
         font-size: 0.9em;
