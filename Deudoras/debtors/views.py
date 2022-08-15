@@ -34,6 +34,7 @@ def user_try(request):
 
 def Landing(request):
     return render(request, "debtors/index.html")
+    
 def SchoolSignup(request):
     
     # if form._

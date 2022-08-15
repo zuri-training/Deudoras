@@ -47,11 +47,11 @@
             <div class="nav_links_2">
                 <div onclick="myFunction5()" class="nav_items" id="needhelp">
                     <i class="space2 fa-solid fa-laptop-code"></i>
-                    <h2 class="space2-text"> Need Help?</h2>
+                    <h2 class="space2-text"><a href="{% url 'Help' %}"> Need Help?</h2>
                 </div>
                 <div onclick="myFunction6()" class="nav_items log_out" id="logout">
                     <i class="space2 fa-solid fa-arrow-right-from-bracket"></i>
-                    <h2 class="space2-text"> Log Out</h2>
+                    <h2 class="space2-text">{% url 'signout' %} Log Out</h2>
                 </div>
             </div>
         </div>       
@@ -120,15 +120,15 @@
                 </div>
                 <div class="offcanvas-body">        
                   <div class="offcanvas-list">
-                    <div onclick="myFunc1()" id="off-dash" class="off-item">Dashboard</div>
-                    <div onclick="myFunc2()" id="off-profile" class="off-item">Profile</div>
-                    <div onclick="myFunc3()" id="off-history" class="off-item">History</div>
-                    <div onclick="myFunc4()" id="off-school" class="off-item">Schools</div>
-                    <div onclick="myFunc5()" id="off-debList" class="off-item">Debtor's List</div>
-                    <div onclick="myFunc6()" id="off-noti" class="off-item">Notification</div>
-                    <div onclick="myFunc7()" id="off-article" class="off-item">Articles</div>
-                    <div onclick="myFunc8()" id="off-help" class="off-item">Help</div>
-                    <div onclick="myFunc9()" id="off-logout" class="off-item">Log Out</div>                 
+                    <div onclick="myFunc1()" id="off-dash" class="off-item"><a href="{% url 'home' %}">Dashboard</div>
+                    <div onclick="myFunc2()" id="off-profile" class="off-item"><a href="{% url 'home' %}">Profile</div>
+                    <div onclick="myFunc3()" id="off-history" class="off-item"><a href="{% url 'home' %}">History</div>
+                    <div onclick="myFunc4()" id="off-school" class="off-item"><a href="{% url 'School list' %}">Schools</div>
+                    <div onclick="myFunc5()" id="off-debList" class="off-item"><a href="{% url 'debtors list' %}">Debtor's List</div>
+                    <div onclick="myFunc6()" id="off-noti" class="off-item"><a href="{% url 'home' %}">Notification</div>
+                    <div onclick="myFunc7()" id="off-article" class="off-item"><a href="{% url 'Articles' %}">Articles</div>
+                    <div onclick="myFunc8()" id="off-help" class="off-item"><a href="{% url 'Help' %}">Help</div>
+                    <div onclick="myFunc9()" id="off-logout" class="off-item"><a href="{% url 'signout' %}">Log Out</div>                 
                   </div>
                 </div>
               </div>
@@ -471,6 +471,53 @@
         }        
       }
 
+      function myFunc8() {        
+        if (!offNeedhelp.classList.contains("off_nav_item-inverse")){
+            offNeedhelp.classList.add("off_nav_item-inverse");
+            offDash.classList.remove("off_nav_item-inverse");
+            offProfile.classList.remove("off_nav_item-inverse");
+            offHistory.classList.remove("off_nav_item-inverse");
+            offSchool.classList.remove("off_nav_item-inverse");
+            offDebList.classList.remove("off_nav_item-inverse");
+            offNoti.classList.remove("off_nav_item-inverse");
+            offArticle.classList.remove("off_nav_item-inverse");
+            offLogout.classList.remove("off_nav_item-inverse");
+        } else {
+          offDash.classList.remove("off_nav_item-inverse");
+          offProfile.classList.remove("off_nav_item-inverse");
+          offHistory.classList.remove("off_nav_item-inverse");
+          offSchool.classList.remove("off_nav_item-inverse");
+          offDebList.classList.remove("off_nav_item-inverse");
+          offNoti.classList.remove("off_nav_item-inverse");
+          offArticle.classList.remove("off_nav_item-inverse");
+          offNeedhelp.classList.remove("off_nav_item-inverse");
+          offLogout.classList.remove("off_nav_item-inverse");
+        }        
+      }
+
+      function myFunc9() {        
+        if (!offLogout.classList.contains("off_nav_item-inverse")){
+            offLogout.classList.add("off_nav_item-inverse");
+            offDash.classList.remove("off_nav_item-inverse");
+            offProfile.classList.remove("off_nav_item-inverse");
+            offHistory.classList.remove("off_nav_item-inverse");
+            offSchool.classList.remove("off_nav_item-inverse");
+            offDebList.classList.remove("off_nav_item-inverse");
+            offNoti.classList.remove("off_nav_item-inverse");
+            offArticle.classList.remove("off_nav_item-inverse");
+            offNeedhelp.classList.remove("off_nav_item-inverse");
+        } else {
+          offDash.classList.remove("off_nav_item-inverse");
+          offProfile.classList.remove("off_nav_item-inverse");
+          offHistory.classList.remove("off_nav_item-inverse");
+          offSchool.classList.remove("off_nav_item-inverse");
+          offDebList.classList.remove("off_nav_item-inverse");
+          offNoti.classList.remove("off_nav_item-inverse");
+          offArticle.classList.remove("off_nav_item-inverse");
+          offNeedhelp.classList.remove("off_nav_item-inverse");
+          offLogout.classList.remove("off_nav_item-inverse");
+        }        
+      }
       function myFunction() {        
         if (!dashboard.classList.contains("nav_items-inverse")){
             dashboard.classList.add("nav_items-inverse");

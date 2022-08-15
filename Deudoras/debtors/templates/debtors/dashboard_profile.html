@@ -1,0 +1,503 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Parents</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'debtors/Frontend/style/dashboard_parents/dashboard_profile.min.css.map'%}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'debtors/Frontend/style/dashboard_parents/dashboard_profile.min.css'%}"
+    />
+    <!-- <link rel="stylesheet" href="{% static 'debtors/Frontend/style/dashboard_parents/dash-parents.css"> -->
+  </head>
+  <body>
+    <div class="body_sidebar">
+      
+      <nav class="navv">
+        <div class="nav_links">
+            <div class="nav_links_logo">
+                <img class="logo" src="{% static 'debtors/Frontend/assets/dashboard_parents/project debtor logo svg 2.png'%}" alt="">
+                <img class="logo2" src="{% static 'debtors/Frontend/assets/dispute_page/Group.png'%}" alt="">
+            </div>
+            <div class="nav_links_1">
+                <div onclick="myFunction()" class="nav_items" id="dashboard"><i class="space fa-solid fa-square-minus"></i> <h2><a href="{% url 'home'  %}">Dashboard</a> </h2></div>
+                <div onclick='myFunction2(); ' class="nav_items " id="profile"><i class="space fa-regular fa-user"></i> <h2><a href="{% url 'home'  %}">Profile</a></h2></div>
+                <div onclick="myFunction3()" class="nav_items " id="history"><i class="space fa-solid fa-receipt"></i> <h2><a href="{% url 'home'  %}">History</a></h2></div>
+                <div onclick="myFunction4()" class="nav_items " id="article"><i class="space fa-solid fa-book-open"></i> <h2><a href="{% url 'Articles'  %}">Articles</a></h2></div>
+            </div>
+            <div class="nav_links_2">
+                <div onclick="myFunction5()" class="nav_items" id="needhelp">
+                    <i class="space2 fa-solid fa-laptop-code"></i>
+                    <h2 class="space2-text"><a href="{% url 'Help' %}">Need Help?</a></h2>
+                </div>
+                <div onclick="myFunction6()" class="nav_items log_out" id="logout">
+                    <i class="space2 fa-solid fa-arrow-right-from-bracket"></i>
+                    <h2 class="space2-text"><a href="{% url  'signout' %}">Log Out</a></h2>
+                </div>
+            </div>
+        </div>       
+    </nav>
+      <main>
+        <div class="main_one">
+          <div class="main_top">
+            <div class="main_top_one">
+              <h1>Dashboard</h1>
+              <p>Dashboard arrow <span>John's</span> profile pic</p>
+            </div>
+            <div class="main_top_two">
+              <div class="nav_items_2">
+                <i class="fa-regular fa-bell"></i>
+              </div>
+              <div class="nav_items_2">
+                <img
+                  class="nav_items_2--img"
+                  src="{% static 'debtors/Frontend/assets/dashboard_parents/brett-jordan-NDjaUqvB7uE-unsplash.jpg'%}"
+                  alt="pic"
+                />
+              </div>
+              <span class="nav_items_2">
+                <div class="dropdown" style="display: inline-block">
+                  <i
+                    class="fa-solid fa-chevron-down dropdown-toggle"
+                    type=""
+                    id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  ></i>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton1"
+                  >
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        ><i class="fa-solid fa-lock"></i> Change Password</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        ><i class="fa-solid fa-circle-question"></i> Help</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        ><i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        Log out</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </span>
+            </div>
+          </div>
+          <div class="main_top_three">
+            <div>            
+              <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                <i class="fa-solid fa-bars"></i>
+              </button>
+              
+              <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasExampleLabel"> </h5>
+                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">        
+                  <div class="offcanvas-list">
+                    <div onclick="myFunc1()" id="off-dash" class="off-item"><a href="{% url 'home'  %}">Dashboard</a></div>
+                    <div onclick="myFunc2()" id="off-profile" class="off-item"><a href="{% url 'home'  %}">Profile</a></div>
+                    <div onclick="myFunc3()" id="off-history" class="off-item"><a href="{% url 'home'  %}">History</a></div>
+                    <div onclick="myFunc4()" id="off-school" class="off-item"><a href="{% url 'School list'  %}">Schools</a></div>
+                    <div onclick="myFunc5()" id="off-debList" class="off-item"><a href="{% url 'debtors list'  %}">Debtor's List</a></div>
+                    <div onclick="myFunc6()" id="off-noti" class="off-item"><a href="{% url 'home'  %}">Notification</a></div>
+                    <div onclick="myFunc7()" id="off-article" class="off-item"><a href="{% url 'Articles'  %}">Articles</a></div>
+                    <div onclick="myFunc8()" id="off-help" class="off-item"><a href="{% url 'Help'  %}">Help</a></div>
+                    <div onclick="myFunc9()" id="off-logout" class="off-item"><a href="{% url 'signout'  %}">Log Out</a></div>                
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div><img class="logo3" src="{% static 'debtors/Frontend/assets/dashboard_parents/project debtor logo svg 2.png'%}" alt="Logo"></div>
+          </div>          
+        </div>
+        
+        
+      </main>
+    </div>
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      
+      let dashboard = document.getElementById("dashboard");
+      let profile = document.getElementById("profile");
+      let history = document.getElementById("history");
+      let article = document.getElementById("article");
+      let needhelp = document.getElementById("needhelp");
+      let logout = document.getElementById("logout");
+      
+      let offDash = document.getElementById("off-dash");
+      let offProfile = document.getElementById("off-profile");
+      let offHistory = document.getElementById("off-history");
+      let offSchool = document.getElementById("off-school");
+      let offDebList = document.getElementById("off-debList");
+      let offNoti = document.getElementById("off-noti");
+      let offArticle = document.getElementById("off-article");
+      let offNeedhelp = document.getElementById("off-help");
+      let offLogout = document.getElementById("off-logout");
+
+
+      function myFunc1() {        
+        if (!offDash.classList.contains("off_nav_item-inverse")){
+            offDash.classList.add("off_nav_item-inverse");
+            offProfile.classList.remove("off_nav_item-inverse");
+            offHistory.classList.remove("off_nav_item-inverse");
+            offSchool.classList.remove("off_nav_item-inverse");
+            offDebList.classList.remove("off_nav_item-inverse");
+            offNoti.classList.remove("off_nav_item-inverse");
+            offArticle.classList.remove("off_nav_item-inverse");
+            offNeedhelp.classList.remove("off_nav_item-inverse");
+            offLogout.classList.remove("off_nav_item-inverse");
+        } else {
+          offDash.classList.remove("off_nav_item-inverse");
+          offProfile.classList.remove("off_nav_item-inverse");
+          offHistory.classList.remove("off_nav_item-inverse");
+          offSchool.classList.remove("off_nav_item-inverse");
+          offDebList.classList.remove("off_nav_item-inverse");
+          offNoti.classList.remove("off_nav_item-inverse");
+          offArticle.classList.remove("off_nav_item-inverse");
+          offNeedhelp.classList.remove("off_nav_item-inverse");
+          offLogout.classList.remove("off_nav_item-inverse");
+        }        
+      }
+
+      function myFunc2() {        
+        if (!offProfile.classList.contains("off_nav_item-inverse")){
+            offProfile.classList.add("off_nav_item-inverse");
+            offDash.classList.remove("off_nav_item-inverse");
+            offHistory.classList.remove("off_nav_item-inverse");
+            offSchool.classList.remove("off_nav_item-inverse");
+            offDebList.classList.remove("off_nav_item-inverse");
+            offNoti.classList.remove("off_nav_item-inverse");
+            offArticle.classList.remove("off_nav_item-inverse");
+            offNeedhelp.classList.remove("off_nav_item-inverse");
+            offLogout.classList.remove("off_nav_item-inverse");
+        } else {
+          offDash.classList.remove("off_nav_item-inverse");
+          offProfile.classList.remove("off_nav_item-inverse");
+          offHistory.classList.remove("off_nav_item-inverse");
+          offSchool.classList.remove("off_nav_item-inverse");
+          offDebList.classList.remove("off_nav_item-inverse");
+          offNoti.classList.remove("off_nav_item-inverse");
+          offArticle.classList.remove("off_nav_item-inverse");
+          offNeedhelp.classList.remove("off_nav_item-inverse");
+          offLogout.classList.remove("off_nav_item-inverse");
+        }        
+      }
+
+      function myFunc3() {        
+        if (!offHistory.classList.contains("off_nav_item-inverse")){
+            offHistory.classList.add("off_nav_item-inverse");
+            offDash.classList.remove("off_nav_item-inverse");
+            offProfile.classList.remove("off_nav_item-inverse");
+            offSchool.classList.remove("off_nav_item-inverse");
+            offDebList.classList.remove("off_nav_item-inverse");
+            offNoti.classList.remove("off_nav_item-inverse");
+            offArticle.classList.remove("off_nav_item-inverse");
+            offNeedhelp.classList.remove("off_nav_item-inverse");
+            offLogout.classList.remove("off_nav_item-inverse");
+        } else {
+          offDash.classList.remove("off_nav_item-inverse");
+          offProfile.classList.remove("off_nav_item-inverse");
+          offHistory.classList.remove("off_nav_item-inverse");
+          offSchool.classList.remove("off_nav_item-inverse");
+          offDebList.classList.remove("off_nav_item-inverse");
+          offNoti.classList.remove("off_nav_item-inverse");
+          offArticle.classList.remove("off_nav_item-inverse");
+          offNeedhelp.classList.remove("off_nav_item-inverse");
+          offLogout.classList.remove("off_nav_item-inverse");
+        }        
+      }
+
+      function myFunc4() {        
+        if (!offSchool.classList.contains("off_nav_item-inverse")){
+            offSchool.classList.add("off_nav_item-inverse");
+            offDash.classList.remove("off_nav_item-inverse");
+            offProfile.classList.remove("off_nav_item-inverse");
+            offHistory.classList.remove("off_nav_item-inverse");
+            offDebList.classList.remove("off_nav_item-inverse");
+            offNoti.classList.remove("off_nav_item-inverse");
+            offArticle.classList.remove("off_nav_item-inverse");
+            offNeedhelp.classList.remove("off_nav_item-inverse");
+            offLogout.classList.remove("off_nav_item-inverse");
+        } else {
+          offDash.classList.remove("off_nav_item-inverse");
+          offProfile.classList.remove("off_nav_item-inverse");
+          offHistory.classList.remove("off_nav_item-inverse");
+          offSchool.classList.remove("off_nav_item-inverse");
+          offDebList.classList.remove("off_nav_item-inverse");
+          offNoti.classList.remove("off_nav_item-inverse");
+          offArticle.classList.remove("off_nav_item-inverse");
+          offNeedhelp.classList.remove("off_nav_item-inverse");
+          offLogout.classList.remove("off_nav_item-inverse");
+        }        
+      }
+
+      function myFunc5() {        
+        if (!offDebList.classList.contains("off_nav_item-inverse")){
+            offDebList.classList.add("off_nav_item-inverse");
+            offDash.classList.remove("off_nav_item-inverse");
+            offProfile.classList.remove("off_nav_item-inverse");
+            offHistory.classList.remove("off_nav_item-inverse");
+            offSchool.classList.remove("off_nav_item-inverse");
+            offNoti.classList.remove("off_nav_item-inverse");
+            offArticle.classList.remove("off_nav_item-inverse");
+            offNeedhelp.classList.remove("off_nav_item-inverse");
+            offLogout.classList.remove("off_nav_item-inverse");
+        } else {
+          offDash.classList.remove("off_nav_item-inverse");
+          offProfile.classList.remove("off_nav_item-inverse");
+          offHistory.classList.remove("off_nav_item-inverse");
+          offSchool.classList.remove("off_nav_item-inverse");
+          offDebList.classList.remove("off_nav_item-inverse");
+          offNoti.classList.remove("off_nav_item-inverse");
+          offArticle.classList.remove("off_nav_item-inverse");
+          offNeedhelp.classList.remove("off_nav_item-inverse");
+          offLogout.classList.remove("off_nav_item-inverse");
+        }        
+      }
+
+      function myFunc6() {        
+        if (!offNoti.classList.contains("off_nav_item-inverse")){
+            offNoti.classList.add("off_nav_item-inverse");
+            offDash.classList.remove("off_nav_item-inverse");
+            offProfile.classList.remove("off_nav_item-inverse");
+            offHistory.classList.remove("off_nav_item-inverse");
+            offSchool.classList.remove("off_nav_item-inverse");
+            offDebList.classList.remove("off_nav_item-inverse");
+            offArticle.classList.remove("off_nav_item-inverse");
+            offNeedhelp.classList.remove("off_nav_item-inverse");
+            offLogout.classList.remove("off_nav_item-inverse");
+        } else {
+          offDash.classList.remove("off_nav_item-inverse");
+          offProfile.classList.remove("off_nav_item-inverse");
+          offHistory.classList.remove("off_nav_item-inverse");
+          offSchool.classList.remove("off_nav_item-inverse");
+          offDebList.classList.remove("off_nav_item-inverse");
+          offNoti.classList.remove("off_nav_item-inverse");
+          offArticle.classList.remove("off_nav_item-inverse");
+          offNeedhelp.classList.remove("off_nav_item-inverse");
+          offLogout.classList.remove("off_nav_item-inverse");
+        }        
+      }
+
+      function myFunc7() {        
+        if (!offArticle.classList.contains("off_nav_item-inverse")){
+            offArticle.classList.add("off_nav_item-inverse");
+            offDash.classList.remove("off_nav_item-inverse");
+            offProfile.classList.remove("off_nav_item-inverse");
+            offHistory.classList.remove("off_nav_item-inverse");
+            offSchool.classList.remove("off_nav_item-inverse");
+            offDebList.classList.remove("off_nav_item-inverse");
+            offNoti.classList.remove("off_nav_item-inverse");
+            offNeedhelp.classList.remove("off_nav_item-inverse");
+            offLogout.classList.remove("off_nav_item-inverse");
+        } else {
+          offDash.classList.remove("off_nav_item-inverse");
+          offProfile.classList.remove("off_nav_item-inverse");
+          offHistory.classList.remove("off_nav_item-inverse");
+          offSchool.classList.remove("off_nav_item-inverse");
+          offDebList.classList.remove("off_nav_item-inverse");
+          offNoti.classList.remove("off_nav_item-inverse");
+          offArticle.classList.remove("off_nav_item-inverse");
+          offNeedhelp.classList.remove("off_nav_item-inverse");
+          offLogout.classList.remove("off_nav_item-inverse");
+        }        
+      }
+
+      function myFunc8() {        
+        if (!offNeedhelp.classList.contains("off_nav_item-inverse")){
+            offNeedhelp.classList.add("off_nav_item-inverse");
+            offDash.classList.remove("off_nav_item-inverse");
+            offProfile.classList.remove("off_nav_item-inverse");
+            offHistory.classList.remove("off_nav_item-inverse");
+            offSchool.classList.remove("off_nav_item-inverse");
+            offDebList.classList.remove("off_nav_item-inverse");
+            offNoti.classList.remove("off_nav_item-inverse");
+            offArticle.classList.remove("off_nav_item-inverse");
+            offLogout.classList.remove("off_nav_item-inverse");
+        } else {
+          offDash.classList.remove("off_nav_item-inverse");
+          offProfile.classList.remove("off_nav_item-inverse");
+          offHistory.classList.remove("off_nav_item-inverse");
+          offSchool.classList.remove("off_nav_item-inverse");
+          offDebList.classList.remove("off_nav_item-inverse");
+          offNoti.classList.remove("off_nav_item-inverse");
+          offArticle.classList.remove("off_nav_item-inverse");
+          offNeedhelp.classList.remove("off_nav_item-inverse");
+          offLogout.classList.remove("off_nav_item-inverse");
+        }        
+      }
+
+      function myFunc9() {        
+        if (!offLogout.classList.contains("off_nav_item-inverse")){
+            offLogout.classList.add("off_nav_item-inverse");
+            offDash.classList.remove("off_nav_item-inverse");
+            offProfile.classList.remove("off_nav_item-inverse");
+            offHistory.classList.remove("off_nav_item-inverse");
+            offSchool.classList.remove("off_nav_item-inverse");
+            offDebList.classList.remove("off_nav_item-inverse");
+            offNoti.classList.remove("off_nav_item-inverse");
+            offArticle.classList.remove("off_nav_item-inverse");
+            offNeedhelp.classList.remove("off_nav_item-inverse");
+        } else {
+          offDash.classList.remove("off_nav_item-inverse");
+          offProfile.classList.remove("off_nav_item-inverse");
+          offHistory.classList.remove("off_nav_item-inverse");
+          offSchool.classList.remove("off_nav_item-inverse");
+          offDebList.classList.remove("off_nav_item-inverse");
+          offNoti.classList.remove("off_nav_item-inverse");
+          offArticle.classList.remove("off_nav_item-inverse");
+          offNeedhelp.classList.remove("off_nav_item-inverse");
+          offLogout.classList.remove("off_nav_item-inverse");
+        }        
+      }
+
+      function myFunction() {        
+        if (!dashboard.classList.contains("nav_items-inverse")){
+            dashboard.classList.add("nav_items-inverse");
+            profile.classList.remove("nav_items-inverse");
+            history.classList.remove("nav_items-inverse");
+            article.classList.remove("nav_items-inverse");
+            needhelp.classList.remove("nav_items-inverse");
+            logout.classList.remove("nav_items-inverse");
+        } else {
+          dashboard.classList.remove("nav_items-inverse");
+          profile.classList.remove("nav_items-inverse");
+          history.classList.remove("nav_items-inverse");
+          article.classList.remove("nav_items-inverse");
+          needhelp.classList.remove("nav_items-inverse");
+          logout.classList.remove("nav_items-inverse");
+        }
+        
+      }
+
+      function myFunction2() {        
+        if (!profile.classList.contains("nav_items-inverse")){
+            profile.classList.add("nav_items-inverse");
+            dashboard.classList.remove("nav_items-inverse");
+            history.classList.remove("nav_items-inverse");
+            article.classList.remove("nav_items-inverse");
+            needhelp.classList.remove("nav_items-inverse");
+            logout.classList.remove("nav_items-inverse");
+        } else {
+          dashboard.classList.remove("nav_items-inverse");
+          profile.classList.remove("nav_items-inverse");
+          history.classList.remove("nav_items-inverse");
+          article.classList.remove("nav_items-inverse");
+          needhelp.classList.remove("nav_items-inverse");
+          logout.classList.remove("nav_items-inverse");
+        }
+        
+      }
+
+      function myFunction3() {        
+        if (!history.classList.contains("nav_items-inverse")){
+            history.classList.add("nav_items-inverse");
+            profile.classList.remove("nav_items-inverse");
+            dashboard.classList.remove("nav_items-inverse");
+            article.classList.remove("nav_items-inverse");
+            needhelp.classList.remove("nav_items-inverse");
+            logout.classList.remove("nav_items-inverse");
+        } else {
+          dashboard.classList.remove("nav_items-inverse");
+          profile.classList.remove("nav_items-inverse");
+          history.classList.remove("nav_items-inverse");
+          article.classList.remove("nav_items-inverse");
+          needhelp.classList.remove("nav_items-inverse");
+          logout.classList.remove("nav_items-inverse");
+        }
+        
+      }
+
+      function myFunction4() {        
+        if (!article.classList.contains("nav_items-inverse")){
+            article.classList.add("nav_items-inverse");
+            profile.classList.remove("nav_items-inverse");
+            history.classList.remove("nav_items-inverse");
+            dashboard.classList.remove("nav_items-inverse");
+            needhelp.classList.remove("nav_items-inverse");
+            logout.classList.remove("nav_items-inverse");
+        } else {
+          dashboard.classList.remove("nav_items-inverse");
+          profile.classList.remove("nav_items-inverse");
+          history.classList.remove("nav_items-inverse");
+          article.classList.remove("nav_items-inverse");
+          needhelp.classList.remove("nav_items-inverse");
+          logout.classList.remove("nav_items-inverse");
+        }
+        
+      }
+
+      function myFunction5() {        
+        if (!needhelp.classList.contains("nav_items-inverse")){
+            needhelp.classList.add("nav_items-inverse");
+            profile.classList.remove("nav_items-inverse");
+            history.classList.remove("nav_items-inverse");
+            article.classList.remove("nav_items-inverse");
+            dashboard.classList.remove("nav_items-inverse");
+            logout.classList.remove("nav_items-inverse");
+        } else {
+          dashboard.classList.remove("nav_items-inverse");
+          profile.classList.remove("nav_items-inverse");
+          history.classList.remove("nav_items-inverse");
+          article.classList.remove("nav_items-inverse");
+          needhelp.classList.remove("nav_items-inverse");
+          logout.classList.remove("nav_items-inverse");
+        }
+        
+      }
+
+      function myFunction6() {        
+        if (!logout.classList.contains("nav_items-inverse")){
+            logout.classList.add("nav_items-inverse");
+            profile.classList.remove("nav_items-inverse");
+            history.classList.remove("nav_items-inverse");
+            article.classList.remove("nav_items-inverse");
+            needhelp.classList.remove("nav_items-inverse");
+            dashboard.classList.remove("nav_items-inverse");
+        } else {
+          dashboard.classList.remove("nav_items-inverse");
+          profile.classList.remove("nav_items-inverse");
+          history.classList.remove("nav_items-inverse");
+          article.classList.remove("nav_items-inverse");
+          needhelp.classList.remove("nav_items-inverse");
+          logout.classList.remove("nav_items-inverse");
+        }
+        
+      }
+
+    </script>
+  </body>
+</html>
