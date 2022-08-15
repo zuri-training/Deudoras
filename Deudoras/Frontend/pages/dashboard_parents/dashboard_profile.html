@@ -87,17 +87,17 @@
                     aria-labelledby="dropdownMenuButton1"
                   >
                     <li>
-                      <a class="dropdown-item" href="#"
+                      <a class="dropdown-item" href="{% url('forgot password') %}"
                         ><i class="fa-solid fa-lock"></i> Change Password</a
                       >
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#"
+                      <a class="dropdown-item" href="{% url('Help') %}"
                         ><i class="fa-solid fa-circle-question"></i> Help</a
                       >
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#"
+                      <a class="dropdown-item" href="{% url('signout') %}"
                         ><i class="fa-solid fa-arrow-right-from-bracket"></i>
                         Log out</a
                       >
@@ -120,15 +120,15 @@
                 </div>
                 <div class="offcanvas-body">        
                   <div class="offcanvas-list">
-                    <div onclick="myFunc1()" id="off-dash" class="off-item"><a href="{% url('home') %}">Dashboard</a></div>
-                    <div onclick="myFunc2()" id="off-profile" class="off-item"><a href="{% url('home') %}">Profile</a></div>
-                    <div onclick="myFunc3()" id="off-history" class="off-item"><a href="{% url('home') %}">History</a></div>
-                    <div onclick="myFunc4()" id="off-school" class="off-item"><a href="{% url('School list') %}">Schools</a></div>
-                    <div onclick="myFunc5()" id="off-debList" class="off-item"><a href="{% url('debtors list') %}">Debtor's List</a></div>
-                    <div onclick="myFunc6()" id="off-noti" class="off-item"><a href="{% url('home') %}">Notification</a></div>
-                    <div onclick="myFunc7()" id="off-article" class="off-item"><a href="{% url('Articles') %}">Articles</a></div>
-                    <div onclick="myFunc8()" id="off-help" class="off-item"><a href="{% url('Help') %}">Help</a></div>
-                    <div onclick="myFunc9()" id="off-logout" class="off-item"><a href="{% url('signout') %}">Log Out</a></div>                
+                    <div onclick="myFunc1()" id="off-dash" class="off-item"><a class="reg-inverse" href="{% url('home') %}">Dashboard</a></div>
+                    <div onclick="myFunc2()" id="off-profile" class="off-item"><a class="reg-inverse" href="{% url('home') %}">Profile</a></div>
+                    <div onclick="myFunc3()" id="off-history" class="off-item"><a class="reg-inverse" href="{% url('home') %}">History</a></div>
+                    <div onclick="myFunc4()" id="off-school" class="off-item"><a class="reg-inverse" href="{% url('School list') %}">Schools</a></div>
+                    <div onclick="myFunc5()" id="off-debList" class="off-item"><a class="reg-inverse" href="{% url('debtors list') %}">Debtor's List</a></div>
+                    <div onclick="myFunc6()" id="off-noti" class="off-item"><a class="reg-inverse" href="{% url('home') %}">Notification</a></div>
+                    <div onclick="myFunc7()" id="off-article" class="off-item"><a class="reg-inverse" href="{% url('Articles') %}">Articles</a></div>
+                    <div onclick="myFunc8()" id="off-help" class="off-item"><a class="reg-inverse" href="{% url('Help') %}">Help</a></div>
+                    <div onclick="myFunc9()" id="off-logout" class="off-item"><a class="reg-inverse" href="{% url('signout') %}">Log Out</a></div>                
                   </div>
                 </div>
               </div>
@@ -137,6 +137,38 @@
           </div>          
         </div>
         
+        <section class="profile-contents">
+          <div class="profile-contents--1">
+            <img class="profile_img" src="../../assets/dashboard_parents/Screenshot_2021-11-15-14-35-33-53.jpg" alt="">
+            <button class="btn btn-primary">EDIT PHOTO</button>
+          </div>
+          <div class="profile-contents--2">
+            <div class="small--mar">
+              <p>John Victor</p>
+              <p>Student ID</p>
+            </div>
+            <div class="small--mar">
+              <p>Personal Information</p>
+              <p>full name</p>
+              <p>John victor</p>
+            </div>
+            <div class="small--mar">
+              <p>House Full Address</p>
+              <p>House 30 Gbegada road</p>
+            </div>
+            <div class="small--mar">
+              <p>Debt Info</p>
+              <p>Amount Outstanding</p>
+              <p>NGN80, 0000</p>
+            </div>
+          </div>
+          <div class="profile-contents--3">
+            <div>
+              <p>Phone number</p>
+              <p>08076543212</p>
+            </div>
+          </div>
+        </section>
         
       </main>
     </div>

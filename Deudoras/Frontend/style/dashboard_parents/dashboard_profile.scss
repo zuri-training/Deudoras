@@ -155,6 +155,14 @@ button.btn-primary{
     border-color: white;
     box-shadow: 0 0 0 0.25rem transparent;
 }
+.reg{
+    text-decoration: none;
+    color: $primary-col-white;
+}
+.reg-inverse{
+    text-decoration: none;
+    color: $primary-col-dash;
+}
 
 
 
@@ -586,4 +594,32 @@ p.total_debt_amt{
         display: flex;
         justify-content: space-between;
     }
+}
+
+
+
+section.profile-contents{
+    display: flex;
+}
+
+div.profile-contents--1{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+.profile_img{
+    width: 4em;
+    height: 4em;
+}
+div.profile-contents--2{
+    width: 30%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+}
+div.profile-contents--3{
+    width: 30%;
+}
+.small--mar{
+    margin-bottom: 3em;
 }

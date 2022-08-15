@@ -132,8 +132,14 @@ div.offcanvas-list{
     background-color: $primary-col-dash;
     color: $primary-col-white;
 }
-
-
+.reg{
+    text-decoration: none;
+    color: $primary-col-white;
+}
+.reg-inverse{
+    text-decoration: none;
+    color: $primary-col-dash;
+}
 
 
 main{

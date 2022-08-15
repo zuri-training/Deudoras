@@ -38,19 +38,19 @@
                 <img class="logo2" src="../../assets/dispute_page/Group.png" alt="">
             </div>
             <div class="nav_links_1">
-                <div onclick="myFunction()" class="nav_items" id="dashboard"><i class="space fa-solid fa-square-minus"></i> <h2><a href="{% url('home') %}">Dashboard</a> </h2></div>
-                <div onclick='myFunction2(); ' class="nav_items " id="profile"><i class="space fa-regular fa-user"></i> <h2><a href="{% url('home') %}">Profile</a></h2></div>
-                <div onclick="myFunction3()" class="nav_items " id="history"><i class="space fa-solid fa-receipt"></i> <h2><a href="{% url('home') %}">History</a></h2></div>
-                <div onclick="myFunction4()" class="nav_items " id="article"><i class="space fa-solid fa-book-open"></i> <h2><a href="{% url('Articles') %}">Articles</a></h2></div>
+                <div onclick="myFunction()" class="nav_items" id="dashboard"><i class="space fa-solid fa-square-minus"></i> <h2><a class="reg" href="{% url('home') %}">Dashboard</a> </h2></div>
+                <div onclick='myFunction2(); ' class="nav_items " id="profile"><i class="space fa-regular fa-user"></i> <h2><a class="reg" href="{% url('home') %}">Profile</a></h2></div>
+                <div onclick="myFunction3()" class="nav_items " id="history"><i class="space fa-solid fa-receipt"></i> <h2><a class="reg" href="{% url('home') %}">History</a></h2></div>
+                <div onclick="myFunction4()" class="nav_items " id="article"><i class="space fa-solid fa-book-open"></i> <h2><a class="reg" href="{% url('Articles') %}">Articles</a></h2></div>
             </div>
             <div class="nav_links_2">
                 <div onclick="myFunction5()" class="nav_items" id="needhelp">
                     <i class="space2 fa-solid fa-laptop-code"></i>
-                    <h2 class="space2-text"><a href="{% url('Help') %}">Need Help?</a></h2>
+                    <h2 class="space2-text"><a class="reg" href="{% url('Help') %}">Need Help?</a></h2>
                 </div>
                 <div onclick="myFunction6()" class="nav_items log_out" id="logout">
                     <i class="space2 fa-solid fa-arrow-right-from-bracket"></i>
-                    <h2 class="space2-text"><a href="{% url('signout') %}">Log Out</a></h2>
+                    <h2 class="space2-text"><a class="reg" href="{% url('signout') %}">Log Out</a></h2>
                 </div>
             </div>
         </div>       
@@ -86,17 +86,17 @@
                     aria-labelledby="dropdownMenuButton1"
                   >
                     <li>
-                      <a class="dropdown-item" href="#"
+                      <a class="dropdown-item" href="{% url('forgot password') %}"
                         ><i class="fa-solid fa-lock"></i> Change Password</a
                       >
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#"
+                      <a class="dropdown-item" href="{% url('Help') %}"
                         ><i class="fa-solid fa-circle-question"></i> Help</a
                       >
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#"
+                      <a class="dropdown-item" href="{% url('signout') %}"
                         ><i class="fa-solid fa-arrow-right-from-bracket"></i>
                         Log out</a
                       >
@@ -119,15 +119,15 @@
                 </div>
                 <div class="offcanvas-body">        
                   <div class="offcanvas-list">
-                    <div onclick="myFunc1()" id="off-dash" class="off-item"><a href="{% url('home') %}">Dashboard</a></div>
-                    <div onclick="myFunc2()" id="off-profile" class="off-item"><a href="{% url('home') %}">Profile</a></div>
-                    <div onclick="myFunc3()" id="off-history" class="off-item"><a href="{% url('home') %}">History</a></div>
-                    <div onclick="myFunc4()" id="off-school" class="off-item"><a href="{% url('School list') %}">Schools</a></div>
-                    <div onclick="myFunc5()" id="off-debList" class="off-item"><a href="{% url('debtors list') %}">Debtor's List</a></div>
-                    <div onclick="myFunc6()" id="off-noti" class="off-item"><a href="{% url('home') %}">Notification</a></div>
-                    <div onclick="myFunc7()" id="off-article" class="off-item"><a href="{% url('Articles') %}">Articles</a></div>
-                    <div onclick="myFunc8()" id="off-help" class="off-item"><a href="{% url('Help') %}">Help</a></div>
-                    <div onclick="myFunc9()" id="off-logout" class="off-item"><a href="{% url('signout') %}">Log Out</a></div>                
+                    <div onclick="myFunc1()" id="off-dash" class="off-item"><a class="reg-inverse" href="{% url('home') %}">Dashboard</a></div>
+                    <div onclick="myFunc2()" id="off-profile" class="off-item"><a class="reg-inverse" href="{% url('home') %}">Profile</a></div>
+                    <div onclick="myFunc3()" id="off-history" class="off-item"><a class="reg-inverse" href="{% url('home') %}">History</a></div>
+                    <div onclick="myFunc4()" id="off-school" class="off-item"><a class="reg-inverse" href="{% url('School list') %}">Schools</a></div>
+                    <div onclick="myFunc5()" id="off-debList" class="off-item"><a class="reg-inverse" href="{% url('debtors list') %}">Debtor's List</a></div>
+                    <div onclick="myFunc6()" id="off-noti" class="off-item"><a class="reg-inverse" href="{% url('home') %}">Notification</a></div>
+                    <div onclick="myFunc7()" id="off-article" class="off-item"><a class="reg-inverse" href="{% url('Articles') %}">Articles</a></div>
+                    <div onclick="myFunc8()" id="off-help" class="off-item"><a class="reg-inverse" href="{% url('Help') %}">Help</a></div>
+                    <div onclick="myFunc9()" id="off-logout" class="off-item"><a class="reg-inverse" href="{% url('signout') %}">Log Out</a></div>                
                   </div>
                 </div>
               </div>
