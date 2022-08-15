@@ -138,7 +138,7 @@ div.offcanvas-list{
 
 main{
     padding: 4em 2em 2em 2em;
-    width: 90%;
+    width: 100%;
 }
 .main_top_three{
     display: none;
@@ -202,7 +202,7 @@ div.main_one_noti{
 
 
 section.main_two{
-    margin-top: 3em;
+    margin-top: 0.6em;
     display: flex;
     flex-direction: column;
     width: 70%;
@@ -258,8 +258,8 @@ section.main_two{
 div.main_two_sch{
     display: flex;
     // justify-content: space-between;
-    margin-top: 2em;
-    margin-bottom: 2em;
+    margin-top: 3em;
+    margin-bottom: 3em;
 }
 div.main_two_sch1{
     display: flex;
@@ -294,7 +294,7 @@ textarea.textarea{
 // 1143px first breaking point
 @media screen and (max-width: 1143px){
     section.main_two{
-        margin-top: 8em;
+        margin-top: 0.6em;
         display: flex;
         flex-direction: column;
         width: 70%;
