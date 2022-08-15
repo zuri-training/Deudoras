@@ -49,11 +49,11 @@
         <button class="close-btn" id="close"><img src="{% static 'debtors/Frontend/assets/landing_page assets/Vector (5).png'%}" alt=""></button>
         <div class="mobile-links">
           <ul>
-            <li class="aktive"><a href="">Home</a></li>
-            <li><a href="">About</a></li>
-            <li ><a href="">Articles</a></li>
-            <li><a href="">Contact us</a></li>
-            <li><a href="">Help</a></li>
+            <li class="aktive"><a class="aktive" href="">Home</a></li>
+            <li ><a class="white" href="{% url 'About us'%}">About</a></li>
+            <li ><a class="white" href="{% url 'Articles'%}">Articles</a></li>
+            <li><a class="white" href="{% url 'Contact us'%}">Contact us</a></li>
+            <li><a class="white" href="{% url 'Help' %}">Help</a></li>
           </ul>
         </div>
         <div class="mobile-sign">
@@ -69,11 +69,11 @@
       <div class="nav-section">
         <div class="nav-links">
           <ul>
-            <li><a id="active" href="">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Articles</a></li>
-            <li><a href="">Contact us</a></li>
-            <li><a href="">Help</a></li>
+            <li><a id="active" href="{% url 'home'%}">Home</a></li>
+            <li><a href="{% url 'About us'%}">About</a></li>
+            <li><a href="{% url 'Articles'%}">Articles</a></li>
+            <li><a href="{% url 'Contact us' %}">Contact us</a></li>
+            <li><a href="{% url 'Help' %}">Help</a></li
           </ul>
         </div>
         <div class="nav-buttons">
@@ -81,15 +81,15 @@
           <div class="dropdown">
             <button class="nav-button-1">Log in</button>
             <div class="dropdown-content">
-               <a href="#">Log in <br> as a school </a>
-               <a href="#">Log in as a<br> Parent/student </a>
+              <a href="{% url 'Sclogin'%}">Log in <br> as a school </a>
+              <a href="{% url 'Sclogin' %}">Log in as a<br> Parent/student </a>
             </div>
           </div>
            <div class="dropdown">
             <button class="nav-button-2">Sign Up</button>
             <div class="dropdown-content">
-               <a href="#">Sign up as a <br> School</a>
-               <a href="#">Sign up as a <br> Parent or student</a>
+              <a href="{% url 'SchoolSignup' %}">Sign up as a <br> School</a>
+              <a href="{% url 'signup1' %}">Sign up as a <br> Parent or student</a>
             </div>
           <!-- End of dropdown html-->  
 
@@ -151,6 +151,7 @@
                   and track debtors.
                 </p>
                 <button class="see-more">
+                  <a href="{% url 'About us' %}">
                   See More
                   <i class="fa fa-angle-right" aria-hidden="true"></i>
                 </button>
@@ -419,7 +420,7 @@
           <div class="company">
             <li class="li">Company</li>
             <li><a href="">Contact Us</a></li>
-            <li><a href="">About</a></li>
+            <li><a href="{% url 'About us' %}">About</a></li>
             <li><a href="">Hiring</a></li>
             <li><a href="">Privacy Policy</a></li>
           </div>
