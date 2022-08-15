@@ -96,6 +96,12 @@ TEMPLATES = [
     },
 ]
 
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'debtors.backends.accountbackend',
+]
+
 WSGI_APPLICATION = 'Deudoras.wsgi.application'
 
 

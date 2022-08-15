@@ -1,4 +1,4 @@
-@import "./reset", "./variables";
+@import "./reset", "./variable";
 
 body {
     background-color: #F6FAFF;
@@ -8,18 +8,106 @@ div.body_sidebar{
 }
 
 
+// .navv {
+//     padding: 1em 0 2em 0;
+//     background-color: $primary-col-dash;
+//     height: auto;
+//     width: 20%;
+// }
+// .nav_links {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+// }
+// div.nav_links_logo{
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
+// .nav_links_1{
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+// }
+// .nav_links_2{
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     margin-top: 3em;
+// }
+// .nav_items {
+//     padding: 1em 3em;
+//     display: flex;
+//     // justify-content: center;
+//     align-items: center;
+//     cursor: pointer;
+//     color: $background-col-white;
+//     width: 100%;
+//     text-align: center;
+// }
+// .space{
+//     padding-right: 1.3em;
+// }
+// h2.log_out{
+//     background-color: $danger-dash;
+//     padding: 0.8em 0.8em;
+//     border-radius: 5px;
+// }
+// .nav_items:visited{
+//     color: $primary-col-dash;
+//     // background-color: $background-col-dash;
+// }
+// .logo{
+//     width: 15em;
+//     height: 5em;
+//     margin-bottom: 3em;
+//     margin-top: 2em;
+// }
+
+// .svg-white{
+//     color: white;
+// }
+// // .nav_items:not(:first-child):not(:last-child) {
+// //     margin: 0 0 0 2em;
+// // }
+// // .nav_items.article {
+// //     margin-left: 2em;
+// // }
+// // .nav_items.dash {
+// //     background-color: white;
+// //     padding: 0.4em;
+// //     border-radius: 5px;
+// //     box-shadow: 0em 0.2em #DFE2ED;
+// // }
+// .nav_items_2 {
+//     margin: auto;
+//     align-self: center;
+//     align-items: center;
+// }
+// .nav_items_2--img {
+//     width: 30px;
+//     height: 30px;
+// }
 .navv {
     padding: 1em 0 2em 0;
     background-color: $primary-col-dash;
     height: auto;
     width: 20%;
 }
+@media screen and (max-width: 764px){
+    .navv {
+        display: none;
+    }
+}
 .nav_links {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 }
-div.nav_links_logo{
+.nav_links_logo{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,6 +125,8 @@ div.nav_links_logo{
     justify-content: center;
     margin-top: 3em;
 }
+
+
 .nav_items {
     padding: 1em 3em;
     display: flex;
@@ -46,13 +136,27 @@ div.nav_links_logo{
     color: $background-col-white;
     width: 100%;
     text-align: center;
+    font-size: 1.1em;
+}
+.nav_items-inverse {
+    color: $primary-col-dash;
+    background-color: $primary-col-white;
 }
 .space{
     padding-right: 1.3em;
 }
-h2.log_out{
+.space2{
+    padding-right: 1.3em;
+}
+@media screen and (max-width: 1243px){
+    .space2{
+        padding-right: 3px;
+    }
+}
+.log_out{
     background-color: $danger-dash;
-    padding: 0.8em 0.8em;
+    // padding: 0.8em 0.8em;
+    // width: 80%;
     border-radius: 5px;
 }
 .nav_items:visited{
@@ -61,35 +165,63 @@ h2.log_out{
 }
 .logo{
     width: 15em;
-    height: 5em;
+    height: 4em;
     margin-bottom: 3em;
     margin-top: 2em;
 }
-
+.logo2{
+    width: 4em;
+    height: 4em;
+    margin-bottom: 3em;
+    margin-top: 2em;
+    display: none;
+}
+.logo3{
+    width: 12em;
+    height: 3em;
+    background-color: $primary-col-dash;
+}
 .svg-white{
     color: white;
 }
-// .nav_items:not(:first-child):not(:last-child) {
-//     margin: 0 0 0 2em;
-// }
-// .nav_items.article {
-//     margin-left: 2em;
-// }
-// .nav_items.dash {
-//     background-color: white;
-//     padding: 0.4em;
-//     border-radius: 5px;
-//     box-shadow: 0em 0.2em #DFE2ED;
-// }
+
 .nav_items_2 {
     margin: auto;
     align-self: center;
     align-items: center;
 }
+.fa-bell{
+    font-size: 1.2em;
+}
 .nav_items_2--img {
     width: 30px;
     height: 30px;
+    border-radius: 50%;
 }
+.offcanvas-start{
+    width: 60vw;
+}
+.off_nav_item-inverse{
+    background-color: $primary-col-dash;
+    color: $primary-col-white;
+}
+button.btn-primary{
+    color: $primary-col-dash;
+    background-color: $primary-col-white;
+    border: 1px solid transparent;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #0b5ed7;
+    border-color: white;
+}
+.btn-check:focus+.btn-primary, .btn-primary:focus {
+    color: $primary-col-dash;
+    background-color: $primary-col-white;
+    border-color: white;
+    box-shadow: 0 0 0 0.25rem transparent;
+}
+
 
 
 
@@ -97,6 +229,11 @@ main{
     width: 80%;
     padding: 2em 2em;
     padding-left: 2em;
+}
+@media screen and (max-width: 764px){
+    main{
+        width: 100%;
+    }
 }
 .main_one {
     color: #02034e;
@@ -108,6 +245,16 @@ main{
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2em;
+}
+@media screen and (max-width: 1134px){
+    .main_top{
+        margin-bottom: 4em;
+    }
+}
+@media screen and (max-width: 764px){
+    .main_top{
+        display: none;
+    }
 }
 div.main_top_one{
     width: 85%;
@@ -124,10 +271,19 @@ div.main_top_one{
     box-shadow: black;
 }
 div.main_top_two{
-    width: 10%;
+    width: 13%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.main_top_three{
+    display: none;
+    justify-content: space-between;
+}
+@media screen and (max-width: 764px){
+    .main_top_three{
+        display: flex;
+    }
 }
 .main_welcome{
     margin: 0 0 0.6em 0;
@@ -138,6 +294,11 @@ div.main_top_two{
     margin: 0em 0;
     color: #3D7A9A;
     font-size: 1.3em;
+}
+@media screen and (max-width: 1134px){
+    .main_child_info{
+        margin-bottom: 3em;
+    }
 }
 .main_student{
     margin-bottom: 3em;
@@ -151,6 +312,18 @@ div.main_top_two{
 .main_student_summary{
     display: flex;
     justify-content: space-between;
+}
+@media screen and (max-width: 1134px){
+    .main_student_summary{
+        margin-top: 5em;
+        margin-bottom: 5em;
+    }
+
+}
+@media screen and (max-width: 574px){
+    .main_student_summary{
+        flex-direction: column;
+    }
 }
 .main_student_summary_1{
     background-color: $primary-col-dash;
@@ -184,6 +357,28 @@ div.main_top_two{
     width: 23%;
     border: 2px solid #C1C4DB;
 }
+@media screen and (max-width: 574px){
+    div.main_student_summary_1{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1.5em;
+    }
+    div.main_student_summary_2{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1.5em;
+    }
+    div.main_student_summary_3{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1.5em;
+        color: rgb(167, 167, 14);
+    }
+    div.main_student_summary_4{
+        width: 100%;
+        text-align: center;
+    }
+}
 .summa_1{
     display: flex;
     justify-content: flex-end;
@@ -192,11 +387,83 @@ div.main_top_two{
 .summa_2{
     padding: 0 1.5em;
 }
+p.summa_2{
+    border-top: 1px solid $primary-col-dash;
+}
+p.summa_2.box1{
+    border-top: 1px solid $primary-col-white;
+}
 p.total_debt{
     font-size: 1em;
 }
 p.total_debt_amt{
     font-size: 1.4em;
+}
+.offcanvas-body{
+    padding: 0 0;
+}
+div.offcanvas-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70vh;
+}
+.off-item{
+    text-align: center;
+}
+@media screen and (max-width: 1146px){
+    p.total_debt{
+        font-size: 0.9em;
+    }
+    p.total_debt_amt{
+        font-size: 1.1em;
+    }
+    p.summa_2{
+        font-size: 0.9em;
+    }
+}
+@media screen and (max-width: 1026px){
+    p.summa_2{
+        font-size: 0.6em;
+        padding: 0 2.3em;
+    }
+    .main_student {
+        margin-bottom: 3em;
+        width: 100%;
+    }
+    div.session-record{
+        width: 110%;
+    }
+}
+@media screen and (max-width: 884px){
+    .summa_2{
+        padding: 0 1em;
+    }
+    p.summa_2{
+        padding: 0 1.5em;
+    }
+}
+@media screen and (max-width: 780px){
+    p.total_debt_amt{
+        font-size: 1em;
+    }
+}
+@media screen and (max-width: 690px){
+    .summa_2{
+        padding: 0 0.3em;
+    }
+
+p.total_debt_amt{
+    font-size: 1em;
+}
+}
+@media screen and (max-width: 547px){
+    p.total_debt{
+        font-size: 1.4em;
+    }
+    p.total_debt_amt{
+        font-size: 1.8em;
+    }
 }
 .main_student_detail {
     display: flex;
@@ -264,9 +531,9 @@ p.total_debt_amt{
 // .main_brkdwn_stdnt_debt_session_3{
     
 // }
-// .main_brkdwn_stdnt_debt_session_4{
-    
-// }
+.main_brkdwn_stdnt_debt_session_4{
+    padding-right: 3em;
+}
 .main_brkdwn_stdnt_debt_detail{
     display: flex;
     justify-content: space-between;
@@ -274,8 +541,86 @@ p.total_debt_amt{
     padding: 1em;
     background-color: white;
     border-bottom: 2px solid lightblue;
+    // margin-right: -2em;
+}
+@media screen and (max-width: 574px){
+    .main_brkdwn_stdnt_debt_detail{
+        font-size: 0.8em;
+    }
+}
+@media screen and (max-width: 452px){
+    .main_brkdwn_stdnt_debt_detail{
+        font-size: 0.6em;
+    }
 }
 
+
+/////////////////////////////////////////////////
+
+// 1135px second breaking point
+@media screen and (max-width: 1135px){
+    .nav_items {
+        // padding: 1em 3em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        color: $background-col-white;
+        width: auto;
+        // text-align: center;
+    }
+    .space {
+        padding-right: 0;
+        font-size: 2em;
+        margin-bottom: 0.5em;
+    }
+    .space2{
+        margin-bottom: 0.5em;
+        font-size: 2em;
+    }
+    .logo{
+        margin-bottom: 0.5em;
+    }
+}
+
+@media screen and (max-width: 952px){
+    .nav_items h2{
+        font-size: 0.8em;
+    }
+    //logo disappear here
+    .logo{
+        display: none;
+    }
+    .logo2{
+        display: block;
+        margin-bottom: 2em;
+    }
+}
+
+//754px
+@media screen and (max-width: 754px){
+    .nav_items{
+        padding: 0.7em 3em;
+    }
+    .nav_items h2{
+        font-size: 0.8em;
+    }
+    .space{
+        margin-bottom: 0.4em;
+    }
+    .log_out{
+        background-color: transparent;
+        border-radius: 5px;
+    }
+    //discription disappear here
+}
+
+
+//////////////////////////////////////////////////
+/// 
+/// 
+/// 
 @media screen and (max-width: 1008px){
     .main_student_detail_1{
         width: 20%;
@@ -363,12 +708,12 @@ p.total_debt_amt{
         background-color: #F6FAFF;
         padding: 1em 0.8em;
     }
-    .nav_items:not(:first-child){
-        display: none;        
-    }
-    .nav_links_2{
-        display: none;
-    }
+    // .nav_items:not(:first-child){
+    //     display: none;        
+    // }
+    // .nav_links_2{
+    //     display: none;
+    // }
     // .nav_links{
     //     display: none;
     // }
@@ -410,12 +755,4 @@ p.total_debt_amt{
         display: flex;
         justify-content: space-between;
     }
-}
-
-@media screen and (max-width: 600px){
-
-}
-
-@media screen and (max-width: 400px){
-
 }

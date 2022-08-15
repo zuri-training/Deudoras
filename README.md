@@ -13,14 +13,9 @@ Enter the project directory
 cd deudoras
 Create a virtual env
 
-python -m venv env
-Activate your env(for windows)
 
-env\Scripts\activate.bat
-(for linux or mac)
+Activate your env
 
-source env/bin/activate
-Install Project Dependencies
 
 pip install -r requirements.txt
 Make Migrations

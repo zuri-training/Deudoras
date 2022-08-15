@@ -108,7 +108,11 @@ class Debt(models.Model):
     stclass = models.CharField(max_length=200)
     amount = models.DecimalField( max_digits=12, decimal_places=2)
     term = models.IntegerField()
-    def sum(self,pk):
+    def debtor_sum(self,pk):
+        list = Debt.objects.get(debtor_id =pk)
+        add = sum(list)
+        return add
+    def school_sum(self,pk):
         list = Debt.objects.get(debtor_id =pk)
         add = sum(list)
         return add

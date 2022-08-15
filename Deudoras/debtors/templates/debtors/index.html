@@ -1,4 +1,4 @@
- {% load static  %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,27 +11,27 @@
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-      />
-  
-     <!-- Boxicons CSS -->
+    />
+
+    <!-- Boxicons CSS -->
     <link
       href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
       rel="stylesheet"
     />
 
-
     <!-- Native css links-->
     <link rel="stylesheet" href="{% static 'debtors/Frontend/style/landing_page/landing_page.css'%}" />
-    {% comment %} <link rel="stylesheet" href=" static 'style/landing_page/landing_page.css'" /> {% endcomment %}
     <link rel="stylesheet" href="{% static 'debtors/Frontend/style/landing_page/utilities.css'%}" />
 
-    
     <!-- google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <!-- font awesome icon-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500&display=swap"
       rel="stylesheet"
@@ -39,24 +39,63 @@
   </head>
   <body>
     <nav>
-     
-      <img
-        src= " {% static 'debtors/Frontend/assets/landing_page assets/project debtor logo svg 2.png' %}"
+      <div class="nav-img">
+        <img
+        src="{% static 'debtors/Frontend/assets/landing_page assets/project debtor logo svg 2.png'%}"
         alt=""
       />
+      <button class="menu"><img src="{% static 'debtors/Frontend/assets/landing_page assets/Icons.png'%}" alt=""></button>
+      <div class="mobile-nav" id="mobile-nav">
+        <button class="close-btn" id="close"><img src="{% static 'debtors/Frontend/assets/landing_page assets/Vector (5).png'%}" alt=""></button>
+        <div class="mobile-links">
+          <ul>
+            <li class="aktive"><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li ><a href="">Articles</a></li>
+            <li><a href="">Contact us</a></li>
+            <li><a href="">Help</a></li>
+          </ul>
+        </div>
+        <div class="mobile-sign">
+          <ul>
+            <li><a href="">Log in</a></li>
+            <li><a href="" class="mobile-signup">Sign up</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      </div>
+      </div>
       <div class="nav-section">
         <div class="nav-links">
           <ul>
-            <li><a class="active" href="">Home</a></li>
-            <li><a href= 'about us' >About</a></li>
+            <li><a id="active" href="">Home</a></li>
+            <li><a href="">About</a></li>
             <li><a href="">Articles</a></li>
             <li><a href="">Contact us</a></li>
-            <li><a href="help">Help</a></li>
+            <li><a href="">Help</a></li>
           </ul>
         </div>
         <div class="nav-buttons">
-          <button class="nav-button-1">Log In</button>
-          <button class="nav-button-2" type=button onclick="schoolsignup %}">Sign Up</button>
+          <!-- Dropdown hmtl-->
+          <div class="dropdown">
+            <button class="nav-button-1">Log in</button>
+            <div class="dropdown-content">
+               <a href="#">Log in <br> as a school </a>
+               <a href="#">Log in as a<br> Parent/student </a>
+            </div>
+          </div>
+           <div class="dropdown">
+            <button class="nav-button-2">Sign Up</button>
+            <div class="dropdown-content">
+               <a href="#">Sign up as a <br> School</a>
+               <a href="#">Sign up as a <br> Parent or student</a>
+            </div>
+          <!-- End of dropdown html-->  
+
+           </div> 
+          
+            
         </div>
       </div>
     </nav>
@@ -66,15 +105,14 @@
       <section class="section-1">
         <div class="division-1">
           <h2>
-            A debt <span class="radical"></span><span class="span-1">tracker</span> <br />
-            for school <br />
-            debtors
+            A debt <span class="radical"></span
+            ><span class="span-1">tracker</span> for <br />school debtors
           </h2>
           <p>
             Deudoras helps school owners to be able to <br />
             track debtors at the comfort of their school.
           </p>
-          <button>sign up</button>
+          <button class="sign-up" id="first-button">sign up</button>
         </div>
         <div class="division-2">
           <img src="{% static 'debtors/Frontend/assets/landing_page assets/Group 6026.png'%}" alt="" />
@@ -97,7 +135,7 @@
 
           <div class="container-2">
             <!-- first card-->
-            <div class="first-card">
+            <div class="layout">
               <div class="simplicity-image">
                 <img
                   src="{% static 'debtors/Frontend/assets/landing_page assets/frame-simplicity.png'%}"
@@ -112,7 +150,7 @@
                   platform, which enables you to edit, add profile <br />picture
                   and track debtors.
                 </p>
-                <button>
+                <button class="see-more">
                   See More
                   <i class="fa fa-angle-right" aria-hidden="true"></i>
                 </button>
@@ -120,7 +158,7 @@
             </div>
 
             <!-- second card -->
-            <div class="second-card">
+            <div class="layout" id="layout-reverse">
               <div class="contention">
                 <p class="c-p1">Comment on posts</p>
                 <h2>CONTENTION</h2>
@@ -131,7 +169,10 @@
                   <br />comment on other schools to post an update of a
                   <br />debtors .
                 </p>
-                <button>View Comment <i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                <button class="view-comment">
+                  View Comment
+                  <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </button>
               </div>
               <div class="contention-image">
                 <img
@@ -142,7 +183,7 @@
             </div>
 
             <!-- third card-->
-            <div class="third-card">
+            <div class="layout">
               <div class="privacy-image">
                 <img
                   src="{% static 'debtors/Frontend/assets/landing_page assets/frame-privacy.png'%}"
@@ -159,7 +200,7 @@
                   a debtor or as a school comment on a schools post<br />
                   privately.
                 </p>
-                <button>Sign Up</button>
+                <button class="sign-up">Sign Up</button>
               </div>
             </div>
           </div>
@@ -213,8 +254,9 @@
             <p class="completion-1">STEP 3</p>
             <h2>Completion</h2>
             <p class="completion-2">
-              After uploading the school database and <br> verifying the list of
-              debtors, you can <br />frequently update the database when you<br />
+              After uploading the school database and <br />
+              verifying the list of debtors, you can <br />frequently update the
+              database when you<br />
               confirm the debtors dont owe anymore.
             </p>
           </div>
@@ -234,7 +276,7 @@
             </p>
           </div>
           <div class="goals-image">
-            <img src="{% static 'debtors/Frontend/assets/landing_page assets/amico.png'%}" alt=""  />
+            <img src="{% static 'debtors/Frontend/assets/landing_page assets/amico.png'%}" alt="" />
           </div>
         </div>
 
@@ -245,56 +287,93 @@
       <!-- the carousel section-->
       <section class="carousel">
         <div class="testimonial mySwiper">
+          <h3>What Our Clients Say About Us</h3>
           <div class="testi-content swiper-wrapper">
             <div class="slide swiper-slide">
-              <img src="{% static 'debtors/Frontend/assets/landing_page assets/img1.jpg'%}" alt="" class="image" />
-              <i class="fa fa-twitter" aria-hidden="true"> <a href=""></a></i>
-              <p>
-                 Before Deudoras, it wasnt easy tracking down debtors that 
-                left my <br> school, all other platform were not seamless and 
-                easy to use. but now i <br> can track down my student at the 
-                comfort of my desk.
-              </p>
-              <div class="details">
-                <span class="name">Mrs. Tola, School Proprietor</span>
+              
+              <div class="contents1">
+                <img
+                  src="{% static 'debtors/Frontend/assets/landing_page assets/img1.png'%}"
+                  alt=""
+                  class="image"
+                />
+              </div>
+
+              <div class="contents2">
+                <h3>Seamless Platform</h3>
+                <p>
+                  Before Deudoras, it wasnt easy <br />
+                  tracking down debtors that left <br />
+                  my school, all other platform <br />
+                  were not seamless and easy to <br />
+                  use. but now i <br />
+                  can track down my <br />
+                  student at the comfort of my <br />
+                  desk.
+                </p>
+                <div class="details">
+                  <span class="name">Mrs. Tola, School Proprietor</span>
+                </div>
               </div>
             </div>
 
             <div class="slide swiper-slide">
-              <img src="{% static 'debtors/Frontend/assets/landing_page assets/img2.jpg'%}" alt="" class="image" />
-              <i class="fa fa-twitter" aria-hidden="true"> <a href=""></a></i>
-              <p>
-                 Before Deudoras, it wasnt easy tracking down debtors that 
-                left my <br> school, all other platform were not seamless and 
-                easy to use. but now i <br> can track down my student at the 
-                comfort of my desk.
-              </p>
+              <div class="contents1">
+                <img
+                  src="{% static 'debtors/Frontend/assets/landing_page assets/img2.png'%}"
+                  alt=""
+                  class="image"
+                />
+              </div>
 
-              <div class="details">
-                <span class="name">Mrs. Tola, School Proprietor</span>
+              <div class="contents2">
+                <h3>Seamless Platform</h3>
+                <p>
+                  Before Deudoras, it wasnt easy <br />
+                  tracking down debtors that left <br />
+                  my school, all other platform <br />
+                  were not seamless and easy to <br />
+                  use. but now i <br />
+                  can track down my <br />
+                  student at the comfort of my <br />
+                  desk.
+                </p>
+                <div class="details">
+                  <span class="name">Mrs. Tola, School Proprietor</span>
+                </div>
               </div>
             </div>
             <div class="slide swiper-slide">
-              <img src="{% static 'debtors/Frontend/assets/landing_page assets/img3.jpg'%}" alt="" class="image" />
-              <i class="fa fa-twitter" aria-hidden="true"> <a href=""></a></i>
-              <p>
-                Before Deudoras, it wasnt easy tracking down debtors that 
-                left my <br> school, all other platform were not seamless and 
-                easy to use. but now i <br> can track down my student at the 
-                comfort of my desk.
-              </p>
+              <div class="contents1">
+                <img
+                  src="{% static 'debtors/Frontend/assets/landing_page assets/img3.jpg'%}"
+                  alt=""
+                  class="image"
+                />
+              </div>
 
-              <div class="details">
-                <span class="name">Mrs. Tola, School Proprietor</span>
+              <div class="contents2">
+                <h3>Seamless Platform</h3>
+                <p>
+                  Before Deudoras, it wasnt easy <br />
+                  tracking down debtors that left <br />
+                  my school, all other platform <br />
+                  were not seamless and easy to <br />
+                  use. but now i <br />
+                  can track down my <br />
+                  student at the comfort of my <br />
+                  desk.
+                </p>
+                <div class="details">
+                  <span class="name">Mrs. Tola, School Proprietor</span>
+                </div>
               </div>
             </div>
           </div>
           <div class="swiper-button-next nav-btn"></div>
           <div class="swiper-button-prev nav-btn"></div>
           <div class="swiper-pagination"></div>
-          
         </div>
-        
       </section>
 
       <!-- fourth section starts with 'we're here to help.' -->
@@ -305,86 +384,75 @@
             <h2>Need help? We got answers</h2>
           </div>
           <div class="help-2">
-            <button class="center">
+            <div class="what-info">
+              <i class="fa fa-plus-circle" aria-hidden="true"></i>
               <a href=""
                 >What information do I need to register for an account?</a
               >
-            </button>
-            <button class="center">
+            </div>
+              
+           <div class="How-is">
+            <i class="fa fa-plus-circle" aria-hidden="true"></i>
               <a href=""> How is my student privacy protected?</a>
-            </button>
-            <button class="center"><a href="">How do I check if I am a debtor?</a></button>
-          </div>
-          <button class="read-more center"><a href="">Read more</a></button>
+           </div>
+          
+        
+          </div
         </div>
       </section>
     </main>
 
-    <footer>
-      <div class="footer">
-        <div class="footer-1">
-          <div class="platform">
-            <ul>
-              <li class="li">PLATFORM</li>
-              <li><a href="">How it works</a></li>
-              <li><a href="">Sign up</a></li>
-              <li><a href="">Log in</a></li>
-            </ul>
-          </div>
+    <footer class="footer">
+      <div class="fluid">
+        <div class="description">
+          <img
+            class="footer-logo"
+            src="{% static 'debtors/Frontend/assets/need_help assets/project debtor logo svg 1 (1).png'%}"
+            alt=""
+          />
+          <p>
+            deudoras@gmail.com <br />
+            +234 000 0000 000 (NIG)
+          </p>
+        </div>
+        <div class="navigation">
           <div class="company">
-            <li class="li">COMPANY</li>
+            <li class="li">Company</li>
+            <li><a href="">Contact Us</a></li>
             <li><a href="">About</a></li>
             <li><a href="">Hiring</a></li>
             <li><a href="">Privacy Policy</a></li>
-            <li><a href="">Security Policy</a></li>
+          </div>
+          <div class="platform">
+            <ul>
+              <li class="li">Platform</li>
+              <li><a href="">How it works</a></li>
+              <li><a href="">Sign Up</a></li>
+              <li><a href="">Log In</a></li>
+              <li><a href="">Careers</a></li>
+            </ul>
           </div>
           <div class="community">
-            <li class="li">COMMUNITY</li>
-            <li><a href="">Open source</a></li>
+            <li class="li">Community</li>
+            <li><a href="">Open Source</a></li>
             <li><a href="">Slack</a></li>
             <li><a href="">Help</a></li>
-            <li><a href="">Terms of Service</a></li>
-          </div>
-          <div class="join">
-            <li class="li">JOIN</li>
-            <li><a href="">Open source</a></li>
-            <li><a href="">Slack</a></li>
-            <li><a href="">Help</a></li>
-            <li><a href="">Terms of Service</a></li>
           </div>
         </div>
-        <div class="footer-2">
-          <div class="subscribe">
-            <h2>Subscribe to our newsletters</h2>
-            <p>We send updates once a month</p>
-          </div>
-          <div class="search">
-            <input type="submit" value="deudoras@email.com" />
-
-            <i class="ic fa fa-times" aria-hidden="true"></i>
-            <button type="submit">Subscribe</button>
-          </div>
-        </div>
-        <div class="footer-3">
-          <div class="social">
-            <h3>FOLLOW US</h3>
-              <div class="mine">
-                   <a class="icon" href="#"
-                   ><img
-                  src="{% static 'debtors/Frontend/assets/landing_page assets/akar-icons_facebook-fill.png'%}"
-                    alt=""
-                   /></a>
-                <a class="icon" href="#"><img src="{% static 'debtors/Frontend/assets/landing_page assets/Group.png'%}" alt=""></i></a>
-                <a class="icon" href="#"><img src="{% static 'debtors/Frontend/assets/landing_page assets/Vector.png'%}" alt=""></i></a>
-            
-              </div>
-         
-            <p>
-              FOR INQUIRIES, PLEASE CONTACT <br />
-              deudoras@mail.com
-            </p>
-          </div>
-        </div>
+      </div>
+      <div class="socials">
+        <img
+          src="{% static 'debtors/Frontend/assets/need_help assets/Vector (1).png'%}"
+          alt=""
+        />
+        <img
+          src="{% static 'debtors/Frontend/assets/need_help assets/Vector.png'%}"
+          alt=""
+        />
+        <img
+          src="{% static 'debtors/Frontend/assets/need_help assets/bxl_instagram-alt.png'%}"
+          alt=""
+        />
       </div>
     </footer>
 
@@ -392,6 +460,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
     <!-- JavaScript -->
-    <script src="{% static 'debtors/Frontend/scripts/landing_page_scripts/landing_script.js'%}"></script>
+    <script src=""{% static 'debtors/Frontend/scripts/landing_page_scripts/landing_script.js'%}"></script>
   </body>
 </html>
