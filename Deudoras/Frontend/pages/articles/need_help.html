@@ -1,4 +1,3 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Need help</title>
-    <link rel="stylesheet" href="{% static 'debtors/Frontend/style/need_help/need_help.css'%}" />
+    <link rel="stylesheet" href="../../style/need_help/need_help.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
@@ -26,29 +25,29 @@
     <header class="header">
       <nav class="nav">
         <img
-          src="{% static 'debtors/Frontend/assets/need_help assets/project debtor logo svg 2.png'%}"
+          src="../../assets/need_help assets/project debtor logo svg 2.png"
           alt=""
         />
         <div class="nav-section">
           <div class="nav-links">
             <ul>
-              <li><a href="{% url 'home' %}">Home</a></li>
-              <li><a href="{% url 'About us' %}">About</a></li>
-              <li><a href="{% url 'Articles'%}">Articles</a></li>
-              <li><a href="{% url 'Contact us' %}">Contact us</a></li>
-              <li><a class="active" href="{% url 'Help' %}" >Help</a></li>
+              <li><a id="active" href="{% url('home')%}">Home</a></li>
+              <li><a href="{% url('About us')%}">About</a></li>
+              <li><a href="{% url('Articles')%}">Articles</a></li>
+              <li><a href="{% url('Contact us')%}">Contact us</a></li>
+              <li><a href="{% url('Help')%}">Help</a></li>
             </ul>
           </div>
           <div class="nav-buttons">
-            <button class="nav-button-1"  href="{% url 'SchoolSignup' %}">Log In</button>
-            <button class="nav-button-2" href="{% url 'Sclogin'%}"">Sign Up</button>
+            <button class="nav-button-1">Log In</button>
+            <button class="nav-button-2">Sign Up</button>
           </div>
         </div>
       </nav>
       <div class="container-fluid head">
         <div class="row">
           <div class="col-sm-4">
-            <img src="{% static 'debtors/Frontend/assets/need_help assets/girl1.png'%}" alt="" />
+            <img src="../../assets/need_help assets/girl1.png" alt="" />
           </div>
           <div class="col-sm-4">
             <div class="faq">
@@ -65,7 +64,7 @@
             </div>
           </div>
           <div class="col-sm-4">
-            <img src="{% static 'debtors/Frontend/assets/need_help assets/girl2.png'%}" alt="" />
+            <img src="../../assets/need_help assets/girl2.png" alt="" />
           </div>
         </div>
       </div>
@@ -75,7 +74,7 @@
         <div class="row rowbar">
           <div class="col-sm-4">
             <img
-              src="{% static 'debtors/Frontend/assets/need_help assets/Group 5986.png'%}"
+              src="../../assets/need_help assets/Group 5986.png"
               class="help-icons"
               alt=""
             />
@@ -91,7 +90,7 @@
           </div>
           <div class="col-sm-4">
             <img
-              src="{% static 'debtors/Frontend/assets/need_help assets/Group 5989.png'%}"
+              src="../../assets/need_help assets/Group 5989.png"
               class="help-icons"
               alt=""
             />
@@ -108,7 +107,7 @@
           </div>
           <div class="col-sm-4">
             <img
-              src="{% static 'debtors/Frontend/assets/need_help assets/check mark.png'%}"
+              src="../../assets/need_help assets/check mark.png"
               class="help-icons"
               alt=""
             />
@@ -131,7 +130,7 @@
         <div class="row rowbar">
           <div class="col-sm-4">
             <img
-              src="{% static 'debtors/Frontend/assets/need_help assets/Group 5992.png'%}"
+              src="../../assets/need_help assets/Group 5992.png"
               class="help-icons"
               alt=""
             />
@@ -147,7 +146,7 @@
           </div>
           <div class="col-sm-4">
             <img
-              src="{% static 'debtors/Frontend/assets/need_help assets/Ellipse 240.png'%}"
+              src="../../assets/need_help assets/Ellipse 240.png"
               class="help-icons"
               alt=""
             />
@@ -161,7 +160,7 @@
           </div>
           <div class="col-sm-4">
             <img
-              src="{% static 'debtors/Frontend/assets/need_help assets/Group 6031.png'%}"
+              src="../../assets/need_help assets/Group 6031.png"
               class="help-icons"
               alt=""
             />
@@ -199,7 +198,7 @@
         <div class="description">
           <img
             class="footer-logo"
-            src="{% static 'debtors/Frontend/assets/need_help assets/project debtor logo svg 1 (1).png'%}"
+            src="../../assets/need_help assets/project debtor logo svg 1 (1).png"
             alt=""
           />
           <p>
@@ -210,8 +209,8 @@
         <div class="navigation">
           <div class="company">
             <li class="li">Company</li>
-            <li><a href="{% url 'Contact us' %}">Contact Us</a></li>
-            <li><a href="{% url 'About us' %}">About</a></li>
+            <li><a href="{% url('Contact us')%}">Contact Us</a></li>
+            <li><a href="{% url('About us')%}">About</a></li>
             <li><a href="">Hiring</a></li>
             <li><a href="">Privacy Policy</a></li>
           </div>
@@ -219,8 +218,8 @@
             <ul>
               <li class="li">Platform</li>
               <li><a href="">How it works</a></li>
-              <li><a href="{% url 'SchoolSignup' %}">Sign Up</a></li>
-              <li><a href="{% url 'Sclogin'%}">Log In</a></li>
+              <li><a href="{% url('schoolSignup')%}">Sign Up</a></li>
+              <li><a href="{% url('sclogin')%}">Log In</a></li>
               <li><a href="">Careers</a></li>
             </ul>
           </div>
@@ -228,14 +227,14 @@
             <li class="li">Community</li>
             <li><a href="">Open Source</a></li>
             <li><a href="">Slack</a></li>
-            <li><a href="{% url 'Help' %}">Help</a></li>
+            <li><a href="{% url('Help')%}">Help</a></li>
           </div>
         </div>
       </div>
       <div class="socials">
-        <img src="{% static 'debtors/Frontend/assets/need_help assets/Vector (1).png'%}" alt="" />
-        <img src="{% static 'debtors/Frontend/assets/need_help assets/Vector.png'%}" alt="" />
-        <img src="{% static 'debtors/Frontend/assets/need_help assets/bxl_instagram-alt.png'%}" alt="" />
+        <img src="../../assets/need_help assets/Vector (1).png" alt="" />
+        <img src="../../assets/need_help assets/Vector.png" alt="" />
+        <img src="../../assets/need_help assets/bxl_instagram-alt.png" alt="" />
       </div>
     </footer>
 
@@ -243,5 +242,7 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!--javascript-->
+    <script src="../../scripts/help_scripts/help.js"></script>
   </body>
 </html>

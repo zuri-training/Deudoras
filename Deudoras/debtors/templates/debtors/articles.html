@@ -1,0 +1,232 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://use.fontawesome.com/8fe1b193ce.js"></script>
+    <link rel="stylesheet" href="{% static 'debtors/Frontend/style/articles/articles.css'%}" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="{% static 'debtors/Frontend/assets/articles/project debtor logo svg 1.png'%}" alt="" />
+      </div>
+      <button class="menu"><img src="{% static 'debtors/Frontend/assets/articles/Icons.png'%}" alt=""></button>
+      <div class="mobile-nav" id="mobile-nav">
+        <button class="close-btn" id="close"><img src="{% static 'debtors/Frontend/assets/articles/Vector 5.png'%}" alt=""></button>
+        <div class="mobile-links">
+          <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'About us' %}">About</a></li>
+            <li class="active"><a href="{% url 'Articles' %}" class="active">Articles</a></li>
+            <li><a href="{% url 'Contact us' %}">Contact us</a></li>
+            <li><a href="{% url 'Help' %}">Help</a></li>
+          </ul>
+        </div>
+
+        <div class="mobile-sign">
+          <ul>
+            <li><a href="">Log in</a></li>
+            <li><a href="" class="mobile-signup">Sign up</a></li>
+          </ul>
+        </div>
+      </div>
+      </div>
+      <div class="nav-links">
+        <div class="links">
+          <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'About us' %}">About</a></li>
+            <li><a href="{% url 'Articles'%}" class="desktop-active">Articles</a></li>
+            <li><a href="{% url 'Contact us' %}">Contact us</a></li>
+            <li><a href="{% url 'Help' %}">Help</a></li>
+          </ul>
+        </div>
+        <div class="sign">
+          <ul>
+           
+            <div class="dropdown">
+              <button class="nav-button-1">Log in</button>
+              <div class="dropdown-content">
+                 <a href="{% url 'Sclogin' %}">Log in <br> as a school </a>
+                 <a href="{% url 'Stlogin' %}">Log in as a<br> Parent/student </a>
+              </div>
+            </div>
+             <div class="dropdown">
+              <button class="nav-button-2">Sign Up</button>
+              <div class="dropdown-content">
+                 <a href="{% url 'SchoolSignup' %}">Sign up as a <br> School</a>
+                 <a href="{% url 'signup1' %}">Sign up as a <br> Parent or student</a>
+              </div>    
+          </ul>
+        </div>
+      </div>
+       <!-- Dropdown hmtl-->
+          <!-- End of dropdown html-->  
+
+    </header>
+
+    <!-- main container -->
+    <main class="container">
+      <div class="text">
+        <h1>All Articles</h1>
+      </div>
+      <div class="form-controller">
+        <form action="">
+          <input type="text" /><span
+            ><button><i class="fa fa-search" aria-hidden="true"></i></button
+          ></span>
+        </form>
+        <p>Keep up with the latest updates from Schools within Gbagada.</p>
+      </div>
+      <section class="container-content">
+        <div class="box font">
+          <figure>
+            <img src="{% static 'debtors/Frontend/assets/articles/image 2.png'%}" alt="" />
+            <figcaption>Feburary 10,2022</figcaption>
+          </figure>
+          <h2>
+            Bernard Citadel of Learning Produces The Best Graduating Student.
+          </h2>
+          <p>
+            Bernard Citadel of learning has broken record once again by
+            producing the best graduating student in the whole of Gbagada.
+          </p>
+          <a href="{% static 'debtors/Frontend/pages/articles/article-page1.html'%}">Read More</a>
+        </div>
+        <div class="box font1">
+          <figure>
+            <img src="{% static 'debtors/Frontend/assets/articles/image 4.png'%}" alt="" />
+            <figcaption>June 22, 2022</figcaption>
+          </figure>
+          <h2>
+            Roseborn College <br />
+            Emmerges First In The Inter-School Footbal Games.
+          </h2>
+          <p>
+            Roseborn college has emerged the winner of the inter-school football
+            game that was held on the 21st of June and organized by the state
+            Government.
+          </p>
+          <a href="">Read More</a>
+        </div>
+        <div class="box font2">
+          <figure>
+            <img src="{% static 'debtors/Frontend/assets/articles/image 3.png'%}" alt="" />
+            <figcaption>March 15, 2022</figcaption>
+          </figure>
+          <h2>
+            Diamond Bloom College <br />
+            Wins School of The Year For The 4th Time.
+          </h2>
+          <p>
+            Diamond Bloom College wins the best school in Gbagada for 2022 for
+            the fourth time in a row Leaving the other schools by surprise.
+          </p>
+          <a href="">Read More</a>
+        </div>
+        <div class="box font">
+          <figure>
+            <img src="{% static 'debtors/Frontend/assets/articles/image 2.png'%}" alt="" />
+            <figcaption>Feburary 10,2022</figcaption>
+          </figure>
+          <h2>
+            Bernard Citadel of Learning Produces The Best Graduating Student.
+          </h2>
+          <p>
+            Bernard Citadel of learning has broken record once again by
+            producing the best graduating student in the whole of Gbagada.
+          </p>
+          <a href="{% static 'debtors/Frontend/pages/articles/article-page1.html'%}">Read More</a>
+        </div>
+        <div class="box font1">
+          <figure>
+            <img src="{% static 'debtors/Frontend/assets/articles/image 4.png'%}" alt="" />
+            <figcaption>June 22, 2022</figcaption>
+          </figure>
+          <h2>
+            Roseborn College <br />
+            Emmerges First In The Inter-School Footbal Games.
+          </h2>
+          <p>
+            Roseborn college has emerged the winner of the inter-school football
+            game that was held on the 21st of June and organized by the state
+            Government.
+          </p>
+          <a href="">Read More</a>
+        </div>
+        <div class="box font2">
+          <figure>
+            <img src="{% static 'debtors/Frontend/assets/articles/image 3.png'%}" alt="" />
+            <figcaption>March 15, 2022</figcaption>
+          </figure>
+          <h2>
+            Diamond Bloom College <br />
+            Wins School of The Year For The 4th Time.
+          </h2>
+          <p>
+            Diamond Bloom College wins the best school in Gbagada for 2022 for
+            the fourth time in a row Leaving the other schools by surprise.
+          </p>
+          <a href="">Read More</a>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <img id="logos" src="{% static 'debtors/Frontend/assets/articles/footer logo.png'%}" alt="" />
+        <p>deudoras@gmail.com</p>
+        <p>+234 000 0000 000 (NG)</p>
+        <ul>
+          <li>
+            <a href="">
+              <img src="{% static 'debtors/Frontend/assets/articles/bi_facebook.png'%}" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href=""
+              ><img src="{% static 'debtors/Frontend/assets/articles/Vector (3).png'%}" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href=""
+              ><img src="{% static 'debtors/Frontend/assets/articles/Vector (4).png'%}" alt=""
+            /></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-content2">
+        <div class="company">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="">Contact Us</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Hiring</a></li>
+            <li><a href="">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="company">
+          <h3>Product</h3>
+          <ul>
+            <li><a href="">How it works</a></li>
+            <li><a href="">Sign up</a></li>
+            <li><a href="">log in</a></li>
+            <li><a href="">careers</a></li>
+          </ul>
+        </div>
+        <div class="company">
+          <h3>Community</h3>
+          <ul>
+            <li><a href="">Open Source</a></li>
+            <li><a href="">Slack</a></li>
+            <li><a href="">Help</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="{% static 'debtors/Frontend/scripts/articles/article.js'%}"></script>
+  </body>
+</html>
