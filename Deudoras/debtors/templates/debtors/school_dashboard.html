@@ -188,7 +188,7 @@
             </div>
             <div class="firstSectionArticle">
               <div>
-                <h2>Welcome, RoseBorn Secondary School.</h2>
+                <h2>Welcome, {{ user.name }}</h2>
                 <p class="desktop-tablet">
                   Learn whether your child is currently defaulting on his/her
                   school fees today.
@@ -225,7 +225,7 @@
                 src="{% static 'debtors/Frontend/assets/school_dashboard assets/transactions-icon.png'%}"
                 alt=""
               />
-              <h3>N30,000,000</h3>
+              <h3>{{sum}} </h3>
               <div class="progressContain">
                 <div class="progress">
                   <div class="progressFlex">
@@ -244,7 +244,7 @@
                 src="{% static 'debtors/Frontend/assets/school_dashboard assets/transactions-icon.png'%}"
                 alt=""
               />
-              <h3>3,000</h3>
+              <h3>{{ ns }} </h3>
               <div class="dangerText">
                 <img
                   src="{% static 'debtors/Frontend/assets/school_dashboard assets/Path.png'%}"
@@ -332,8 +332,8 @@
                   <tbody>
                     <tr>
                       <td class="sn_no snrow">001</td>
-                      <td class="srow">STU20001</td>
-                      <td class="nrow">Glorious Kids International School</td>
+                      <td class="srow">{{sc.debtor}}</td>
+                      <td class="nrow">{{user.name}}</td>
                       <td class="arow">NGN 40,000</td>
                       <td class="brow"><button>View</button></td>
                     </tr>

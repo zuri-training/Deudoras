@@ -25,4 +25,5 @@ path('contact us', views.Contactus, name = 'Contact us'),
 path('schools',views.Schools, name='School list'),
 path('debtors',views.Debtors, name='debtors list'),
 path('articles',views.Articles, name='Articles'),
+path('fogot password', views.forgot, name='forgot password'),
 ]

@@ -1,4 +1,5 @@
 from itertools import count
+from multiprocessing import context
 from unicodedata import name
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
@@ -20,7 +21,7 @@ from .decorators import not_user,users
 from django.contrib.auth.forms import UserCreationForm
 from .models import School,Debtors,Debt, Article, Account,MyAccountManager
 # from Deudoras import debtors
-
+from django.template import Context
 # Create your views here.
 def user_try(request):
     form = NewUserForm(request.POST)
@@ -199,6 +200,7 @@ def signout(request):
 # @users(allowed_roles=['school'])
 
 def SchoolHome(request):
+    
     user = request.user.id
     ob = Debt.objects.filter(School_id =user)
     sum = 0
@@ -206,20 +208,22 @@ def SchoolHome(request):
         sum+= i.amount
     schools =School.objects.all()
     n_schools = len(schools)
-
-
-
-
-    return  render(request, 'debtors/school_dashboard.html')
-
-
-
-
-
-
-
-
+    print( n_schools )
+    # print(user)
+    sc = Debtors.objects.filter(school_id =user.id).order_by('-id')[:10:-1]
+    context ={'ns':n_schools,'sum':sum,'sc':sc}
+    # print(context['ns'])
     
+    return  render(request, 'debtors/school_dashboard.html',context)
+
+
+
+
+
+
+
+
+
 def Debtors(request,pk):
     debtor = Debtors.objects.get(School_id = pk )
     return render(request, 'debtors/debtors_list.html',{'debtors': debtor})
@@ -243,7 +247,8 @@ def Contactus(request):
     return render (request,'debtors/contact.html')
 
 
-
+def forgot(request):
+    return render(request, 'debtors/forgot.html')
 
 
 
