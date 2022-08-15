@@ -1,0 +1,681 @@
+@import "./reset", "./variable";
+
+body {
+    background-color: #F6FAFF;
+}
+div.body_sidebar{
+    display: flex;    
+}
+
+
+.navv {
+    padding: 1em 0 2em 0;
+    background-color: $primary-col-dash;
+    height: auto;
+    width: 20%;
+}
+@media screen and (max-width: 764px){
+    .navv {
+        display: none;
+    }
+}
+.nav_links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nav_links_logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav_links_1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.nav_links_2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3em;
+}
+
+
+.nav_items {
+    padding: 1em 3em;
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: $background-col-white;
+    width: 100%;
+    text-align: center;
+    font-size: 1.1em;
+}
+.nav_items-inverse {
+    color: $primary-col-dash;
+    background-color: $primary-col-white;
+}
+.space{
+    padding-right: 1.3em;
+}
+.space2{
+    padding-right: 1.3em;
+}
+@media screen and (max-width: 1243px){
+    .space2{
+        padding-right: 3px;
+    }
+}
+.log_out{
+    background-color: $danger-dash;
+    // padding: 0.8em 0.8em;
+    // width: 80%;
+    border-radius: 5px;
+}
+.nav_items:visited{
+    color: $primary-col-dash;
+    // background-color: $background-col-dash;
+}
+.logo{
+    width: 15em;
+    height: 4em;
+    margin-bottom: 3em;
+    margin-top: 2em;
+}
+.logo2{
+    width: 4em;
+    height: 4em;
+    margin-bottom: 3em;
+    margin-top: 2em;
+    display: none;
+}
+.logo3{
+    width: 12em;
+    height: 3em;
+    background-color: $primary-col-dash;
+}
+.svg-white{
+    color: white;
+}
+
+.nav_items_2 {
+    margin: auto;
+    align-self: center;
+    align-items: center;
+}
+.fa-bell{
+    font-size: 1.2em;
+}
+.nav_items_2--img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.offcanvas-start{
+    width: 60vw;
+}
+.offcanvas-body{
+    padding: 0 0;
+}
+div.offcanvas-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90vh;
+}
+.off-item{
+    text-align: center;
+    display: flex;
+    height: 3em;
+    justify-content: center;
+    align-items: center;
+}
+.off_nav_item-inverse{
+    background-color: $primary-col-dash;
+    color: $primary-col-white;
+}
+button.btn-primary{
+    color: $primary-col-dash;
+    background-color: $primary-col-white;
+    border: 1px solid transparent;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #0b5ed7;
+    border-color: white;
+}
+.btn-check:focus+.btn-primary, .btn-primary:focus {
+    color: $primary-col-dash;
+    background-color: $primary-col-white;
+    border-color: white;
+    box-shadow: 0 0 0 0.25rem transparent;
+}
+
+
+
+
+main{
+    width: 80%;
+    padding: 2em 2em;
+    padding-left: 2em;
+}
+@media screen and (max-width: 764px){
+    main{
+        width: 100%;
+    }
+}
+.main_one {
+    color: #02034e;
+    margin: 0em 0;
+    margin-bottom: 1em;
+}
+.main_top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2em;
+}
+@media screen and (max-width: 1134px){
+    .main_top{
+        margin-bottom: 4em;
+    }
+}
+@media screen and (max-width: 764px){
+    .main_top{
+        display: none;
+    }
+}
+div.main_top_one{
+    width: 85%;
+    align-self: center;
+}
+.search{
+    border-radius: 5px;
+    width: 100%;
+    border: 2px solid transparent;
+    background-color: $background-col-white;
+    height: 3em;
+    padding: 1em;
+    padding-left: 2em;
+    box-shadow: black;
+}
+div.main_top_two{
+    width: 13%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main_top_three{
+    display: none;
+    justify-content: space-between;
+}
+@media screen and (max-width: 764px){
+    .main_top_three{
+        display: flex;
+    }
+}
+.main_welcome{
+    margin: 0 0 0.6em 0;
+    font-size: 1.8em;
+    color: $primary-light-blue;
+}
+.main_child_info{
+    margin: 0em 0;
+    color: #3D7A9A;
+    font-size: 1.3em;
+}
+@media screen and (max-width: 1134px){
+    .main_child_info{
+        margin-bottom: 3em;
+    }
+}
+.main_student{
+    margin-bottom: 3em;
+    width: 90%;
+}
+.main_student_name{
+    margin: 1.5em 0;
+    color: #75C26A;
+    font-size: 1.3em;
+}
+.main_student_summary{
+    display: flex;
+    justify-content: space-between;
+}
+@media screen and (max-width: 1134px){
+    .main_student_summary{
+        margin-top: 5em;
+        margin-bottom: 5em;
+    }
+
+}
+@media screen and (max-width: 574px){
+    .main_student_summary{
+        flex-direction: column;
+    }
+}
+.main_student_summary_1{
+    background-color: $primary-col-dash;
+    color: $primary-col-white;
+    padding: 1em 0;
+    border-radius: 5px;
+    width: 23%;
+    border: 2px solid #C1C4DB;
+}
+.main_student_summary_2{
+    background-color: $primary-col-white;
+    color: $primary-col-dash;
+    padding: 1em 0;
+    border-radius: 5px;
+    width: 23%;
+    border: 2px solid #C1C4DB;
+}
+.main_student_summary_3{
+    background-color: $primary-col-white;
+    color: $primary-col-dash;
+    padding: 1em 0;
+    border-radius: 5px;
+    width: 23%;
+    border: 2px solid #C1C4DB;
+}
+.main_student_summary_4{
+    background-color: $primary-col-white;
+    color: $primary-col-dash;
+    padding: 1em 0;
+    border-radius: 5px;
+    width: 23%;
+    border: 2px solid #C1C4DB;
+}
+@media screen and (max-width: 574px){
+    div.main_student_summary_1{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1.5em;
+    }
+    div.main_student_summary_2{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1.5em;
+    }
+    div.main_student_summary_3{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1.5em;
+        color: rgb(167, 167, 14);
+    }
+    div.main_student_summary_4{
+        width: 100%;
+        text-align: center;
+    }
+}
+.summa_1{
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 1.5em;
+}
+.summa_2{
+    padding: 0 1.5em;
+}
+p.summa_2{
+    border-top: 1px solid $primary-col-dash;
+}
+p.summa_2.box1{
+    border-top: 1px solid $primary-col-white;
+}
+p.total_debt{
+    font-size: 1em;
+}
+p.total_debt_amt{
+    font-size: 1.4em;
+}
+
+@media screen and (max-width: 1146px){
+    p.total_debt{
+        font-size: 0.9em;
+    }
+    p.total_debt_amt{
+        font-size: 1.1em;
+    }
+    p.summa_2{
+        font-size: 0.9em;
+    }
+}
+@media screen and (max-width: 1026px){
+    p.summa_2{
+        font-size: 0.6em;
+        padding: 0 2.3em;
+    }
+    .main_student {
+        margin-bottom: 3em;
+        width: 100%;
+    }
+    div.session-record{
+        width: 110%;
+    }
+}
+@media screen and (max-width: 884px){
+    .summa_2{
+        padding: 0 1em;
+    }
+    p.summa_2{
+        padding: 0 1.5em;
+    }
+}
+@media screen and (max-width: 780px){
+    p.total_debt_amt{
+        font-size: 1em;
+    }
+}
+@media screen and (max-width: 690px){
+    .summa_2{
+        padding: 0 0.3em;
+    }
+
+p.total_debt_amt{
+    font-size: 1em;
+}
+}
+@media screen and (max-width: 547px){
+    p.total_debt{
+        font-size: 1.4em;
+    }
+    p.total_debt_amt{
+        font-size: 1.8em;
+    }
+}
+.main_student_detail {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    padding: 1em 2em;
+    background-color: #E8F2FF;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.main_student_detail_info {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    padding: 1em 2em;
+    background-color: #F6FAFF;
+    border-bottom: 2px solid #BFDDEC;
+}
+.main_student_detail_1{
+    width: 25%;
+    // margin-left: 1em;
+}
+.main_student_detail_2{
+    width: 35%;
+    // margin-left: -10em;
+}
+.main_student_detail_3{
+    width: 35%;
+    // margin-left: -10em;
+}
+#amount{
+    color: #DE5050;
+}
+.main_student_detail_4{
+    width: 5%;
+    // margin-right: 2em;
+}
+
+
+.main_brkdwn_stdnt_debt{
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    width: 90%;
+}
+.main_brkdwn_stdnt_debt_head{
+    font-size: 1.1em;
+    margin-bottom: 1em;
+    color: #02034E;
+}
+.main_brkdwn_stdnt_debt_session{
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    padding: 1em;
+    background-color: #E8F2FF;
+    // border-top-right-radius: 15px;
+    // border-top-left-radius: 15px;
+}
+// .main_brkdwn_stdnt_debt_session_1{
+    
+// }
+// .main_brkdwn_stdnt_debt_session_2{
+    
+// }
+// .main_brkdwn_stdnt_debt_session_3{
+    
+// }
+.main_brkdwn_stdnt_debt_session_4{
+    padding-right: 3em;
+}
+.main_brkdwn_stdnt_debt_detail{
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    padding: 1em;
+    background-color: white;
+    border-bottom: 2px solid lightblue;
+    // margin-right: -2em;
+}
+@media screen and (max-width: 574px){
+    .main_brkdwn_stdnt_debt_detail{
+        font-size: 0.8em;
+    }
+}
+@media screen and (max-width: 452px){
+    .main_brkdwn_stdnt_debt_detail{
+        font-size: 0.6em;
+    }
+}
+
+
+/////////////////////////////////////////////////
+
+// 1135px second breaking point
+@media screen and (max-width: 1135px){
+    .nav_items {
+        // padding: 1em 3em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        color: $background-col-white;
+        width: auto;
+        // text-align: center;
+    }
+    .space {
+        padding-right: 0;
+        font-size: 2em;
+        margin-bottom: 0.5em;
+    }
+    .space2{
+        margin-bottom: 0.5em;
+        font-size: 2em;
+    }
+    .logo{
+        margin-bottom: 0.5em;
+    }
+}
+
+@media screen and (max-width: 952px){
+    .nav_items h2{
+        font-size: 0.8em;
+    }
+    //logo disappear here
+    .logo{
+        display: none;
+    }
+    .logo2{
+        display: block;
+        margin-bottom: 2em;
+    }
+}
+
+//754px
+@media screen and (max-width: 754px){
+    .nav_items{
+        padding: 0.7em 3em;
+    }
+    .nav_items h2{
+        font-size: 0.8em;
+    }
+    .space{
+        margin-bottom: 0.4em;
+    }
+    .log_out{
+        background-color: transparent;
+        border-radius: 5px;
+    }
+    //discription disappear here
+}
+
+
+//////////////////////////////////////////////////
+/// 
+/// 
+/// 
+@media screen and (max-width: 1008px){
+    .main_student_detail_1{
+        width: 20%;
+        // margin-left: 1em;
+    }
+    .main_student_detail_2{
+        width: 40%;
+        // margin-left: -10em;
+    }
+    .main_student_detail_3{
+        width: 35%;
+        // margin-left: -10em;
+    }
+    #amount{
+        color: #DE5050;
+    }
+    .main_student_detail_4{
+        width: 5%;
+        // margin-right: 2em;
+    }
+
+    .main_brkdwn_stdnt_debt_session_1{
+        width: 25%;
+        // margin-left: 2em;
+    }
+    .main_brkdwn_stdnt_debt_session_2{
+        width: 30%;
+        // margin-left: -4em;
+    }
+    .main_brkdwn_stdnt_debt_session_3{
+        width: 30%;
+        // margin-left: -4em;
+    }
+    .main_brkdwn_stdnt_debt_session_4{
+        width: 25%;
+        // margin-right: 2em;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 831px){
+    .main_student_detail_1{
+        width: 17%;
+        // margin-left: 1em;
+    }
+    .main_student_detail_2{
+        width: 52%;
+        // margin-left: -10em;
+    }
+    .main_student_detail_3{
+        width: 32%;
+        // margin-left: -10em;
+    }
+    #amount{
+        color: #DE5050;
+    }
+    .main_student_detail_4{
+        width: 3%;
+        // margin-right: 2em;
+    }
+
+    .main_brkdwn_stdnt_debt_session_1{
+        width: 22%;
+        // margin-left: 2em;
+    }
+    .main_brkdwn_stdnt_debt_session_2{
+        width: 27%;
+        // margin-left: -4em;
+    }
+    .main_brkdwn_stdnt_debt_session_3{
+        width: 30%;
+        // margin-left: -4em;
+    }
+    .main_brkdwn_stdnt_debt_session_4{
+        width: 31%;
+        // margin-right: 2em;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 724px){
+    .body {
+        background-color: #F6FAFF;
+        padding: 1em 0.8em;
+    }
+    // .nav_items:not(:first-child){
+    //     display: none;        
+    // }
+    // .nav_links_2{
+    //     display: none;
+    // }
+    // .nav_links{
+    //     display: none;
+    // }
+    .main_student_detail_1{
+        width: 17%;
+        // margin-left: 1em;
+    }
+    .main_student_detail_2{
+        width: 46%;
+        // margin-left: -10em;
+    }
+    .main_student_detail_3{
+        width: 32%;
+        // margin-left: -10em;
+    }
+    #amount{
+        color: #DE5050;
+    }
+    .main_student_detail_4{
+        width: 3%;
+        // margin-right: 2em;
+    }
+
+    .main_brkdwn_stdnt_debt_session_1{
+        width: 20%;
+        // margin-left: 2em;
+    }
+    .main_brkdwn_stdnt_debt_session_2{
+        width: 21%;
+        // margin-left: -4em;
+    }
+    .main_brkdwn_stdnt_debt_session_3{
+        width: 34%;
+        // margin-left: -4em;
+    }
+    .main_brkdwn_stdnt_debt_session_4{
+        width: 31%;
+        // margin-right: 2em;
+        display: flex;
+        justify-content: space-between;
+    }
+}

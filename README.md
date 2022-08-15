@@ -54,6 +54,8 @@ Deudoras is a website application that enables school owners in Gbagada locality
 Tools Used
 
     VS-Code
+    Project Documentation - https://docs.google.com/document/d/1oHJR7ExoQC8421zz3bNPVmU-Mnf-74t0Nt4vfdnt1nA/edit
+    Project Journey(meetings/updates) - https://docs.google.com/document/d/1aL2UL2ZkRyystw6pH0j6J9FmCL3Ub4QCCtkrAkpS-ZY/edit?usp=sharing
     Figma -   https://www.figma.com/file/xweedyiijgngZt24JB44rd/Team-39_MyDebtors-Figma?node-id=305%3A98
     Figjam - https://www.figma.com/file/GAyXOrMav37WbmE6tUBM5i/User-Research-2-Resources?node-id=0%3A1
     Lucidchart - https://lucid.app/lucidchart/49f54d9d-bd2c-4b55-b3f3-8fa6ff830985/view?page=8.HAGRnC1py.#
