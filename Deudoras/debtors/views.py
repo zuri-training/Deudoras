@@ -236,7 +236,7 @@ def debt_by_school(request,pk):
 
 def Articles(request):
     articles = Article.objects.all()
-    return render(request,'debtors/school_list.html',{'articles': articles})
+    return render(request,'debtors/articles.html',{'articles': articles})
 
 
 
