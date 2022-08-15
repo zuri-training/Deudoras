@@ -330,7 +330,7 @@
               <div class="table">
                 <table>
                   <tbody>
-                    <tr>
+                    {% comment %} <tr>
                       {% for i in sc %}
                       <td class="sn_no snrow">user.account</td>
                       <td class="srow">{{i.debtor}}</td>
@@ -338,7 +338,7 @@
                       <td class="arow"> {{}}</td>
                       <td class="brow"><button>View</button></td>
                       {% endfor %}
-                    </tr>
+                    </tr> {% endcomment %}
                     <tr class="special-bg-table">
                       <td class="sn_no snrow"></td>
                       <td class="srow"></td>

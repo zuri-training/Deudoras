@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -20,13 +21,13 @@
     />
     <link
       rel="stylesheet"
-      href="../../style/dashboard_parents/dashboard_parents.min.css.map"
+      href="{% static 'debtors/Frontend/style/dashboard_parents/dashboard_parents.min.css.map'%}"
     />
     <link
       rel="stylesheet"
-      href="../../style/dashboard_parents/dashboard_parents.min.css"
+      href="{% static 'debtors/Frontend/style/dashboard_parents/dashboard_parents.min.css'%}"
     />
-    <!-- <link rel="stylesheet" href="../../style/dashboard_parents/dash-parents.css"> -->
+    <!-- <link rel="stylesheet" href="{% static 'debtors/Frontend/style/dashboard_parents/dash-parents.css"> -->
   </head>
   <body>
     <div class="body_sidebar">
@@ -34,8 +35,8 @@
       <nav class="navv">
         <div class="nav_links">
             <div class="nav_links_logo">
-                <img class="logo" src="../../assets/dashboard_parents/project debtor logo svg 2.png" alt="">
-                <img class="logo2" src="../../assets/dispute_page/Group.png" alt="">
+                <img class="logo" src="{% static 'debtors/Frontend/assets/dashboard_parents/project debtor logo svg 2.png'%}" alt="">
+                <img class="logo2" src="{% static 'debtors/Frontend/assets/dispute_page/Group.png'%}" alt="">
             </div>
             <div class="nav_links_1">
                 <div onclick="myFunction()" class="nav_items" id="dashboard"><i class="space fa-solid fa-square-minus"></i> <h2>Dashboard</h2></div>
@@ -68,7 +69,7 @@
               <div class="nav_items_2">
                 <img
                   class="nav_items_2--img"
-                  src="../../assets/dashboard_parents/brett-jordan-NDjaUqvB7uE-unsplash.jpg"
+                  src="{% static 'debtors/Frontend/assets/dashboard_parents/brett-jordan-NDjaUqvB7uE-unsplash.jpg '%}"
                   alt="pic"
                 />
               </div>
@@ -132,7 +133,7 @@
                 </div>
               </div>
             </div>
-            <div><img class="logo3" src="../../assets/dashboard_parents/project debtor logo svg 2.png" alt="Logo"></div>
+            <div><img class="logo3" src="{% static 'debtors/Frontend/assets/dashboard_parents/project debtor logo svg 2.png'%}" alt="Logo"></div>
           </div>
           <h1 class="main_welcome">Welcome, Mr. John!</h1>
           <p class="main_child_info">

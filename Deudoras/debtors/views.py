@@ -187,7 +187,7 @@ def signupuser2(request):
 def signout(request):
     logout(request)
     messages.success(request, "logged out succesfully")
-    return redirect('debtors/index.html')
+    return redirect('landing')
 
 
 
@@ -210,8 +210,9 @@ def SchoolHome(request):
     n_schools = len(schools)
     print( n_schools )
     # print(user)
-    sc = Debtors.objects.filter(school_id =user.id).order_by('-id')[:10:-1]
-    context ={'ns':n_schools,'sum':sum,'sc':sc}
+    # sc = Debtors.objects.filter(school_id =user.id).order_by('-id')[:10:-1]
+#    'sc':sc
+    context ={'ns':n_schools,'sum':sum}
     # print(context['ns'])
     
     return  render(request, 'debtors/school_dashboard.html',context)
@@ -256,9 +257,10 @@ def forgot(request):
 
 def UserHome(request):
     # , pk
-    user = Debtors.objects.get(id = pk)
-    debt = request.user.Debt.all()
-    return render(request,'debtors/dashboard_parents.html',{'debt':debt,'user':user})
+    # user = Debtors.objects.get(id = pk)
+    # debt = request.user.Debt.all()
+    # ,{'debt':debt,'user':user}
+    return render(request,'debtors/dashboard_parents.html')
 
 
 
