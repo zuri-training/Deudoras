@@ -135,13 +135,14 @@ def dispute(request):
 def UserSignin(request):
 
     if request.method == 'POST':
+        print('done')
         email = request.POST.get('email')
         password = request.POST.get('password')
 
         user = authenticate(email=email, password=password)
 
         if user is not None:
-            print('done')
+            
             username =user.username
             login(request, user)
             return redirect( "UserHome")
