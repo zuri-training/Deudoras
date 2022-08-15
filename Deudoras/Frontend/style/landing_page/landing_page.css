@@ -778,7 +778,60 @@ li {
   color: #010113;
   opacity: 0.6;
 }
+/* section four drop down*/
+.collapsible {
+  background-color: #f6faff;
+  color: #010113;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  font-family: var(--font-family);
+}
 
+.collapsible:hover {
+  background-color: #cce4f0;
+  color: #01011f;
+}
+
+.reveal {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #cce4f0;
+  opacity: 0.9;
+  font-family: var(--font-family);
+}
+.reveal p {
+  padding: 20px 130px;
+}
+.reveal button {
+  margin-bottom: 1em;
+}
+.collapsible-buttons {
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.0125em;
+  text-transform: capitalize;
+  color: #fafbfc;
+  background: #03034e;
+  border: none;
+  padding: 13px;
+  box-shadow: 0px 2px 6px 2px rgba(3, 4, 94, 0.15),
+    0px 1px 2px rgba(3, 4, 94, 0.3);
+  border-radius: 16px;
+  margin-left: 10em;
+}
+
+/*footer */
 .footer {
   background-color: var(--primary-color);
   height: 47vh;
@@ -865,6 +918,14 @@ li a {
   }
   .nav-links li a {
     margin-right: 1.3em;
+  }
+  .collapsible {
+    width: 120%;
+    margin-left: -5em;
+  }
+  .reveal {
+    width: 120%;
+    margin-left: -4.7em;
   }
   .socials {
     margin-top: -1.2em;
@@ -1131,6 +1192,14 @@ li a {
   }
   .goals p {
     font-size: 18px;
+  }
+  .collapsible {
+    width: 150%;
+    margin-left: -7em;
+  }
+  .reveal {
+    width: 150%;
+    margin-left: -6.55em;
   }
 
   .fluid {
@@ -1497,6 +1566,14 @@ li a {
     font-weight: 700;
     margin-left: 5.5em;
   }
+  .collapsible {
+    width: 280%;
+    margin-left: -6.5em;
+  }
+  .reveal {
+    width: 280%;
+    margin-left: -6.05em;
+  }
   .footer {
     width: 38.33em;
   }
@@ -1539,6 +1616,14 @@ li a {
   .contention-image,
   .simplicity-image {
     width: 120%;
+  }
+  .collapsible {
+    width: 300%;
+    margin-left: -5em;
+  }
+  .reveal {
+    width: 300%;
+    margin-left: -4.68em;
   }
   .completion-2,
   .data-2,
@@ -1622,6 +1707,14 @@ li a {
   }
   .help h2 {
     font-size: 20px;
+  }
+  .collapsible {
+    width: 350%;
+    margin-left: -3.8em;
+  }
+  .reveal {
+    width: 350%;
+    margin-left: -3.55em;
   }
   .company,
   .platform {
