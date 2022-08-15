@@ -31,7 +31,8 @@ def user_try(request):
     return render(request,'debtors/test.html',context)
 
 
-
+def parentprofile(request):
+    return render(request,'debtors/dashboard_profile.html')
 def Landing(request):
     return render(request, "debtors/index.html")
     
@@ -113,7 +114,7 @@ def SchoolSignin(request):
         user = authenticate(request, email=email, password=password)
         print(user)
         if user is not None:
-            print('done')
+            
             school_name =user.name
             id = user.id
             
@@ -129,7 +130,8 @@ def SchoolSignin(request):
 
     return render(request, "debtors/login/login-school.html")
 
-
+def dispute(request):
+    return render(request,'debtors/dispute.html')
 def UserSignin(request):
 
     if request.method == 'POST':
@@ -139,9 +141,10 @@ def UserSignin(request):
         user = authenticate(email=email, password=password)
 
         if user is not None:
+            print('done')
             username =user.username
             login(request, user)
-            return render(request, "debtors/userdashboard.html", {'name':username})
+            return redirect( "UserHome")
 
         else:
             messages.error(request, "Bad credentials!!")
@@ -149,7 +152,7 @@ def UserSignin(request):
         return redirect('landing')
 
 
-    return render(request, "debtorslogin/usersignin.html")
+    return render(request, "debtors/login/login-students.html")
 
 
 @login_required
@@ -188,7 +191,7 @@ def signupuser2(request):
 def signout(request):
     logout(request)
     messages.success(request, "logged out succesfully")
-    return redirect('landing')
+    return redirect( 'home' )
 
 
 

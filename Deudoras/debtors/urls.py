@@ -18,7 +18,7 @@ urlpatterns = [
     # path('userdashboard',views.user_dashboard,name='User dashboard')
 path('contact us', views.Contactus, name = 'Contact us'),
  path('loginSchool',views.SchoolSignin, name='Sclogin'),
- path('loginStudent',views.loginStudents , name='Stlogin'),
+ path('loginStudent',views.UserSignin , name='Stlogin'),
  path('loginuser',views.loginUser , name='userlogin'),
   path('signupuser1',views.signupuser1 , name='signup1'),
    # path('signupuser2',views.signupuser2 , name='signup2'),
@@ -27,4 +27,8 @@ path('schools',views.Schools, name='School list'),
 path('debtors',views.Debtors, name='debtors list'),
 path('articles',views.Articles, name='Articles'),
 path('fogot password', views.forgot, name='forgot password'),
+path('parent profile', views.parentprofile, name='profile'),
+path('dispute', views.dispute, name='dispute'),
+
+
 ]
