@@ -72,7 +72,6 @@ def SchoolSignup(request):
     return render(request,"debtors/signup_school.html")
 def add_debtor(request):
     
-    # if form._
     if request.method == "POST":
         name = request.POST.get('name')
         email = request.POST.get('Email')
@@ -94,7 +93,8 @@ def add_debtor(request):
 
         messages.success(request, 'Your account has been succesfully created')
 
-        return render(request,SchoolSignin)
+        return redirect("Sclogin")
+    return render(request,'debtors/add_debtor.html')
 def need_help(request):
     return render(request,'debtors/need_help.html')
 
@@ -254,7 +254,7 @@ def forgot(request):
 
 # @users(allowed_roles=['student'])
 
-def UserHome(request,pk):
+def UserHome(request):
     # , pk
     user = Debtors.objects.get(id = pk)
     debt = request.user.Debt.all()
