@@ -1270,9 +1270,7 @@ li a {
     height: 370px;
   }
   #first-button {
-    position: absolute;
-    top: 130%;
-    left: 0.2em;
+    margin-left: -0.4em;
   }
   .container-1 {
     width: 100%;
