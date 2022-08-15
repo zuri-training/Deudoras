@@ -140,6 +140,12 @@ main{
     padding: 4em 2em 2em 2em;
     width: 100%;
 }
+@media screen and (max-width: 474px){
+    main{
+        padding: 4em 0.4em 2em 0.4em;
+        width: 100%;
+    }
+}
 .main_top_three{
     display: none;
     justify-content: space-between;
