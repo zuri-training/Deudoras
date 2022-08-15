@@ -196,7 +196,6 @@
                   alt="hamopen"
                   class="mobileBtnOpen"
                 />
-                <img src="" alt="mobile-logo" />
               </div>
 
               <div class="search">
@@ -215,10 +214,12 @@
             </div>
             <div class="firstSectionArticle pageSchool">
               <div class="pageView">
-                <h2>Diamond Bloom Nursery and Primary School</h2>
-                <a>View Profile</a>
-                <a>Article</a>
-                <a href="school_dashboard_debtorlist.html">See Debtors List</a>
+                <h2>{{school_name}}</h2>
+                <a href="{% url profile%}">View Profile</a>
+                <a href="{% url article%}">Article</a>
+                <a href="{% url school_dashboard_debtorlist %"
+                  >See Debtors List</a
+                >
               </div>
               <div class="desktop-tablet search">
                 <div class="serach-on">
@@ -256,30 +257,18 @@
                 </tr>
               </thead>
               <tbody>
+                {% for studentdebt in schooldebtors %}
                 <tr>
-                  <td>D4601DU</td>
-                  <td>Divine Ugochukwu</td>
-                  <td class="dangerAmount">NGN 40,000</td>
-                  <td class="viewD">View Details</td>
+                  <td>{{studentdebt.id}}</td>
+                  <td>{{studentdebt.name}}</td>
+                  <td class="dangerAmount">NGN {{studentdebt.amount}}</td>
+                  <td class="viewD">
+                    <a href="{% url school_dashboardViewStudentDetails %}"
+                      >{{studentdebt.viewdetails}}</a
+                    >
+                  </td>
                 </tr>
-                <tr>
-                  <td>D4601DU</td>
-                  <td>Divine Ugochukwu</td>
-                  <td class="dangerAmount">NGN 40,000</td>
-                  <td>View Details</td>
-                </tr>
-                <tr>
-                  <td>D4601DU</td>
-                  <td>Divine Ugochukwu</td>
-                  <td class="dangerAmount">NGN 40,000</td>
-                  <td>View Details</td>
-                </tr>
-                <tr>
-                  <td>D4601DU</td>
-                  <td>Divine Ugochukwu</td>
-                  <td class="dangerAmount">NGN 40,000</td>
-                  <td>View Details</td>
-                </tr>
+                {% endfor %}
               </tbody>
             </table>
           </section>

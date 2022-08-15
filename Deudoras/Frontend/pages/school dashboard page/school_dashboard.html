@@ -251,7 +251,7 @@
                 src="../../assets/school_dashboard assets/transactions-icon.png"
                 alt=""
               />
-              <h3>N30,000,000</h3>
+              <h3>{{ sum}}</h3>
               <div class="progressContain">
                 <div class="progress">
                   <div class="progressFlex">
@@ -270,7 +270,7 @@
                 src="../../assets/school_dashboard assets/transactions-icon.png"
                 alt=""
               />
-              <h3>3,000</h3>
+              <h3>{{ns}}</h3>
               <div class="dangerText">
                 <img
                   src="../../assets/school_dashboard assets/Path.png"
@@ -356,12 +356,15 @@
               <div class="table">
                 <table>
                   <tbody>
+                    {% for tabledetails in saheed_table %}
                     <tr>
-                      <td class="sn_no snrow">001</td>
-                      <td class="srow">STU20001</td>
-                      <td class="nrow">Glorious Kids International School</td>
-                      <td class="arow">NGN 40,000</td>
-                      <td class="brow"><button>View</button></td>
+                      <td class="sn_no snrow">{{tabledetails.sn}}</td>
+                      <td class="srow">{{tabledetails.stdID}}</td>
+                      <td class="nrow">{{tabledetails.schname}}</td>
+                      <td class="arow">{{tabledetails.debt}}</td>
+                      <a href="{url studentViewDetails}"
+                        ><td class="brow"><button></button></td
+                      ></a>
                     </tr>
                     <tr class="special-bg-table">
                       <td class="sn_no snrow"></td>
@@ -370,62 +373,8 @@
                       <td class="arow"></td>
                       <td class="brow"></td>
                     </tr>
-                    <tr>
-                      <td class="sn_no snrow">001</td>
-                      <td class="srow">STU20001</td>
-                      <td class="nrow">Glorious Kids International School</td>
-                      <td class="arow">NGN 40,000</td>
-                      <td class="brow"><button>View</button></td>
-                    </tr>
-                    <tr class="special-bg-table">
-                      <td class="sn_no snrow"></td>
-                      <td class="srow"></td>
-                      <td class="nrow"></td>
-                      <td class="arow"></td>
-                      <td class="brow"></td>
-                    </tr>
-                    <tr>
-                      <td class="sn_no snrow">001</td>
-                      <td class="srow">STU20001</td>
-                      <td class="nrow">Glorious Kids International School</td>
-                      <td class="arow">NGN 40,000</td>
-                      <td class="brow"><button>View</button></td>
-                    </tr>
-                    <tr class="special-bg-table">
-                      <td class="sn_no snrow"></td>
-                      <td class="srow"></td>
-                      <td class="nrow"></td>
-                      <td class="arow"></td>
-                      <td class="brow"></td>
-                    </tr>
-                    <tr>
-                      <td class="sn_no snrow">001</td>
-                      <td class="srow">STU20001</td>
-                      <td class="nrow">Glorious Kids International School</td>
-                      <td class="arow">NGN 40,000</td>
-                      <td class="brow"><button>View</button></td>
-                    </tr>
-                    <tr class="special-bg-table">
-                      <td class="sn_no snrow"></td>
-                      <td class="srow"></td>
-                      <td class="nrow"></td>
-                      <td class="arow"></td>
-                      <td class="brow"></td>
-                    </tr>
-                    <tr>
-                      <td class="sn_no snrow">001</td>
-                      <td class="srow">STU20001</td>
-                      <td class="nrow">Glorious Kids International School</td>
-                      <td class="arow">NGN 40,000</td>
-                      <td class="brow"><button>View</button></td>
-                    </tr>
-                    <tr class="special-bg-table">
-                      <td class="sn_no snrow"></td>
-                      <td class="srow"></td>
-                      <td class="nrow"></td>
-                      <td class="arow"></td>
-                      <td class="brow"></td>
-                    </tr>
+
+                    {% endfor %}
                   </tbody>
                 </table>
               </div>

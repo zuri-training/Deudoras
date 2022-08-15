@@ -220,7 +220,7 @@
                       alt=""
                     />
                   </div>
-                  <a href="school_dashboard_upload_edit.html">
+                  <a href="{% url school_dashboard_upload_edit %}">
                     <div class="uploadflex">
                       <img
                         src="../../assets/school_dashboard assets/add.png"
@@ -232,7 +232,7 @@
                 </div>
               </section>
               <div class="pageView">
-                <h2>Diamond Bloom Nursery and Primary School Debtor Lists</h2>
+                <h2>{{school_name}}</h2>
               </div>
 
               <div class="desktop-tablet search">
@@ -243,7 +243,7 @@
                       alt="notificationIcon"
                     />
                     <div class="dropFlex">
-                      <p>B</p>
+                      <p>{{school_abr}}</p>
                       <img
                         src="../../assets/school_dashboard assets/arrow-down.png"
                         alt="dropdownIcon"
@@ -265,54 +265,16 @@
                 </tr>
               </thead>
               <tbody>
+                {% for studentdetails in schoolDebtTable %}
                 <tr>
-                  <td>D4601DU</td>
-                  <td>Divine Ugochukwu</td>
-                  <td class="dangerAmount">NGN 40,000</td>
-                  <a href="school_dashboard_upload_edit.html"
+                  <td>{{studentdetails.id}}</td>
+                  <td>{{studentdetails.name}}</td>
+                  <td class="dangerAmount">NGN {{studentdetails.amount}}</td>
+                  <a href="{% url school_dashboard_upload_edit %}"
                     ><td class="viewD">Edit</td></a
                   >
                 </tr>
-                <tr>
-                  <td>D4601DU</td>
-                  <td>Divine Ugochukwu</td>
-                  <td class="dangerAmount">NGN 40,000</td>
-                  <a href="school_dashboard_upload_edit.html"
-                    ><td class="viewD">Edit</td></a
-                  >
-                </tr>
-                <tr>
-                  <td>D4601DU</td>
-                  <td>Divine Ugochukwu</td>
-                  <td class="dangerAmount">NGN 40,000</td>
-                  <a href="school_dashboard_upload_edit.html"
-                    ><td class="viewD">Edit</td></a
-                  >
-                </tr>
-                <tr>
-                  <td>D4601DU</td>
-                  <td>Divine Ugochukwu</td>
-                  <td class="dangerAmount">NGN 40,000</td>
-                  <a href="school_dashboard_upload_edit.html"
-                    ><td class="viewD">Edit</td></a
-                  >
-                </tr>
-                <tr>
-                  <td>D4601DU</td>
-                  <td>Divine Ugochukwu</td>
-                  <td class="dangerAmount">NGN 40,000</td>
-                  <a href="school_dashboard_upload_edit.html"
-                    ><td class="viewD">Edit</td></a
-                  >
-                </tr>
-                <tr>
-                  <td>D4601DU</td>
-                  <td>Divine Ugochukwu</td>
-                  <td class="dangerAmount">NGN 40,000</td>
-                  <a href="school_dashboard_upload_edit.html"
-                    ><td class="viewD">Edit</td></a
-                  >
-                </tr>
+                {% endfor %}
               </tbody>
             </table>
           </section>

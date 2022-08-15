@@ -243,126 +243,23 @@
             </div>
           </section>
           <section class="second-section-school">
-            <a href="school_dashboard_school_view.html"
+            {% for schoolinfo in schools %}
+            <a href="{%url school_dashboard_school_view%}"
               ><div class="tableFlex">
                 <div>
-                  <p class="special-school">A</p>
-                  <p>Ava Memorial College</p>
+                  <p class="special-school">{{schoolinfo.school_abr}}</p>
+                  <p>{{schoolinfo.schoolname}}</p>
                 </div>
                 <div>
                   <img
                     src="../../assets/school_dashboard assets/pGroup.png"
                     alt=""
                   />
-                  <p>10</p>
+                  <p>{{schoolinfo.schoolDebtAmont}}</p>
                 </div>
               </div></a
             >
-            <a href="school_dashboard_school_view.html"
-              ><div class="tableFlex">
-                <div>
-                  <p class="special-school">A</p>
-                  <p>Ava Memorial College</p>
-                </div>
-                <div>
-                  <img
-                    src="../../assets/school_dashboard assets/pGroup.png"
-                    alt=""
-                  />
-                  <p>10</p>
-                </div>
-              </div></a
-            >
-            <a href="school_dashboard_school_view.html"
-              ><div class="tableFlex">
-                <div>
-                  <p class="special-school">A</p>
-                  <p>Ava Memorial College</p>
-                </div>
-                <div>
-                  <img
-                    src="../../assets/school_dashboard assets/pGroup.png"
-                    alt=""
-                  />
-                  <p>10</p>
-                </div>
-              </div></a
-            >
-            <a href="school_dashboard_school_view.html"
-              ><div class="tableFlex">
-                <div>
-                  <p class="special-school">A</p>
-                  <p>Ava Memorial College</p>
-                </div>
-                <div>
-                  <img
-                    src="../../assets/school_dashboard assets/pGroup.png"
-                    alt=""
-                  />
-                  <p>10</p>
-                </div>
-              </div></a
-            >
-            <a href="school_dashboard_school_view.html"
-              ><div class="tableFlex">
-                <div>
-                  <p class="special-school">A</p>
-                  <p>Ava Memorial College</p>
-                </div>
-                <div>
-                  <img
-                    src="../../assets/school_dashboard assets/pGroup.png"
-                    alt=""
-                  />
-                  <p>10</p>
-                </div>
-              </div></a
-            >
-            <a href="school_dashboard_school_view.html"
-              ><div class="tableFlex">
-                <div>
-                  <p class="special-school">A</p>
-                  <p>Ava Memorial College</p>
-                </div>
-                <div>
-                  <img
-                    src="../../assets/school_dashboard assets/pGroup.png"
-                    alt=""
-                  />
-                  <p>10</p>
-                </div>
-              </div></a
-            >
-            <a href="school_dashboard_school_view.html"
-              ><div class="tableFlex">
-                <div>
-                  <p class="special-school">A</p>
-                  <p>Ava Memorial College</p>
-                </div>
-                <div>
-                  <img
-                    src="../../assets/school_dashboard assets/pGroup.png"
-                    alt=""
-                  />
-                  <p>10</p>
-                </div>
-              </div></a
-            >
-            <a href="school_dashboard_school_view.html"
-              ><div class="tableFlex">
-                <div>
-                  <p class="special-school">A</p>
-                  <p>Ava Memorial College</p>
-                </div>
-                <div>
-                  <img
-                    src="../../assets/school_dashboard assets/pGroup.png"
-                    alt=""
-                  />
-                  <p>10</p>
-                </div>
-              </div></a
-            >
+            {% endfor %}
           </section>
         </div>
       </section>

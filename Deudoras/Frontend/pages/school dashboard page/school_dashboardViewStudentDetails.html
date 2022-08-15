@@ -201,20 +201,16 @@
             </div>
             <div class="firstSectionArticle pageSchool">
               <div class="pageView totalDebt">
-                <h2>Diamond Bloom Nursery and Primary School</h2>
+                <h2>{{school_name}}</h2>
                 <div class="studentFlex">
-                  <p>Student Name : <span>Adesua Obanwole</span></p>
-                  <p>Student ID : <span>A4605DO</span></p>
-                  <p>Name of Guardian : <span>John Obawonle</span></p>
-                  <p>Phone Number: <span>+234 000 0000 000</span></p>
-                  <p>Email Address : <span>johnobanwole@email.com</span></p>
-                  <p>
-                    Home Address :<span>
-                      No. 2 Joshua Adams Crescent, Gbagada, Lagos.</span
-                    >
-                  </p>
+                  <p>Student Name : <span>{{student_name}}</span></p>
+                  <p>Student ID : <span>{{student_id}}</span></p>
+                  <p>Name of Guardian : <span>{{student_g}}</span></p>
+                  <p>Phone Number: <span>{{g-phone}}</span></p>
+                  <p>Email Address : <span>{{g-mail}}</span></p>
+                  <p>Home Address :<span> {{g-address}}</span></p>
                   <p class="DangerTotalDebt">
-                    Total Oustanding Amount : NGN 80,000
+                    Total Oustanding Amount : NGN {{total_amount}}
                   </p>
                 </div>
               </div>
@@ -233,27 +229,17 @@
                 </tr>
               </thead>
               <tbody>
+                {% for studentdebtbreakdown in studentDebtRecord %}
                 <tr>
-                  <td>2020/2021</td>
-                  <td>First Term</td>
-                  <td>SSS 2</td>
-                  <td class="dangerAmount">NGN 10,000</td>
+                  <td>{{studentdebtbreakdown.year}}</td>
+                  <td>{{studentdebtbreakdown.term}}</td>
+                  <td>{{studentdebtbreakdown.class}}</td>
+                  <td class="dangerAmount">
+                    NGN {{studentdebtbreakdown.amount}}
+                  </td>
                   <td class="viewD">View Details</td>
                 </tr>
-                <tr>
-                  <td>2018/2019</td>
-                  <td>Third Term</td>
-                  <td>JSS 3</td>
-                  <td class="dangerAmount">NGN 30,000</td>
-                  <td class="viewD">View Details</td>
-                </tr>
-                <tr>
-                  <td>2018/2019</td>
-                  <td>First Term</td>
-                  <td>JSS 3</td>
-                  <td class="dangerAmount">NGN 40,000</td>
-                  <td class="viewD">View Details</td>
-                </tr>
+                {% endfor %}
               </tbody>
             </table>
           </section>
