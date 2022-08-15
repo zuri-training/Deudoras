@@ -40,8 +40,8 @@
             </ul>
           </div>
           <div class="nav-buttons">
-            <button class="nav-button-1">Log In</button>
-            <button class="nav-button-2">Sign Up</button>
+            <button class="nav-button-1"  href="{% url 'SchoolSignup' %}">Log In</button>
+            <button class="nav-button-2" href="{% url 'Sclogin'%}"">Sign Up</button>
           </div>
         </div>
       </nav>
@@ -210,8 +210,8 @@
         <div class="navigation">
           <div class="company">
             <li class="li">Company</li>
-            <li><a href="">Contact Us</a></li>
-            <li><a href="">About</a></li>
+            <li><a href="{% url 'Contact us' %}">Contact Us</a></li>
+            <li><a href="{% url 'About us' %}">About</a></li>
             <li><a href="">Hiring</a></li>
             <li><a href="">Privacy Policy</a></li>
           </div>
@@ -219,8 +219,8 @@
             <ul>
               <li class="li">Platform</li>
               <li><a href="">How it works</a></li>
-              <li><a href="">Sign Up</a></li>
-              <li><a href="">Log In</a></li>
+              <li><a href="{% url 'SchoolSignup' %}">Sign Up</a></li>
+              <li><a href="{% url 'Sclogin'%}">Log In</a></li>
               <li><a href="">Careers</a></li>
             </ul>
           </div>
@@ -228,7 +228,7 @@
             <li class="li">Community</li>
             <li><a href="">Open Source</a></li>
             <li><a href="">Slack</a></li>
-            <li><a href="">Help</a></li>
+            <li><a href="{% url 'Help' %}">Help</a></li>
           </div>
         </div>
       </div>
