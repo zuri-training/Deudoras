@@ -49,7 +49,7 @@ Many school owners experience financial losses as a result of students who owe a
 
 Deudoras is a website application that enables school owners in Gbagada locality to upload the database of students who are debtors on the platform and make this list of students available to other schools in the community that are registered on the platform. The website application will help school administrators track down debtors and this will go a long way in helping them recover their funds.
 
-        Link to the project research plan
+        Link to the project research plan - https://docs.google.com/document/d/10n_VLdjgWS-ugrluERfMa1g2AOn7NgqY3hLa-lwtmn0/edit?usp=sharing
 
 Tools Used
 
