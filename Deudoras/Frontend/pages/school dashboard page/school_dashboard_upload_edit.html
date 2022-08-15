@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="../../scripts/school_dashboard script/school_dashboard.js"
+      defer
+    ></script>
+    <title>Debt Tracking Website (Deudoras) - Dashboard for School</title>
+    <link
+      rel="stylesheet"
+      href="../../style/school_dashboard/school_dashboard.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400&family=Public+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="main-upload">
+      <nav id="mobile-nav">
+        <img
+          src="../../assets/about us assests/hamClose.png"
+          id="close"
+          alt="close button"
+        />
+        <ul>
+          <a href="{% url schoolhome %}"><li>Dashboard</li></a>
+          <a href="{% url profile %}"> <li>Profile</li></a>
+          <a href="{% url schools %}"><li>Schools</li></a>
+          <a href="{% url debtor %}"
+            ><li class="activeMobileNav">Debtors List</li></a
+          >
+          <a href="{% url article %}"><li>Articles</li></a>
+          <a href="school_dashboard_need_help.html"><li>Need Help</li></a>
+        </ul>
+        <button>Log Out</button>
+      </nav>
+      <aside class="desktop">
+        <div class="sidebar">
+          <img
+            src="../../assets/school_dashboard assets/desktoplogo.png"
+            alt=""
+            class="desktop desklogo"
+          />
+          <nav>
+            <div class="navItem">
+              <a href="{% url schoolhome %}"
+                ><span
+                  ><img
+                    src="../../assets/school_dashboard assets/whiteDashDesk.png"
+                    alt=""
+                  />Dashboard</span
+                ></a
+              >
+              <a href="{% url profile %}">
+                <span
+                  ><img
+                    src="../../assets/school_dashboard assets/profile.png"
+                    alt=""
+                  />Profile</span
+                ></a
+              >
+              <a href="{% url schools %}">
+                <span
+                  ><img
+                    src="../../assets/school_dashboard assets/teacher.png"
+                    alt=""
+                  />
+                  Schools
+                </span>
+              </a>
+              <a href="{% url debtor %}">
+                <span class="activeMenuDesktop"
+                  ><img
+                    src="../../assets/school_dashboard assets/receipt-item col.png"
+                    alt=""
+                  />Debtors List</span
+                ></a
+              >
+
+              <a href="{% url article %}">
+                <span
+                  ><img
+                    src="../../assets/school_dashboard assets/book.png"
+                    alt=""
+                  />Article</span
+                ></a
+              >
+            </div>
+            <div class="navItem navItemMB">
+              <a href="school_dashboard_need_help.html">
+                <span
+                  ><img
+                    src="../../assets/school_dashboard assets/device-message.png"
+                    alt=""
+                  />Need Help?</span
+                ></a
+              >
+              <span class="danger-btn">
+                <img
+                  src="../../assets/school_dashboard assets/logout.png"
+                  alt=""
+                />Log Out
+              </span>
+            </div>
+          </nav>
+        </div>
+      </aside>
+      <aside class="tablet tablet-sidebar">
+        <img
+          src="../../assets/school_dashboard assets/tab log.png"
+          alt=""
+          class="tabletLOgo"
+        />
+        <nav>
+          <div class="navItem">
+            <a href="{% url schoolhome %}">
+              <span
+                ><img
+                  src="../../assets/school_dashboard assets/dash tab w.png"
+                  alt=""
+                />Dashboard</span
+              >
+            </a>
+            <a href="{% url profile %}">
+              <span
+                ><img
+                  src="../../assets/school_dashboard assets/profileTab.png"
+                  alt=""
+                />Profile</span
+              >
+            </a>
+
+            <a href="{% url schools %}">
+              <span
+                ><img
+                  src="../../assets/school_dashboard assets/teacher.png"
+                  alt=""
+                />Schools</span
+              ></a
+            >
+            <a href="{% url debtor %}">
+              <span class="activeMenuDesktop"
+                ><img
+                  src="../../assets/school_dashboard assets/receipt-item col.png"
+                  alt=""
+                />Debtors List</span
+              >
+            </a>
+            <a href="{% url article %}"
+              ><span
+                ><img
+                  src="../../assets/school_dashboard assets/book tab.png"
+                  alt=""
+                />Article</span
+              ></a
+            >
+          </div>
+          <div class="navItem navItemMB">
+            <span
+              ><img
+                src="../../assets/school_dashboard assets/device-message tab.png"
+                alt=""
+              />Need Help?</span
+            >
+            <span class="danger-btn">
+              <img
+                src="../../assets/school_dashboard assets/logout tab.png"
+                alt=""
+              />Log Out
+            </span>
+          </div>
+        </nav>
+      </aside>
+      <section class="Content">
+        <div class="Container">
+          <section class="first-section">
+            <div class="mobileMain">
+              <div class="logo">
+                <img
+                  src="../../assets/about us assests/HamOPen.png"
+                  alt="hamopen"
+                  class="mobileBtnOpen"
+                />
+                <img src="" alt="mobile-logo" />
+              </div>
+
+              <div class="search">
+                <img
+                  src="../../assets/school_dashboard assets/icon-bell.png"
+                  alt="notificationIcon"
+                />
+                <div class="search_noti">
+                  <p>B</p>
+                  <img
+                    src="../../assets/signup_school assets/"
+                    alt="dropdownIcon"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="school_dashboard_debtorlist_section upload">
+              <div class="pageView">
+                <h2>Diamond Bloom Nursery and Primary School Debtor Lists</h2>
+                <p>Fill in the details of the debtor below</p>
+              </div>
+
+              <div class="desktop-tablet search">
+                <div>
+                  <div class="search_noti">
+                    <img
+                      src="../../assets/school_dashboard assets/icon-bell.png"
+                      alt="notificationIcon"
+                    />
+                    <div class="dropFlex">
+                      <p>B</p>
+                      <img
+                        src="../../assets/school_dashboard assets/arrow-down.png"
+                        alt="dropdownIcon"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="second-section-school-view debtorView">
+            <h3>Student Personal Details</h3>
+            <form action="" id="form-upload">
+              <section class="page1">
+                <div class="main-form">
+                  <div class="form-part">
+                    <div>
+                      <label id="name">Student Full Name </label>
+                      <input type="text" id="name" />
+                    </div>
+                    <div>
+                      <label id="address">Address </label>
+                      <input type="text" id="address" />
+                    </div>
+                    <div>
+                      <label for="classOwning">Class Owing </label>
+                      <select id="classOwning">
+                        <option value="kindergarteen">kindergarteen</option>
+                        <option value="nursary-1">Nursery 1</option>
+                        <option value="nursary-1">Nursery 2</option>
+                        <option value="primary-1">Primary 1</option>
+                        <option value="primary-2">Primary 2</option>
+                        <option value="primary-3">Primary 3</option>
+                        <option value="primary-4">Primary 4</option>
+                        <option value="primary-5">Primary 5</option>
+                        <option value="primary-6">Primary 6</option>
+                        <option value="jss-1">JSS 1</option>
+                        <option value="jss2">JSS 2</option>
+                        <option value="jss-3">JSS 3</option>
+                        <option value="sss-1">SSS 1</option>
+                        <option value="sss2">SSS 2</option>
+                        <option value="sss-3">SSS 3</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-part">
+                    <div>
+                      <label id="id">Student ID </label>
+                      <input type="text" id="id" />
+                    </div>
+                    <div>
+                      <label id="contact">Contact Details </label>
+                      <input type="text" id="contact" />
+                    </div>
+                    <div>
+                      <label for="session">Session </label>
+                      <select id="session">
+                        <option value="2015/2016">2015/2016</option>
+                        <option value="2016/2017">2016/2017</option>
+                        <option value="2017/2018">2017/2018</option>
+                        <option value="2018/2019">2018/2019</option>
+                        <option value="2019/2020">2019/2020</option>
+                        <option value="2020/2021">2020/2021</option>
+                        <option value="2021/2022">2021/2022</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <p class="p-center">1/2</p>
+                <button type="button" class="p-end">NEXT</button>
+              </section>
+              <section class="page2">
+                <div class="main-form">
+                  <div class="form-part">
+                    <div>
+                      <label for="term">Term </label>
+                      <select id="term">
+                        <option value="first-term">First Term</option>
+                        <option value="second-term">Second Term</option>
+                        <option value="third-term">Third Term</option>
+                      </select>
+                    </div>
+                    <div class="divSpecial">
+                      <img
+                        src="../../assets/school_dashboard assets/add.png"
+                        alt="add"
+                      />
+                      <p>ADD NEW TERM</p>
+                    </div>
+                  </div>
+                  <div class="form-part">
+                    <div>
+                      <label id="id">Student ID </label>
+                      <input type="text" id="id" />
+                    </div>
+                  </div>
+                </div>
+                <button type="submit" class="p-submit">SUBMIT</button>
+                <p class="p-center">2/2</p>
+              </section>
+            </form>
+          </section>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
