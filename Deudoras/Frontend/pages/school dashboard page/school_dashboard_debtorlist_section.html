@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="../../scripts/school_dashboard script/school_dashboard.js"
+      defer
+    ></script>
+    <title>Debt Tracking Website (Deudoras) - Dashboard for School</title>
+    <link
+      rel="stylesheet"
+      href="../../style/school_dashboard/school_dashboard.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400&family=Public+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <nav id="mobile-nav">
+        <img
+          src="../../assets/about us assests/hamClose.png"
+          id="close"
+          alt="close button"
+        />
+        <ul>
+          <a href="{% url schoolhome %}"><li>Dashboard</li></a>
+          <a href="{% url profile %}"> <li>Profile</li></a>
+          <a href="{% url schools %}"><li>Schools</li></a>
+          <a href="{% url debtor %}"
+            ><li class="activeMobileNav">Debtors List</li></a
+          >
+          <a href="{% url article %}"><li>Articles</li></a>
+          <a href="school_dashboard_need_help.html"><li>Need Help</li></a>
+        </ul>
+        <button>Log Out</button>
+      </nav>
+      <aside class="desktop">
+        <div class="sidebar">
+          <img
+            src="../../assets/school_dashboard assets/desktoplogo.png"
+            alt=""
+            class="desktop desklogo"
+          />
+          <nav>
+            <div class="navItem">
+              <a href="{% url schoolhome %}"
+                ><span
+                  ><img
+                    src="../../assets/school_dashboard assets/whiteDashDesk.png"
+                    alt=""
+                  />Dashboard</span
+                ></a
+              >
+              <a href="{% url profile %}">
+                <span
+                  ><img
+                    src="../../assets/school_dashboard assets/profile.png"
+                    alt=""
+                  />Profile</span
+                ></a
+              >
+              <a href="{% url schools %}">
+                <span
+                  ><img
+                    src="../../assets/school_dashboard assets/teacher.png"
+                    alt=""
+                  />
+                  Schools
+                </span>
+              </a>
+              <a href="{% url debtor %}">
+                <span class="activeMenuDesktop"
+                  ><img
+                    src="../../assets/school_dashboard assets/receipt-item col.png"
+                    alt=""
+                  />Debtors List</span
+                ></a
+              >
+
+              <a href="{% url article %}">
+                <span
+                  ><img
+                    src="../../assets/school_dashboard assets/book.png"
+                    alt=""
+                  />Article</span
+                ></a
+              >
+            </div>
+            <div class="navItem navItemMB">
+              <a href="school_dashboard_need_help.html">
+                <span
+                  ><img
+                    src="../../assets/school_dashboard assets/device-message.png"
+                    alt=""
+                  />Need Help?</span
+                ></a
+              >
+              <span class="danger-btn">
+                <img
+                  src="../../assets/school_dashboard assets/logout.png"
+                  alt=""
+                />Log Out
+              </span>
+            </div>
+          </nav>
+        </div>
+      </aside>
+      <aside class="tablet tablet-sidebar">
+        <img
+          src="../../assets/school_dashboard assets/tab log.png"
+          alt=""
+          class="tabletLOgo"
+        />
+        <nav>
+          <div class="navItem">
+            <a href="{% url schoolhome %}">
+              <span
+                ><img
+                  src="../../assets/school_dashboard assets/dash tab w.png"
+                  alt=""
+                />Dashboard</span
+              >
+            </a>
+            <a href="{% url profile %}">
+              <span
+                ><img
+                  src="../../assets/school_dashboard assets/profileTab.png"
+                  alt=""
+                />Profile</span
+              >
+            </a>
+
+            <a href="{% url schools %}">
+              <span
+                ><img
+                  src="../../assets/school_dashboard assets/teacher.png"
+                  alt=""
+                />Schools</span
+              ></a
+            >
+            <a href="{% url debtor %}">
+              <span class="activeMenuDesktop"
+                ><img
+                  src="../../assets/school_dashboard assets/receipt-item col.png"
+                  alt=""
+                />Debtors List</span
+              >
+            </a>
+            <a href="{% url article %}"
+              ><span
+                ><img
+                  src="../../assets/school_dashboard assets/book tab.png"
+                  alt=""
+                />Article</span
+              ></a
+            >
+          </div>
+          <div class="navItem navItemMB">
+            <span
+              ><img
+                src="../../assets/school_dashboard assets/device-message tab.png"
+                alt=""
+              />Need Help?</span
+            >
+            <span class="danger-btn">
+              <img
+                src="../../assets/school_dashboard assets/logout tab.png"
+                alt=""
+              />Log Out
+            </span>
+          </div>
+        </nav>
+      </aside>
+      <section class="Content">
+        <div class="Container">
+          <section class="first-section">
+            <div class="mobileMain">
+              <div class="logo">
+                <img
+                  src="../../assets/about us assests/HamOPen.png"
+                  alt="hamopen"
+                  class="mobileBtnOpen"
+                />
+                <img src="" alt="mobile-logo" />
+              </div>
+
+              <div class="search">
+                <img
+                  src="../../assets/school_dashboard assets/icon-bell.png"
+                  alt="notificationIcon"
+                />
+                <div class="search_noti">
+                  <p>B</p>
+                  <img
+                    src="../../assets/signup_school assets/"
+                    alt="dropdownIcon"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="school_dashboard_debtorlist_section">
+              <section>
+                <div class="debtsearch">
+                  <p class="p-back">Debtor's Name</p>
+                  <div class="searchflex">
+                    <input type="text" placeholder="Search" />
+                    <img
+                      class="imgflex"
+                      src="../../assets/school_dashboard assets/search on debt.png"
+                      alt=""
+                    />
+                  </div>
+                  <a href="{% url school_dashboard_upload_edit %}">
+                    <div class="uploadflex">
+                      <img
+                        src="../../assets/school_dashboard assets/add.png"
+                        alt=""
+                      />
+                      <p>UPLOAD DEBTORS LIST</p>
+                    </div>
+                  </a>
+                </div>
+              </section>
+              <div class="pageView">
+                <h2>{{school_name}}</h2>
+              </div>
+
+              <div class="desktop-tablet search">
+                <div>
+                  <div class="search_noti">
+                    <img
+                      src="../../assets/school_dashboard assets/icon-bell.png"
+                      alt="notificationIcon"
+                    />
+                    <div class="dropFlex">
+                      <p>{{school_abr}}</p>
+                      <img
+                        src="../../assets/school_dashboard assets/arrow-down.png"
+                        alt="dropdownIcon"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="second-section-school-view debtorView">
+            <table>
+              <thead>
+                <tr>
+                  <th class="bor1">Student ID</th>
+                  <th>Name of Student</th>
+                  <th>Amount Outstanding</th>
+                  <th class="bor2"></th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for studentdetails in schoolDebtTable %}
+                <tr>
+                  <td>{{studentdetails.id}}</td>
+                  <td>{{studentdetails.name}}</td>
+                  <td class="dangerAmount">NGN {{studentdetails.amount}}</td>
+                  <a href="{% url school_dashboard_upload_edit %}"
+                    ><td class="viewD">Edit</td></a
+                  >
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </section>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

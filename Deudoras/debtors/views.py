@@ -1,11 +1,7 @@
-from itertools import count
-from multiprocessing import context
-from unicodedata import name
 from django.shortcuts import render
-from django.contrib.auth.decorators import login_required
-from django.contrib.auth.models import Group
-from . import forms
+
 # Create your views here.
+<<<<<<< HEAD
 from imaplib import _Authenticator
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
@@ -292,3 +288,5 @@ def UserHome(request):
 
 
 
+=======
+>>>>>>> origin/psyche-complete

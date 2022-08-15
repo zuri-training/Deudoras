@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 proj_debtors-team -39
 
 Environment Setup
@@ -127,3 +128,6 @@ Contributors
 Acknowledgement
 
 This project is acknowledged by the Zuri Team organization as they came up with the project idea and contributed massively to the success of this project.
+=======
+# Deudoras
+>>>>>>> origin/psyche-complete
